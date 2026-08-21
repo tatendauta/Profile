@@ -6,32 +6,30 @@
     <title>Tatenda Uta | AI & Analytics Decision Partner</title>
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%23FFFFFF'/><text x='50%25' y='55%25' font-family='Inter, sans-serif' font-weight='900' font-size='48' fill='%230F8A7C' text-anchor='middle' dominant-baseline='middle'>TU</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%23FFFFFF'/><text x='50%25' y='55%25' font-family='Inter, sans-serif' font-weight='900' font-size='48' fill='%232563EB' text-anchor='middle' dominant-baseline='middle'>TU</text></svg>">
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-            darkMode: 'class',
             theme: {
                 extend: {
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
                     },
                     colors: {
+                        canvas: {
+                            light: '#F8FAFC',
+                            card: '#FFFFFF',
+                            border: '#E2E8F0',
+                            hover: '#CBD5E1'
+                        },
                         brand: {
-                            50: '#E8F5F3',
-                            100: '#C2E5E0',
-                            500: '#0F8A7C', // Teal - the single signal accent
-                            600: '#0C6E63',
-                            950: '#06302B'
-                        },
-                        accent: {
-                            500: '#3E5C80', // Navy - secondary color for visual variety
-                            600: '#1B3A5C'
-                        },
-                        slate: {
-                            950: '#FFFFFF', // White page background
+                            blue: '#2563EB',
+                            navy: '#1E40AF',
+                            emerald: '#059669',
+                            slate: '#0F172A',
+                            muted: '#64748B'
                         }
                     }
                 }
@@ -49,10 +47,10 @@
             background: rgba(255, 255, 255, 0.88);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(19, 32, 46, 0.08);
+            border-bottom: 1px solid rgba(15, 23, 42, 0.08);
         }
         .glow-green {
-            box-shadow: 0 0 40px rgba(15, 138, 124, 0.07);
+            box-shadow: 0 0 40px rgba(37, 99, 235, 0.07);
         }
         @media print {
             .no-print {
@@ -79,66 +77,66 @@
         }
     </style>
 </head>
-<body class="bg-[#FFFFFF] text-[#13202E] min-h-screen selection:bg-brand-500 selection:text-white overflow-x-hidden">
+<body class="bg-slate-50 text-slate-900 min-h-screen selection:bg-blue-600 selection:text-white overflow-x-hidden">
 
 <header class="fixed top-0 left-0 w-full z-50 glassmorphism transition-all duration-300 no-print">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         <div class="flex items-center space-x-3 cursor-pointer" onclick="navigateTo('home')">
-            <div class="h-10 w-10 rounded-lg bg-brand-500 flex items-center justify-center font-black text-white text-lg shadow-md shadow-brand-500/20 border border-brand-600">
+            <div class="h-10 w-10 rounded-lg bg-white flex items-center justify-center font-black text-blue-600 text-lg shadow-md shadow-blue-600/20 border border-blue-200">
                 TU
             </div>
             <div>
-                <span class="text-base font-extrabold tracking-tight text-[#13202E] block">Tatenda Uta</span>
-                <span class="text-[10px] text-[#5C6470] font-bold tracking-widest uppercase block -mt-1">AI & Analytics Decision Partner</span> 
+                <span class="text-base font-extrabold tracking-tight text-slate-900 block">Tatenda Uta</span>
+                <span class="text-[10px] text-slate-500 font-bold tracking-widest uppercase block -mt-1">AI & Analytics Decision Partner</span> 
             </div>
         </div>
 
         <!-- Desktop Navigation Links -->
         <nav class="hidden lg:flex items-center space-x-1">
-            <button onclick="navigateTo('home')" id="nav-home" class="px-3.5 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-colors hover:text-[#13202E] text-[#5C6470] hover:bg-black/5">Home</button>
-            <button onclick="navigateTo('projects')" id="nav-projects" class="px-3.5 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-colors hover:text-[#13202E] text-[#5C6470] hover:bg-black/5">Projects</button>
-            <button onclick="navigateTo('leadership')" id="nav-leadership" class="px-3.5 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-colors hover:text-[#13202E] text-[#5C6470] hover:bg-black/5">Philosophy</button>
-            <button onclick="navigateTo('skills')" id="nav-skills" class="px-3.5 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-colors hover:text-[#13202E] text-[#5C6470] hover:bg-black/5">Skills & Toolkits</button>
-            <button onclick="navigateTo('writing')" id="nav-writing" class="px-3.5 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-colors hover:text-[#13202E] text-[#5C6470] hover:bg-black/5">Insights</button>
-            <button onclick="navigateTo('resume')" id="nav-resume" class="px-3.5 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-colors hover:text-[#13202E] text-[#5C6470] hover:bg-black/5">Resume</button>
-            <button onclick="void(0)" id="nav-websites" class="px-3.5 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-colors hover:text-[#13202E] text-[#5C6470] hover:bg-black/5">Websites</button>
+            <button onclick="navigateTo('home')" id="nav-home" class="px-3.5 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-colors hover:text-slate-900 text-slate-500 hover:bg-slate-100">Home</button>
+            <button onclick="navigateTo('projects')" id="nav-projects" class="px-3.5 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-colors hover:text-slate-900 text-slate-500 hover:bg-slate-100">Projects</button>
+            <button onclick="navigateTo('leadership')" id="nav-leadership" class="px-3.5 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-colors hover:text-slate-900 text-slate-500 hover:bg-slate-100">Philosophy</button>
+            <button onclick="navigateTo('skills')" id="nav-skills" class="px-3.5 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-colors hover:text-slate-900 text-slate-500 hover:bg-slate-100">Skills & Toolkits</button>
+            <button onclick="navigateTo('writing')" id="nav-writing" class="px-3.5 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-colors hover:text-slate-900 text-slate-500 hover:bg-slate-100">Insights</button>
+            <button onclick="navigateTo('resume')" id="nav-resume" class="px-3.5 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-colors hover:text-slate-900 text-slate-500 hover:bg-slate-100">Resume</button>
+            <button onclick="void(0)" id="nav-websites" class="px-3.5 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-colors hover:text-slate-900 text-slate-500 hover:bg-slate-100">Websites</button>
            
         </nav>
 
         <div class="hidden md:flex items-center space-x-3">
-            <div class="flex items-center space-x-2 text-[11px] text-brand-600 bg-brand-50 border border-brand-100 px-3 py-1.5 rounded-full">
+            <div class="flex items-center space-x-2 text-[11px] text-slate-700 bg-slate-100 border border-slate-200 px-3 py-1.5 rounded-full">
                 <span class="relative flex h-2 w-2">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-500 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                 </span>
                 <i class="fa-solid fa-user-shield"></i>
                 <span class="font-bold">NDA Protected & Generalized</span>
             </div>
-            <button onclick="navigateTo('contact')" class="bg-brand-500 hover:bg-brand-600 text-white px-4.5 py-2 rounded-lg text-xs font-bold uppercase tracking-wider shadow-lg shadow-brand-500/15 transition-all duration-300 hover:-translate-y-0.5">
+            <button onclick="navigateTo('contact')" class="bg-blue-600 hover:bg-blue-800 text-white px-4.5 py-2 rounded-lg text-xs font-bold uppercase tracking-wider shadow-lg shadow-blue-600/15 transition-all duration-300 hover:-translate-y-0.5">
                 Let's Connect
             </button>
         </div>
 
         <!-- Mobile Menu Toggle Button -->
         <div class="lg:hidden flex items-center space-x-3">
-            <button onclick="navigateTo('contact')" class="bg-brand-500 hover:bg-brand-600 text-white px-3 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider">
+            <button onclick="navigateTo('contact')" class="bg-blue-600 hover:bg-blue-800 text-white px-3 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider">
                 Connect
             </button>
-            <button onclick="toggleMobileMenu()" class="text-[#5C6470] hover:text-[#13202E] p-2 rounded-lg focus:outline-none">
+            <button onclick="toggleMobileMenu()" class="text-slate-500 hover:text-slate-900 p-2 rounded-lg focus:outline-none">
                 <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
             </button>
         </div>
     </div>
 
     <!-- Mobile Navigation Panel -->
-    <div id="mobile-menu" class="hidden lg:hidden glassmorphism border-t border-black/10 px-4 pt-2 pb-6 space-y-1.5 animate-fade-in">
-        <button onclick="navigateTo('home'); toggleMobileMenu()" class="block w-full text-left px-4 py-3 rounded-lg text-sm font-semibold uppercase tracking-wider hover:bg-black/5 text-[#5C6470] hover:text-[#13202E]">Home</button>
-        <button onclick="navigateTo('projects'); toggleMobileMenu()" class="block w-full text-left px-4 py-3 rounded-lg text-sm font-semibold uppercase tracking-wider hover:bg-black/5 text-[#5C6470] hover:text-[#13202E]">Projects</button>
-        <button onclick="navigateTo('leadership'); toggleMobileMenu()" class="block w-full text-left px-4 py-3 rounded-lg text-sm font-semibold uppercase tracking-wider hover:bg-black/5 text-[#5C6470] hover:text-[#13202E]">Philosophy</button>
-        <button onclick="navigateTo('skills'); toggleMobileMenu()" class="block w-full text-left px-4 py-3 rounded-lg text-sm font-semibold uppercase tracking-wider hover:bg-black/5 text-[#5C6470] hover:text-[#13202E]">Skills & Toolkits</button>
-        <button onclick="navigateTo('writing'); toggleMobileMenu()" class="block w-full text-left px-4 py-3 rounded-lg text-sm font-semibold uppercase tracking-wider hover:bg-black/5 text-[#5C6470] hover:text-[#13202E]">Insights</button>
-        <button onclick="navigateTo('resume'); toggleMobileMenu()" class="block w-full text-left px-4 py-3 rounded-lg text-sm font-semibold uppercase tracking-wider hover:bg-black/5 text-[#5C6470] hover:text-[#13202E]">Resume</button>
-        <button onclick="navigateTo('contact'); toggleMobileMenu()" class="block w-full text-center py-3 rounded-lg text-sm font-bold uppercase tracking-widest bg-brand-500 hover:bg-brand-600 text-white mt-4 shadow-lg shadow-brand-500/15">Let's Connect</button>
+    <div id="mobile-menu" class="hidden lg:hidden glassmorphism border-t border-slate-200 px-4 pt-2 pb-6 space-y-1.5 animate-fade-in">
+        <button onclick="navigateTo('home'); toggleMobileMenu()" class="block w-full text-left px-4 py-3 rounded-lg text-sm font-semibold uppercase tracking-wider hover:bg-slate-100 text-slate-500 hover:text-slate-900">Home</button>
+        <button onclick="navigateTo('projects'); toggleMobileMenu()" class="block w-full text-left px-4 py-3 rounded-lg text-sm font-semibold uppercase tracking-wider hover:bg-slate-100 text-slate-500 hover:text-slate-900">Projects</button>
+        <button onclick="navigateTo('leadership'); toggleMobileMenu()" class="block w-full text-left px-4 py-3 rounded-lg text-sm font-semibold uppercase tracking-wider hover:bg-slate-100 text-slate-500 hover:text-slate-900">Philosophy</button>
+        <button onclick="navigateTo('skills'); toggleMobileMenu()" class="block w-full text-left px-4 py-3 rounded-lg text-sm font-semibold uppercase tracking-wider hover:bg-slate-100 text-slate-500 hover:text-slate-900">Skills & Toolkits</button>
+        <button onclick="navigateTo('writing'); toggleMobileMenu()" class="block w-full text-left px-4 py-3 rounded-lg text-sm font-semibold uppercase tracking-wider hover:bg-slate-100 text-slate-500 hover:text-slate-900">Insights</button>
+        <button onclick="navigateTo('resume'); toggleMobileMenu()" class="block w-full text-left px-4 py-3 rounded-lg text-sm font-semibold uppercase tracking-wider hover:bg-slate-100 text-slate-500 hover:text-slate-900">Resume</button>
+        <button onclick="navigateTo('contact'); toggleMobileMenu()" class="block w-full text-center py-3 rounded-lg text-sm font-bold uppercase tracking-widest bg-blue-600 hover:bg-blue-800 text-white mt-4 shadow-lg shadow-blue-600/15">Let's Connect</button>
     </div>
 </header>
 
@@ -149,8 +147,8 @@
     <!-- Hero Area -->
     <section class="relative py-12 lg:py-20 overflow-hidden">
         <!-- Abstract glowing circles matching revenue/growth theme -->
-        <div class="absolute top-20 right-10 w-96 h-96 bg-brand-500/5 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute bottom-10 left-10 w-80 h-80 bg-accent-500/5 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-20 right-10 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 left-10 w-80 h-80 bg-blue-600/5 rounded-full blur-3xl pointer-events-none"></div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -160,19 +158,19 @@
                                    
                     <div class="flex flex-wrap items-start justify-between gap-4">
                         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-none">
-                            <span class="block text-brand-500 text-2xl sm:text-3xl lg:text-4xl">
+                            <span class="block text-blue-600 text-2xl sm:text-3xl lg:text-4xl">
                                 AI & Analytics Decision Partner 
                             </span>
                         </h1>
-                        <button onclick="navigateTo('resume')" class="bg-white hover:bg-black/[0.03] text-[#13202E] border border-black/15 px-6 py-3.5 rounded-xl font-bold text-sm uppercase tracking-wider transition-all duration-300 hover:-translate-y-0.5 flex items-center space-x-2 flex-shrink-0">
+                        <button onclick="navigateTo('resume')" class="bg-white hover:bg-slate-100 text-slate-900 border border-slate-300 px-6 py-3.5 rounded-xl font-bold text-sm uppercase tracking-wider transition-all duration-300 hover:-translate-y-0.5 flex items-center space-x-2 flex-shrink-0">
                             <i class="fa-solid fa-file-pdf"></i>
                             <span>View Resume</span>
                         </button>
                     </div>
                     
-                    <h2 class="text-sm font-bold text-brand-600 uppercase tracking-widest">About Me</h2>
+                    <h2 class="text-sm font-bold text-blue-800 uppercase tracking-widest">About Me</h2>
 
-                    <div class="space-y-4 text-[#2E2E2E] text-base sm:text-lg leading-relaxed max-w-2xl font-light font-sans">
+                    <div class="space-y-4 text-slate-700 text-base sm:text-lg leading-relaxed max-w-2xl font-light font-sans">
                         <p>
                             I'm a Business Intelligence and Product Analytics professional with over a decade of experience turning messy, ambiguous data into clear, profitable decisions — and lately, that means building AI directly into how that analysis gets done (AI implementation and prompt engineering).
                         </p>
@@ -182,83 +180,83 @@
                     </div>
                     
                     <div class="flex flex-wrap gap-3.5 pt-2">
-                        <button onclick="navigateTo('projects')" class="bg-brand-500 hover:bg-brand-600 text-white px-6 py-3.5 rounded-xl font-bold text-sm uppercase tracking-wider shadow-lg shadow-brand-500/15 transition-all duration-300 hover:-translate-y-0.5 flex items-center space-x-2">
+                        <button onclick="navigateTo('projects')" class="bg-blue-600 hover:bg-blue-800 text-white px-6 py-3.5 rounded-xl font-bold text-sm uppercase tracking-wider shadow-lg shadow-blue-600/15 transition-all duration-300 hover:-translate-y-0.5 flex items-center space-x-2">
                             <span>Explore Projects</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
 
                     <!-- Short credibility quote -->
-                    <div class="border-l-2 border-brand-500/60 pl-4 py-1 mt-6 text-xs sm:text-sm text-[#5C6470] italic">
+                    <div class="border-l-2 border-blue-600/60 pl-4 py-1 mt-6 text-xs sm:text-sm text-slate-500 italic">
                         "Most companies are drowning in data but starving for clarity. They can tell you what happened. I tell them what to do about it."
                     </div>
                 </div>
 
                 <!-- Right column Visual summary panel -->
                 <div class="lg:col-span-5">
-                    <div class="glassmorphism p-8 rounded-2xl glow-green border border-black/10 relative bg-white/70">
-                        <div class="absolute -top-3.5 right-6 bg-brand-500 text-white font-black text-[10px] px-3 py-1 rounded-full uppercase tracking-widest">
+                    <div class="glassmorphism p-8 rounded-2xl glow-green border border-slate-200 relative bg-white/70">
+                        <div class="absolute -top-3.5 right-6 bg-blue-600 text-white font-black text-[10px] px-3 py-1 rounded-full uppercase tracking-widest">
                             Impact Metrics
                         </div>
                         
-                        <h3 class="text-base font-bold text-[#13202E] mb-6 flex items-center space-x-2">
-                            <i class="fa-solid fa-chart-line text-brand-500"></i>
+                        <h3 class="text-base font-bold text-slate-900 mb-6 flex items-center space-x-2">
+                            <i class="fa-solid fa-chart-line text-blue-600"></i>
                             <span>Proven Business Value</span>
                         </h3>
                         
                         <div class="space-y-6">
                             <!-- Impact Item 1 -->
                             <div class="flex items-start space-x-4">
-                                <div class="bg-brand-50 p-3 rounded-lg text-brand-600 border border-brand-100">
+                                <div class="bg-emerald-50/80 p-3 rounded-lg text-emerald-800 border border-emerald-200">
                                     <i class="fa-solid fa-sack-dollar text-xl"></i>
                                 </div>
                                 <div>
-                                    <h4 class="text-2xl font-black text-[#13202E] leading-none">$1.4M+</h4>
-                                    <p class="text-xs text-[#5C6470] uppercase tracking-widest font-bold mt-1.5"> Incremental Revenue Engineered</p>
+                                    <h4 class="text-2xl font-black text-slate-900 leading-none">$1.4M+</h4>
+                                    <p class="text-xs text-slate-500 uppercase tracking-widest font-bold mt-1.5"> Incremental Revenue Engineered</p>
                                 </div>
                             </div>
                             
                             <!-- Impact Item 2 -->
                             <div class="flex items-start space-x-4">
-                                <div class="bg-accent-500/10 p-3 rounded-lg text-accent-600 border border-black/10">
+                                <div class="bg-blue-50/80 p-3 rounded-lg text-blue-800 border border-slate-200">
                                     <i class="fa-solid fa-people-group text-xl"></i>
                                 </div>
                                 <div>
-                                    <h4 class="text-2xl font-black text-[#13202E] leading-none">20+</h4>
-                                    <p class="text-xs text-[#5C6470] uppercase tracking-widest font-bold mt-1.5">Cross-Functional Initiatives Led</p>
+                                    <h4 class="text-2xl font-black text-slate-900 leading-none">20+</h4>
+                                    <p class="text-xs text-slate-500 uppercase tracking-widest font-bold mt-1.5">Cross-Functional Initiatives Led</p>
                                 </div>
                             </div>
 
                             <!-- Impact Item 3 -->
                             <div class="flex items-start space-x-4">
-                                <div class="bg-brand-50 p-3 rounded-lg text-brand-600 border border-brand-100">
+                                <div class="bg-blue-50/80 p-3 rounded-lg text-blue-800 border border-blue-200">
                                     <i class="fa-solid fa-network-wired text-xl"></i>
                                 </div>
                                 <div>
-                                    <h4 class="text-sm font-bold text-[#13202E]">Product • AI • Growth • Risk</h4>
-                                    <p class="text-xs text-[#5C6470] uppercase tracking-widest font-bold mt-1.5">Functional Areas of Expertise</p>
+                                    <h4 class="text-sm font-bold text-slate-900">Product • AI • Growth • Risk</h4>
+                                    <p class="text-xs text-slate-500 uppercase tracking-widest font-bold mt-1.5">Functional Areas of Expertise</p>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Mini Interactive Decision Wheel Preview -->
-                        <div class="mt-8 pt-6 border-t border-black/10">
-                            <h4 class="text-xs font-bold text-[#5C6470] uppercase tracking-widest mb-3">How I Work</h4>
+                        <div class="mt-8 pt-6 border-t border-slate-200">
+                            <h4 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-3">How I Work</h4>
                             <div class="grid grid-cols-2 gap-2 text-xs">
-                                <div class="bg-black/[0.03] p-2 rounded border border-black/10 flex items-center space-x-1.5 text-[#2E2E2E]">
-                                    <i class="fa-solid fa-check-circle text-brand-500"></i>
+                                <div class="bg-slate-100 p-2 rounded border border-slate-200 flex items-center space-x-1.5 text-slate-700">
+                                    <i class="fa-solid fa-check-circle text-blue-600"></i>
                                     <span>Outcome-Focused</span>
                                 </div>
-                                <div class="bg-black/[0.03] p-2 rounded border border-black/10 flex items-center space-x-1.5 text-[#2E2E2E]">
-                                    <i class="fa-solid fa-check-circle text-accent-600"></i>
+                                <div class="bg-slate-100 p-2 rounded border border-slate-200 flex items-center space-x-1.5 text-slate-700">
+                                    <i class="fa-solid fa-check-circle text-blue-800"></i>
                                     <span>No Jargon Reports</span>
                                 </div>
-                                <div class="bg-black/[0.03] p-2 rounded border border-black/10 flex items-center space-x-1.5 text-[#2E2E2E]">
-                                    <i class="fa-solid fa-check-circle text-brand-500"></i>
+                                <div class="bg-slate-100 p-2 rounded border border-slate-200 flex items-center space-x-1.5 text-slate-700">
+                                    <i class="fa-solid fa-check-circle text-blue-600"></i>
                                     <span>Data-Driven Choices</span>
                                 </div>
-                                <div class="bg-black/[0.03] p-2 rounded border border-black/10 flex items-center space-x-1.5 text-[#2E2E2E]">
-                                    <i class="fa-solid fa-check-circle text-accent-600"></i>
+                                <div class="bg-slate-100 p-2 rounded border border-slate-200 flex items-center space-x-1.5 text-slate-700">
+                                    <i class="fa-solid fa-check-circle text-blue-800"></i>
                                     <span>Aligned Stakeholders</span>
                                 </div>
                             </div>
@@ -271,122 +269,122 @@
     </section>
 
     <!-- Core Organizations Experience Showcase (Gainbridge Decoupled to eliminate timeline overlap) -->
-    <section class="py-12 border-t border-black/10 bg-black/[0.02]">
+    <section class="py-12 border-t border-slate-200 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-8">
-                <span class="text-[10px] font-bold text-brand-600 uppercase tracking-widest block mb-2">Corporate Ecosystem & Trust Partners</span>
-                <h3 class="text-xs font-bold text-[#5C6470] uppercase tracking-widest">DRIVING RESULTS FOR LEADING ORGANIZATIONS</h3>
+                <span class="text-[10px] font-bold text-blue-800 uppercase tracking-widest block mb-2">Corporate Ecosystem & Trust Partners</span>
+                <h3 class="text-xs font-bold text-slate-500 uppercase tracking-widest">DRIVING RESULTS FOR LEADING ORGANIZATIONS</h3>
             </div>
             
             <div class="grid grid-cols-2 sm:grid-cols-5 gap-6 items-center justify-items-center opacity-85 hover:opacity-100 transition-opacity duration-300">
                 <!-- Brand 1: JustAnswer -->
-                <a href="https://www.justanswer.com/info/how-it-works" target="_blank" class="group flex flex-col items-center justify-center p-4 rounded-xl hover:bg-black/[0.03] transition-all duration-300 border border-transparent hover:border-black/10 w-full" title="Visit JustAnswer">
-                    <span class="text-sm font-black tracking-tighter text-[#5C6470] group-hover:text-brand-600 transition-colors uppercase">JustAnswer</span>
-                    <span class="text-[9px] text-[#8A9099] group-hover:text-[#2E2E2E]">AI and Product Analytics  (Present)</span>
+                <a href="https://www.justanswer.com/info/how-it-works" target="_blank" class="group flex flex-col items-center justify-center p-4 rounded-xl hover:bg-slate-100 transition-all duration-300 border border-transparent hover:border-slate-200 w-full" title="Visit JustAnswer">
+                    <span class="text-sm font-black tracking-tighter text-slate-500 group-hover:text-blue-800 transition-colors uppercase">JustAnswer</span>
+                    <span class="text-[9px] text-slate-400 group-hover:text-slate-700">AI and Product Analytics  (Present)</span>
                 </a>
 
                 <!-- Brand 2: TD SYNNEX (Tech Data) -->
-                <a href="https://www.tdsynnex.com/na/us/" target="_blank" class="group flex flex-col items-center justify-center p-4 rounded-xl hover:bg-black/[0.03] transition-all duration-300 border border-transparent hover:border-black/10 w-full" title="Visit TD SYNNEX">
-                    <span class="text-sm font-black tracking-tighter text-[#5C6470] group-hover:text-brand-600 transition-colors uppercase">TD SYNNEX</span>
-                    <span class="text-[9px] text-[#8A9099] group-hover:text-[#2E2E2E]">Data Science & FP&A</span>
+                <a href="https://www.tdsynnex.com/na/us/" target="_blank" class="group flex flex-col items-center justify-center p-4 rounded-xl hover:bg-slate-100 transition-all duration-300 border border-transparent hover:border-slate-200 w-full" title="Visit TD SYNNEX">
+                    <span class="text-sm font-black tracking-tighter text-slate-500 group-hover:text-blue-800 transition-colors uppercase">TD SYNNEX</span>
+                    <span class="text-[9px] text-slate-400 group-hover:text-slate-700">Data Science & FP&A</span>
                 </a>
 
                 <!-- Brand 3: Ashley Furniture -->
-                <a href="https://www.ashleyfurnitureindustriesllc.com/company/tampa-office/" target="_blank" class="group flex flex-col items-center justify-center p-4 rounded-xl hover:bg-black/[0.03] transition-all duration-300 border border-transparent hover:border-black/10 w-full" title="Visit Ashley Furniture Industries">
-                    <span class="text-sm font-black tracking-tighter text-[#5C6470] group-hover:text-brand-600 transition-colors uppercase">Ashley Furniture</span>
-                    <span class="text-[9px] text-[#8A9099] group-hover:text-[#2E2E2E]">BI Analytics and Data Science</span>
+                <a href="https://www.ashleyfurnitureindustriesllc.com/company/tampa-office/" target="_blank" class="group flex flex-col items-center justify-center p-4 rounded-xl hover:bg-slate-100 transition-all duration-300 border border-transparent hover:border-slate-200 w-full" title="Visit Ashley Furniture Industries">
+                    <span class="text-sm font-black tracking-tighter text-slate-500 group-hover:text-blue-800 transition-colors uppercase">Ashley Furniture</span>
+                    <span class="text-[9px] text-slate-400 group-hover:text-slate-700">BI Analytics and Data Science</span>
                 </a>
 
                 <!-- Brand 4: Revenue Management Solutions -->
-                <a href="https://www.revenuemanage.com/?utm_source=Google&utm_medium=pmax&utm_campaign=retargeting" target="_blank" class="group flex flex-col items-center justify-center p-4 rounded-xl hover:bg-black/[0.03] transition-all duration-300 border border-transparent hover:border-black/10 w-full" title="Visit Revenue Management Solutions">
-                    <span class="text-sm font-black tracking-tighter text-[#5C6470] group-hover:text-brand-600 transition-colors uppercase">RMS</span>
-                    <span class="text-[9px] text-[#8A9099] group-hover:text-[#2E2E2E]">Pricing Strategy and Consulting</span>
+                <a href="https://www.revenuemanage.com/?utm_source=Google&utm_medium=pmax&utm_campaign=retargeting" target="_blank" class="group flex flex-col items-center justify-center p-4 rounded-xl hover:bg-slate-100 transition-all duration-300 border border-transparent hover:border-slate-200 w-full" title="Visit Revenue Management Solutions">
+                    <span class="text-sm font-black tracking-tighter text-slate-500 group-hover:text-blue-800 transition-colors uppercase">RMS</span>
+                    <span class="text-[9px] text-slate-400 group-hover:text-slate-700">Pricing Strategy and Consulting</span>
                 </a>
 
                 <!-- Brand 5: Pearl -->
-                <a href="https://www.pearl.com/" target="_blank" class="group flex flex-col items-center justify-center p-4 rounded-xl hover:bg-black/[0.03] transition-all duration-300 border border-transparent hover:border-black/10 w-full" title="Visit Pearl">
-                    <span class="text-sm font-black tracking-tighter text-[#5C6470] group-hover:text-brand-600 transition-colors uppercase">Pearl</span>
-                    <span class="text-[9px] text-[#8A9099] group-hover:text-[#2E2E2E]">Product Analytics and Strategy</span>
+                <a href="https://www.pearl.com/" target="_blank" class="group flex flex-col items-center justify-center p-4 rounded-xl hover:bg-slate-100 transition-all duration-300 border border-transparent hover:border-slate-200 w-full" title="Visit Pearl">
+                    <span class="text-sm font-black tracking-tighter text-slate-500 group-hover:text-blue-800 transition-colors uppercase">Pearl</span>
+                    <span class="text-[9px] text-slate-400 group-hover:text-slate-700">Product Analytics and Strategy</span>
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Interactive Decision Framework Showcase -->
-    <section class="py-12 bg-black/[0.02] border-y border-black/10">
+    <section class="py-12 bg-slate-50 border-y border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-10">
-                <h2 class="text-xs font-bold text-brand-600 uppercase tracking-widest">How I Drive Results</h2>
-                <h3 class="text-2xl sm:text-3xl font-extrabold text-[#13202E] mt-1">From Complex Challenges to Measurable Outcomes</h3>
-                <p class="text-[#5C6470] text-sm mt-2">Click a step to see how I actually apply it.</p>
+                <h2 class="text-xs font-bold text-blue-800 uppercase tracking-widest">How I Drive Results</h2>
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">From Complex Challenges to Measurable Outcomes</h3>
+                <p class="text-slate-500 text-sm mt-2">Click a step to see how I actually apply it.</p>
             </div>
 
             <!-- Dynamic Interactive Accordion Elements -->
             <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
                 <!-- Step 1 -->
-                <div class="bg-white p-5 rounded-xl border border-black/10 hover:border-brand-500/50 transition-all duration-300 cursor-pointer group" onclick="showFrameworkTip(1)">
+                <div class="bg-white p-5 rounded-xl border border-slate-200 hover:border-blue-600/50 transition-all duration-300 cursor-pointer group" onclick="showFrameworkTip(1)">
                     <div class="flex items-center justify-between mb-3">
-                        <span class="text-2xl font-black text-black/15 group-hover:text-brand-500 transition-colors">01</span>
-                        <i class="fa-solid fa-lightbulb text-brand-500 text-lg"></i>
+                        <span class="text-2xl font-black text-slate-200 group-hover:text-blue-600 transition-colors">01</span>
+                        <i class="fa-solid fa-lightbulb text-blue-600 text-lg"></i>
                     </div>
-                    <h4 class="text-sm font-bold text-[#13202E] mb-1">Frame Business Problems</h4>
-                    <p class="text-xs text-[#5C6470] line-clamp-2">Move beyond standard dashboards to pinpoint exact customer drop-off points.</p>
+                    <h4 class="text-sm font-bold text-slate-900 mb-1">Frame Business Problems</h4>
+                    <p class="text-xs text-slate-500 line-clamp-2">Move beyond standard dashboards to pinpoint exact customer drop-off points.</p>
                 </div>
 
                 <!-- Step 2 -->
-                <div class="bg-white p-5 rounded-xl border border-black/10 hover:border-accent-500/50 transition-all duration-300 cursor-pointer group" onclick="showFrameworkTip(2)">
+                <div class="bg-white p-5 rounded-xl border border-slate-200 hover:border-blue-600/50 transition-all duration-300 cursor-pointer group" onclick="showFrameworkTip(2)">
                     <div class="flex items-center justify-between mb-3">
-                        <span class="text-2xl font-black text-black/15 group-hover:text-accent-600 transition-colors">02</span>
-                        <i class="fa-solid fa-database text-accent-600 text-lg"></i>
+                        <span class="text-2xl font-black text-slate-200 group-hover:text-blue-800 transition-colors">02</span>
+                        <i class="fa-solid fa-database text-blue-800 text-lg"></i>
                     </div>
-                    <h4 class="text-sm font-bold text-[#13202E] mb-1">Ensure Data Integrity</h4>
-                    <p class="text-xs text-[#5C6470] line-clamp-2">Consolidate metric structures so teams work from a single system of record.</p>
+                    <h4 class="text-sm font-bold text-slate-900 mb-1">Ensure Data Integrity</h4>
+                    <p class="text-xs text-slate-500 line-clamp-2">Consolidate metric structures so teams work from a single system of record.</p>
                 </div>
 
                 <!-- Step 3 -->
-                <div class="bg-white p-5 rounded-xl border border-black/10 hover:border-brand-500/50 transition-all duration-300 cursor-pointer group" onclick="showFrameworkTip(3)">
+                <div class="bg-white p-5 rounded-xl border border-slate-200 hover:border-blue-600/50 transition-all duration-300 cursor-pointer group" onclick="showFrameworkTip(3)">
                     <div class="flex items-center justify-between mb-3">
-                        <span class="text-2xl font-black text-black/15 group-hover:text-brand-500 transition-colors">03</span>
-                        <i class="fa-solid fa-people-carry-box text-brand-500 text-lg"></i>
+                        <span class="text-2xl font-black text-slate-200 group-hover:text-blue-600 transition-colors">03</span>
+                        <i class="fa-solid fa-people-carry-box text-blue-600 text-lg"></i>
                     </div>
-                    <h4 class="text-sm font-bold text-[#13202E] mb-1">Align Stakeholders</h4>
-                    <p class="text-xs text-[#5C6470] line-clamp-2">Work closely with engineering, product, and risk partners from day one.</p>
+                    <h4 class="text-sm font-bold text-slate-900 mb-1">Align Stakeholders</h4>
+                    <p class="text-xs text-slate-500 line-clamp-2">Work closely with engineering, product, and risk partners from day one.</p>
                 </div>
 
                 <!-- Step 4 -->
-                <div class="bg-white p-5 rounded-xl border border-black/10 hover:border-brand-500/50 transition-all duration-300 cursor-pointer group" onclick="showFrameworkTip(4)">
+                <div class="bg-white p-5 rounded-xl border border-slate-200 hover:border-blue-600/50 transition-all duration-300 cursor-pointer group" onclick="showFrameworkTip(4)">
                     <div class="flex items-center justify-between mb-3">
-                        <span class="text-2xl font-black text-black/15 group-hover:text-brand-500 transition-colors">04</span>
-                        <i class="fa-solid fa-flask text-brand-500 text-lg"></i>
+                        <span class="text-2xl font-black text-slate-200 group-hover:text-blue-600 transition-colors">04</span>
+                        <i class="fa-solid fa-flask text-blue-600 text-lg"></i>
                     </div>
-                    <h4 class="text-sm font-bold text-[#13202E] mb-1">Test & Iterate</h4>
-                    <p class="text-xs text-[#5C6470] line-clamp-2">Design, monitor, and scale tests based on reliable statistical models.</p>
+                    <h4 class="text-sm font-bold text-slate-900 mb-1">Test & Iterate</h4>
+                    <p class="text-xs text-slate-500 line-clamp-2">Design, monitor, and scale tests based on reliable statistical models.</p>
                 </div>
 
                 <!-- Step 5 -->
-                <div class="bg-white p-5 rounded-xl border border-black/10 hover:border-accent-500/50 transition-all duration-300 cursor-pointer group" onclick="showFrameworkTip(5)">
+                <div class="bg-white p-5 rounded-xl border border-slate-200 hover:border-blue-600/50 transition-all duration-300 cursor-pointer group" onclick="showFrameworkTip(5)">
                     <div class="flex items-center justify-between mb-3">
-                        <span class="text-2xl font-black text-black/15 group-hover:text-accent-600 transition-colors">05</span>
-                        <i class="fa-solid fa-coins text-accent-600 text-lg"></i>
+                        <span class="text-2xl font-black text-slate-200 group-hover:text-blue-800 transition-colors">05</span>
+                        <i class="fa-solid fa-coins text-blue-800 text-lg"></i>
                     </div>
-                    <h4 class="text-sm font-bold text-[#13202E] mb-1">Measure Bottom-Line ROI</h4>
-                    <p class="text-xs text-[#5C6470] line-clamp-2">Connect product updates directly to margin gains and cost savings.</p>
+                    <h4 class="text-sm font-bold text-slate-900 mb-1">Measure Bottom-Line ROI</h4>
+                    <p class="text-xs text-slate-500 line-clamp-2">Connect product updates directly to margin gains and cost savings.</p>
                 </div>
             </div>
 
             <!-- Dynamic explanation block -->
-            <div id="framework-explanation" class="mt-6 bg-white border border-black/10 p-4 rounded-lg text-[#2E2E2E] text-sm italic text-center">
-                <i class="fa-solid fa-circle-info text-brand-500 mr-2"></i> Click a step above to see it in action.
+            <div id="framework-explanation" class="mt-6 bg-white border border-slate-200 p-4 rounded-lg text-slate-700 text-sm italic text-center">
+                <i class="fa-solid fa-circle-info text-blue-600 mr-2"></i> Click a step above to see it in action.
             </div>
         </div>
     </section>
 
     <!-- About Section (Refactored to centered elegant narrative, removing professional profile) -->
     <section class="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-        <h2 class="text-xs font-bold text-brand-600 uppercase tracking-widest">About My Approach</h2>
-        <h3 class="text-3xl font-extrabold text-[#13202E]">Focusing on Business Outcomes, Not Just Building Dashboards</h3>
+        <h2 class="text-xs font-bold text-blue-800 uppercase tracking-widest">About My Approach</h2>
+        <h3 class="text-3xl font-extrabold text-slate-900">Focusing on Business Outcomes, Not Just Building Dashboards</h3>
         
-        <div class="space-y-4 text-[#2E2E2E] text-base sm:text-lg leading-relaxed font-light max-w-3xl mx-auto">
+        <div class="space-y-4 text-slate-700 text-base sm:text-lg leading-relaxed font-light max-w-3xl mx-auto">
             <p>
                 I turn complex customer journeys into insights teams can act on — improving conversion, reducing friction, and growing the business along the way.
             </p>
@@ -399,7 +397,7 @@
         </div>
         
         <div class="pt-4">
-            <button onclick="navigateTo('leadership')" class="inline-flex items-center space-x-2 text-brand-600 hover:text-brand-500 font-bold transition-colors group">
+            <button onclick="navigateTo('leadership')" class="inline-flex items-center space-x-2 text-blue-800 hover:text-blue-600 font-bold transition-colors group">
                 <span>Read My Full Leadership Philosophy</span>
                 <i class="fa-solid fa-chevron-right group-hover:translate-x-1 transition-transform"></i>
             </button>
@@ -407,14 +405,14 @@
     </section>
 
     <!-- Flagship Projects Section (Curated grid) -->
-    <section class="py-16 bg-black/[0.02] border-t border-black/10">
+    <section class="py-16 bg-slate-50 border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
                 <div>
-                    <h2 class="text-xs font-bold text-brand-600 uppercase tracking-widest">Featured Projects</h2>
-                    <h3 class="text-3xl font-extrabold text-[#13202E] mt-1">High-Impact Product Analytics</h3>
+                    <h2 class="text-xs font-bold text-blue-800 uppercase tracking-widest">Featured Projects</h2>
+                    <h3 class="text-3xl font-extrabold text-slate-900 mt-1">High-Impact Product Analytics</h3>
                 </div>
-                <button onclick="navigateTo('projects')" class="text-brand-600 hover:text-brand-500 font-bold text-sm flex items-center space-x-1 group mt-4 md:mt-0">
+                <button onclick="navigateTo('projects')" class="text-blue-800 hover:text-blue-600 font-bold text-sm flex items-center space-x-1 group mt-4 md:mt-0">
                     <span>View All Projects</span>
                     <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
                 </button>
@@ -431,16 +429,16 @@
 <!-- VIEW: ALL PROJECTS LIST -->
 <div id="view-projects" class="hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 animate-fade-in no-print">
     <div class="text-center max-w-3xl mx-auto mb-12">
-        <h1 class="text-3xl sm:text-4xl font-extrabold text-[#13202E]">Flagship Projects</h1>
-        <p class="text-[#5C6470] text-base mt-2">Real projects, real numbers. Click into any of them for the full story — what the problem was, what I did, and what changed.</p>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Flagship Projects</h1>
+        <p class="text-slate-500 text-base mt-2">Real projects, real numbers. Click into any of them for the full story — what the problem was, what I did, and what changed.</p>
         
         <!-- Interactive Category Filters -->
         <div class="flex flex-wrap justify-center gap-2 mt-6">
-            <button onclick="filterProjects('all')" id="filter-all" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-brand-500 text-white transition-all">All Projects</button>
-            <button onclick="filterProjects('Revenue & Conversion')" id="filter-rev" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-black/5 hover:bg-black/10 text-[#2E2E2E] transition-all">Revenue & Conversion</button>
-            <button onclick="filterProjects('Metric Integrity')" id="filter-met" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-black/5 hover:bg-black/10 text-[#2E2E2E] transition-all">Metric Integrity</button>
-            <button onclick="filterProjects('Experimentation')" id="filter-exp" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-black/5 hover:bg-black/10 text-[#2E2E2E] transition-all">Experimentation</button>
-            <button onclick="filterProjects('Risk & Compliance')" id="filter-risk" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-black/5 hover:bg-black/10 text-[#2E2E2E] transition-all">Risk & Compliance</button>
+            <button onclick="filterProjects('all')" id="filter-all" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-blue-600 text-white transition-all">All Projects</button>
+            <button onclick="filterProjects('Revenue & Conversion')" id="filter-rev" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">Revenue & Conversion</button>
+            <button onclick="filterProjects('Metric Integrity')" id="filter-met" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">Metric Integrity</button>
+            <button onclick="filterProjects('Experimentation')" id="filter-exp" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">Experimentation</button>
+            <button onclick="filterProjects('Risk & Compliance')" id="filter-risk" class="px-4 py-1.5 rounded-full text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">Risk & Compliance</button>
         </div>
     </div>
 
@@ -454,18 +452,18 @@
 <div id="view-project-detail" class="hidden max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 animate-fade-in no-print">
     <!-- Back Navigation and controls -->
     <div class="mb-8 flex items-center justify-between">
-        <button onclick="navigateTo('projects')" class="text-brand-600 hover:text-brand-500 font-bold text-sm flex items-center space-x-2">
+        <button onclick="navigateTo('projects')" class="text-blue-800 hover:text-blue-600 font-bold text-sm flex items-center space-x-2">
             <i class="fa-solid fa-arrow-left"></i>
             <span>Back to Projects</span>
         </button>
-        <span class="text-xs text-brand-600 bg-brand-50 border border-brand-100 px-3 py-1 rounded-full flex items-center space-x-1">
+        <span class="text-xs text-blue-800 bg-blue-50/80 border border-blue-200 px-3 py-1 rounded-full flex items-center space-x-1">
             <i class="fa-solid fa-user-shield"></i>
             <span>Compliance Generalization Applied</span>
         </span>
     </div>
 
     <!-- Container for dynamically injected Project Template content -->
-    <article id="project-detail-content" class="bg-white border border-black/10 rounded-2xl p-6 sm:p-10 space-y-8">
+    <article id="project-detail-content" class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-10 space-y-8">
         <!-- Injected via renderProjectDetail() -->
     </article>
 </div>
@@ -473,78 +471,78 @@
 <!-- VIEW: LEADERSHIP PHILOSOPHY -->
 <div id="view-leadership" class="hidden max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 animate-fade-in no-print">
     <div class="text-center max-w-3xl mx-auto mb-12">
-        <h1 class="text-3xl sm:text-4xl font-extrabold text-[#13202E]">How I Work</h1>
-        <p class="text-[#5C6470] text-base mt-2">Analysts deliver the most value when they stop just reporting what happened and start helping decide what to do next.</p>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900">How I Work</h1>
+        <p class="text-slate-500 text-base mt-2">Analysts deliver the most value when they stop just reporting what happened and start helping decide what to do next.</p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
         <!-- Principle 1 -->
-        <div class="bg-white border border-black/10 rounded-xl p-6 space-y-3">
-            <div class="h-10 w-10 bg-brand-50 text-brand-600 rounded-lg flex items-center justify-center border border-brand-100">
+        <div class="bg-white border border-slate-200 rounded-xl p-6 space-y-3">
+            <div class="h-10 w-10 bg-blue-50/80 text-blue-800 rounded-lg flex items-center justify-center border border-blue-200">
                 <i class="fa-solid fa-compass text-lg"></i>
             </div>
-            <h3 class="text-lg font-bold text-[#13202E]">1. Start with the Business Problem</h3>
-            <p class="text-sm text-[#2E2E2E] leading-relaxed font-light">
+            <h3 class="text-lg font-bold text-slate-900">1. Start with the Business Problem</h3>
+            <p class="text-sm text-slate-700 leading-relaxed font-light">
                 I don't open a spreadsheet until I know what we're actually trying to answer. "Why is funding down?" gets you a different — and better — analysis than "pull the funding numbers."
             </p>
         </div>
 
         <!-- Principle 2 -->
-        <div class="bg-white border border-black/10 rounded-xl p-6 space-y-3">
-            <div class="h-10 w-10 bg-accent-500/10 text-accent-600 rounded-lg flex items-center justify-center border border-black/10">
+        <div class="bg-white border border-slate-200 rounded-xl p-6 space-y-3">
+            <div class="h-10 w-10 bg-blue-50/80 text-blue-800 rounded-lg flex items-center justify-center border border-slate-200">
                 <i class="fa-solid fa-shield-heart text-lg"></i>
             </div>
-            <h3 class="text-lg font-bold text-[#13202E]">2. Make Metrics Trustworthy</h3>
-            <p class="text-sm text-[#2E2E2E] leading-relaxed font-light">
+            <h3 class="text-lg font-bold text-slate-900">2. Make Metrics Trustworthy</h3>
+            <p class="text-sm text-slate-700 leading-relaxed font-light">
                 If people don't trust the data, nothing built on top of it matters. I clean up definitions, fix reporting lag, and make sure everyone's looking at the same source of truth.
             </p>
         </div>
 
         <!-- Principle 3 -->
-        <div class="bg-white border border-black/10 rounded-xl p-6 space-y-3">
-            <div class="h-10 w-10 bg-brand-50 text-brand-600 rounded-lg flex items-center justify-center border border-brand-100">
+        <div class="bg-white border border-slate-200 rounded-xl p-6 space-y-3">
+            <div class="h-10 w-10 bg-blue-50/80 text-blue-800 rounded-lg flex items-center justify-center border border-blue-200">
                 <i class="fa-solid fa-users-viewfinder text-lg"></i>
             </div>
-            <h3 class="text-lg font-bold text-[#13202E]">3. Bring Stakeholders Along Early</h3>
-            <p class="text-sm text-[#2E2E2E] leading-relaxed font-light">
+            <h3 class="text-lg font-bold text-slate-900">3. Bring Stakeholders Along Early</h3>
+            <p class="text-sm text-slate-700 leading-relaxed font-light">
                 Findings shouldn't be a surprise. I check assumptions with product, design, compliance, and engineering before I finalize anything.
             </p>
         </div>
 
         <!-- Principle 4 -->
-        <div class="bg-white border border-black/10 rounded-xl p-6 space-y-3">
-            <div class="h-10 w-10 bg-brand-50 text-brand-600 rounded-lg flex items-center justify-center border border-brand-100">
+        <div class="bg-white border border-slate-200 rounded-xl p-6 space-y-3">
+            <div class="h-10 w-10 bg-blue-50/80 text-blue-800 rounded-lg flex items-center justify-center border border-blue-200">
                 <i class="fa-solid fa-circle-check text-lg"></i>
             </div>
-            <h3 class="text-lg font-bold text-[#13202E]">4. Measure Outcomes, Not Outputs</h3>
-            <p class="text-sm text-[#2E2E2E] leading-relaxed font-light">
+            <h3 class="text-lg font-bold text-slate-900">4. Measure Outcomes, Not Outputs</h3>
+            <p class="text-sm text-slate-700 leading-relaxed font-light">
                 Scripts written and dashboards shipped don't matter. What matters is the bottleneck removed, the hours saved, the decision made with confidence.
             </p>
         </div>
     </div>
 
     <!-- Interactive Leadership Simulation Grid -->
-    <div class="mt-12 bg-white p-6 sm:p-10 rounded-2xl border border-black/10 relative">
-        <h3 class="text-xl font-bold text-[#13202E] mb-2">Philosophy in Action: Real-World Scenario</h3>
-        <p class="text-xs text-[#5C6470] mb-6 uppercase tracking-wider">Pick a situation and see how I'd actually approach it.</p>
+    <div class="mt-12 bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 relative">
+        <h3 class="text-xl font-bold text-slate-900 mb-2">Philosophy in Action: Real-World Scenario</h3>
+        <p class="text-xs text-slate-500 mb-6 uppercase tracking-wider">Pick a situation and see how I'd actually approach it.</p>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4" id="scenario-selector">
-            <button onclick="triggerScenario(1)" class="p-4 bg-black/[0.02] border border-brand-500/30 text-left rounded-lg hover:border-brand-500 transition-all">
-                <div class="text-brand-600 text-xs font-bold uppercase mb-1">Scenario A</div>
-                <div class="text-[#13202E] text-sm font-semibold">Google releases an Ad Quality update shifting search volumes.</div>
+            <button onclick="triggerScenario(1)" class="p-4 bg-slate-50 border border-blue-600/30 text-left rounded-lg hover:border-blue-600 transition-all">
+                <div class="text-blue-800 text-xs font-bold uppercase mb-1">Scenario A</div>
+                <div class="text-slate-900 text-sm font-semibold">Google releases an Ad Quality update shifting search volumes.</div>
             </button>
-            <button onclick="triggerScenario(2)" class="p-4 bg-black/[0.02] border border-black/10 text-left rounded-lg hover:border-accent-500 transition-all">
-                <div class="text-accent-600 text-xs font-bold uppercase mb-1">Scenario B</div>
-                <div class="text-[#13202E] text-sm font-semibold">Paid search teams worry PMax is cannibalizing traditional search.</div>
+            <button onclick="triggerScenario(2)" class="p-4 bg-slate-50 border border-slate-200 text-left rounded-lg hover:border-blue-600 transition-all">
+                <div class="text-blue-800 text-xs font-bold uppercase mb-1">Scenario B</div>
+                <div class="text-slate-900 text-sm font-semibold">Paid search teams worry PMax is cannibalizing traditional search.</div>
             </button>
-            <button onclick="triggerScenario(3)" class="p-4 bg-black/[0.02] border border-black/10 text-left rounded-lg hover:border-brand-500 transition-all">
-                <div class="text-brand-600 text-xs font-semibold block uppercase mb-1">Scenario C</div>
-                <div class="text-[#13202E] text-sm font-semibold">Teams want to cross-sell Urgent Care users into other therapies.</div>
+            <button onclick="triggerScenario(3)" class="p-4 bg-slate-50 border border-slate-200 text-left rounded-lg hover:border-blue-600 transition-all">
+                <div class="text-blue-800 text-xs font-semibold block uppercase mb-1">Scenario C</div>
+                <div class="text-slate-900 text-sm font-semibold">Teams want to cross-sell Urgent Care users into other therapies.</div>
             </button>
         </div>
 
-        <div id="scenario-result" class="mt-6 p-6 bg-black/[0.02] rounded-xl border border-black/10 animate-fade-in text-sm">
-            <div class="text-[#5C6470] italic">Select a scenario above to view the diagnostic response strategy and step-by-step resolution path.</div>
+        <div id="scenario-result" class="mt-6 p-6 bg-slate-50 rounded-xl border border-slate-200 animate-fade-in text-sm">
+            <div class="text-slate-500 italic">Select a scenario above to view the diagnostic response strategy and step-by-step resolution path.</div>
         </div>
     </div>
 </div>
@@ -552,87 +550,87 @@
 <!-- VIEW: SKILLS & TOOLKIT -->
 <div id="view-skills" class="hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 animate-fade-in no-print">
     <div class="text-center max-w-3xl mx-auto mb-12">
-        <h1 class="text-3xl sm:text-4xl font-extrabold text-[#13202E]">Skills & Toolkit</h1>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Skills & Toolkit</h1>
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
         <!-- Analytics Competencies -->
-        <div class="bg-white border border-black/10 rounded-2xl p-6 space-y-6">
-            <div class="flex items-center space-x-3 pb-3 border-b border-black/10">
-                <div class="bg-brand-50 text-brand-600 p-2.5 rounded-lg border border-brand-100">
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 space-y-6">
+            <div class="flex items-center space-x-3 pb-3 border-b border-slate-200">
+                <div class="bg-blue-50/80 text-blue-800 p-2.5 rounded-lg border border-blue-200">
                     <i class="fa-solid fa-square-poll-vertical text-lg"></i>
                 </div>
                 <div>
-                    <h3 class="text-base font-bold text-[#13202E] leading-tight">Data Analytics</h3>
-                    <p class="text-[11px] text-[#5C6470]">Modeling & insights</p>
+                    <h3 class="text-base font-bold text-slate-900 leading-tight">Data Analytics</h3>
+                    <p class="text-[11px] text-slate-500">Modeling & insights</p>
                 </div>
             </div>
             
-            <ul class="space-y-3.5 text-xs text-[#2E2E2E]">
-                <li class="flex items-start space-x-3"><i class="fa-solid fa-circle-check text-brand-500 mt-0.5"></i> <div><strong>SQL, BigQuery, Snowflake:</strong> Querying and modeling large transaction histories.</div></li>
-                <li class="flex items-start space-x-3"><i class="fa-solid fa-circle-check text-brand-500 mt-0.5"></i> <div><strong>Python:</strong> Cleaning data and building regression models.</div></li>
-                <li class="flex items-start space-x-3"><i class="fa-solid fa-circle-check text-brand-500 mt-0.5"></i> <div><strong>Alteryx, Tableau:</strong> Automated data prep and clear visualization.</div></li>
-                <li class="flex items-start space-x-3"><i class="fa-solid fa-circle-check text-brand-500 mt-0.5"></i> <div><strong>Power BI, Sigma:</strong> Reporting that teams actually use day to day.</div></li>
+            <ul class="space-y-3.5 text-xs text-slate-700">
+                <li class="flex items-start space-x-3"><i class="fa-solid fa-circle-check text-blue-600 mt-0.5"></i> <div><strong>SQL, BigQuery, Snowflake:</strong> Querying and modeling large transaction histories.</div></li>
+                <li class="flex items-start space-x-3"><i class="fa-solid fa-circle-check text-blue-600 mt-0.5"></i> <div><strong>Python:</strong> Cleaning data and building regression models.</div></li>
+                <li class="flex items-start space-x-3"><i class="fa-solid fa-circle-check text-blue-600 mt-0.5"></i> <div><strong>Alteryx, Tableau:</strong> Automated data prep and clear visualization.</div></li>
+                <li class="flex items-start space-x-3"><i class="fa-solid fa-circle-check text-blue-600 mt-0.5"></i> <div><strong>Power BI, Sigma:</strong> Reporting that teams actually use day to day.</div></li>
             </ul>
         </div>
 
         <!-- AI and Developer Toolkit -->
-        <div class="bg-white border border-black/10 rounded-2xl p-6 space-y-6">
-            <div class="flex items-center space-x-3 pb-3 border-b border-black/10">
-                <div class="bg-accent-500/10 text-accent-600 p-2.5 rounded-lg border border-black/10">
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 space-y-6">
+            <div class="flex items-center space-x-3 pb-3 border-b border-slate-200">
+                <div class="bg-blue-50/80 text-blue-800 p-2.5 rounded-lg border border-slate-200">
                     <i class="fa-solid fa-brain text-lg"></i>
                 </div>
                 <div>
-                    <h3 class="text-base font-bold text-[#13202E] leading-tight">AI & Dev Toolkit</h3>
-                    <p class="text-[11px] text-[#5C6470]">LLMs & environments</p>
+                    <h3 class="text-base font-bold text-slate-900 leading-tight">AI & Dev Toolkit</h3>
+                    <p class="text-[11px] text-slate-500">LLMs & environments</p>
                 </div>
             </div>
             
-            <ul class="space-y-3.5 text-xs text-[#2E2E2E]">
-                <li class="flex items-start space-x-3"><i class="fa-solid fa-circle-check text-accent-600 mt-0.5"></i> <div><strong>ChatGPT & Claude APIs:</strong> Sorting unstructured customer feedback automatically.</div></li>
-                <li class="flex items-start space-x-3"><i class="fa-solid fa-circle-check text-accent-600 mt-0.5"></i> <div><strong>Claude Code, Codex:</strong> Building and checking SQL models faster.</div></li>
-                <li class="flex items-start space-x-3"><i class="fa-solid fa-circle-check text-accent-600 mt-0.5"></i> <div><strong>VS Code, GitHub:</strong> Keeping analysis work reproducible.</div></li>
-                <li class="flex items-start space-x-3"><i class="fa-solid fa-circle-check text-accent-600 mt-0.5"></i> <div><strong>Prompt design:</strong> Getting consistent output from AI tools on messy text.</div></li>
+            <ul class="space-y-3.5 text-xs text-slate-700">
+                <li class="flex items-start space-x-3"><i class="fa-solid fa-circle-check text-blue-800 mt-0.5"></i> <div><strong>ChatGPT & Claude APIs:</strong> Sorting unstructured customer feedback automatically.</div></li>
+                <li class="flex items-start space-x-3"><i class="fa-solid fa-circle-check text-blue-800 mt-0.5"></i> <div><strong>Claude Code, Codex:</strong> Building and checking SQL models faster.</div></li>
+                <li class="flex items-start space-x-3"><i class="fa-solid fa-circle-check text-blue-800 mt-0.5"></i> <div><strong>VS Code, GitHub:</strong> Keeping analysis work reproducible.</div></li>
+                <li class="flex items-start space-x-3"><i class="fa-solid fa-circle-check text-blue-800 mt-0.5"></i> <div><strong>Prompt design:</strong> Getting consistent output from AI tools on messy text.</div></li>
             </ul>
         </div>
 
         <!-- Product Competencies -->
-        <div class="bg-white border border-black/10 rounded-2xl p-6 space-y-6">
-            <div class="flex items-center space-x-3 pb-3 border-b border-black/10">
-                <div class="bg-brand-50 text-brand-600 p-2.5 rounded-lg border border-brand-100">
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 space-y-6">
+            <div class="flex items-center space-x-3 pb-3 border-b border-slate-200">
+                <div class="bg-blue-50/80 text-blue-800 p-2.5 rounded-lg border border-blue-200">
                     <i class="fa-solid fa-lightbulb text-lg"></i>
                 </div>
                 <div>
-                    <h3 class="text-base font-bold text-[#13202E] leading-tight">Product Strategy</h3>
-                    <p class="text-[11px] text-[#5C6470]">Deciding what to test</p>
+                    <h3 class="text-base font-bold text-slate-900 leading-tight">Product Strategy</h3>
+                    <p class="text-[11px] text-slate-500">Deciding what to test</p>
                 </div>
             </div>
             
-            <ul class="space-y-3.5 text-xs text-[#2E2E2E]">
-                <li class="flex items-start space-x-3"><i class="fa-solid fa-circle-check text-brand-500 mt-0.5"></i> <div><strong>A/B & multi-armed testing:</strong> Running tests that actually settle the question.</div></li>
-                <li class="flex items-start space-x-3"><i class="fa-solid fa-circle-check text-brand-500 mt-0.5"></i> <div><strong>KPI design:</strong> Picking metrics teams will agree on.</div></li>
-                <li class="flex items-start space-x-3"><i class="fa-solid fa-circle-check text-brand-500 mt-0.5"></i> <div><strong>Opportunity sizing:</strong> Knowing if an idea is worth building before it's built.</div></li>
-                <li class="flex items-start space-x-3"><i class="fa-solid fa-circle-check text-brand-500 mt-0.5"></i> <div><strong>OKRs & planning:</strong> Keeping analysis tied to company goals.</div></li>
+            <ul class="space-y-3.5 text-xs text-slate-700">
+                <li class="flex items-start space-x-3"><i class="fa-solid fa-circle-check text-blue-600 mt-0.5"></i> <div><strong>A/B & multi-armed testing:</strong> Running tests that actually settle the question.</div></li>
+                <li class="flex items-start space-x-3"><i class="fa-solid fa-circle-check text-blue-600 mt-0.5"></i> <div><strong>KPI design:</strong> Picking metrics teams will agree on.</div></li>
+                <li class="flex items-start space-x-3"><i class="fa-solid fa-circle-check text-blue-600 mt-0.5"></i> <div><strong>Opportunity sizing:</strong> Knowing if an idea is worth building before it's built.</div></li>
+                <li class="flex items-start space-x-3"><i class="fa-solid fa-circle-check text-blue-600 mt-0.5"></i> <div><strong>OKRs & planning:</strong> Keeping analysis tied to company goals.</div></li>
             </ul>
         </div>
 
         <!-- Leadership Competencies -->
-        <div class="bg-white border border-black/10 rounded-2xl p-6 space-y-6">
-            <div class="flex items-center space-x-3 pb-3 border-b border-black/10">
-                <div class="bg-brand-50 text-brand-600 p-2.5 rounded-lg border border-brand-100">
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 space-y-6">
+            <div class="flex items-center space-x-3 pb-3 border-b border-slate-200">
+                <div class="bg-blue-50/80 text-blue-800 p-2.5 rounded-lg border border-blue-200">
                     <i class="fa-solid fa-people-line text-lg"></i>
                 </div>
                 <div>
-                    <h3 class="text-base font-bold text-[#13202E] leading-tight">Leadership</h3>
-                    <p class="text-[11px] text-[#5C6470]">Getting things over the line</p>
+                    <h3 class="text-base font-bold text-slate-900 leading-tight">Leadership</h3>
+                    <p class="text-[11px] text-slate-500">Getting things over the line</p>
                 </div>
             </div>
             
-            <ul class="space-y-3.5 text-xs text-[#2E2E2E]">
-                <li class="flex items-start space-x-3"><i class="fa-solid fa-circle-check text-brand-500 mt-0.5"></i> <div><strong>Stakeholder communication:</strong> Translating detail into what leadership needs to know.</div></li>
-                <li class="flex items-start space-x-3"><i class="fa-solid fa-circle-check text-brand-500 mt-0.5"></i> <div><strong>Executive Communication:</strong> Tailoring updates for Managers, Directors, and VPs.</div></li>
-                <li class="flex items-start space-x-3"><i class="fa-solid fa-circle-check text-brand-500 mt-0.5"></i> <div><strong>Mentoring:</strong> Helping junior analysts grow.</div></li>
-                <li class="flex items-start space-x-3"><i class="fa-solid fa-circle-check text-brand-500 mt-0.5"></i> <div><strong>Strategic framing:</strong> Moving teams from "what happened" to "what next."</div></li>
+            <ul class="space-y-3.5 text-xs text-slate-700">
+                <li class="flex items-start space-x-3"><i class="fa-solid fa-circle-check text-blue-600 mt-0.5"></i> <div><strong>Stakeholder communication:</strong> Translating detail into what leadership needs to know.</div></li>
+                <li class="flex items-start space-x-3"><i class="fa-solid fa-circle-check text-blue-600 mt-0.5"></i> <div><strong>Executive Communication:</strong> Tailoring updates for Managers, Directors, and VPs.</div></li>
+                <li class="flex items-start space-x-3"><i class="fa-solid fa-circle-check text-blue-600 mt-0.5"></i> <div><strong>Mentoring:</strong> Helping junior analysts grow.</div></li>
+                <li class="flex items-start space-x-3"><i class="fa-solid fa-circle-check text-blue-600 mt-0.5"></i> <div><strong>Strategic framing:</strong> Moving teams from "what happened" to "what next."</div></li>
             </ul>
         </div>
     </div>
@@ -641,37 +639,37 @@
 <!-- VIEW: WRITING & INSIGHTS -->
 <div id="view-writing" class="hidden max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 animate-fade-in no-print">
     <div class="text-center max-w-3xl mx-auto mb-12">
-        <h1 class="text-3xl sm:text-4xl font-extrabold text-[#13202E]">Insights & Strategy</h1>
-        <p class="text-[#5C6470] text-base mt-2">A few things I've learned doing this work. Pick a topic to read.</p>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Insights & Strategy</h1>
+        <p class="text-slate-500 text-base mt-2">A few things I've learned doing this work. Pick a topic to read.</p>
     </div>
 
     <!-- Live Article Selector list -->
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
         <div class="lg:col-span-5 space-y-4" id="articles-menu">
             <!-- Article 1 -->
-            <button onclick="readArticle(1)" id="art-btn-1" class="w-full text-left p-4 rounded-xl border border-brand-500/40 bg-white hover:border-brand-500 transition-all block group">
-                <span class="text-brand-600 text-xs font-semibold block uppercase tracking-wider">Revenue Analytics</span>
-                <span class="text-[#13202E] text-base font-bold block mt-1 leading-tight group-hover:text-brand-600">What Funding Funnels Taught Me About Revenue Leakage</span>
-                <span class="text-xs text-[#5C6470] block mt-2">It's rarely the traffic. It's almost always the last step before checkout.</span>
+            <button onclick="readArticle(1)" id="art-btn-1" class="w-full text-left p-4 rounded-xl border border-blue-600/40 bg-white hover:border-blue-600 transition-all block group">
+                <span class="text-blue-800 text-xs font-semibold block uppercase tracking-wider">Revenue Analytics</span>
+                <span class="text-slate-900 text-base font-bold block mt-1 leading-tight group-hover:text-blue-800">What Funding Funnels Taught Me About Revenue Leakage</span>
+                <span class="text-xs text-slate-500 block mt-2">It's rarely the traffic. It's almost always the last step before checkout.</span>
             </button>
             
             <!-- Article 2 -->
-            <button onclick="readArticle(2)" id="art-btn-2" class="w-full text-left p-4 rounded-xl border border-black/10 bg-black/[0.01] hover:border-accent-500 transition-all block group">
-                <span class="text-accent-600 text-xs font-semibold block uppercase tracking-wider">Product Strategy</span>
-                <span class="text-[#13202E] text-base font-bold block mt-1 leading-tight group-hover:text-accent-600">Why Analysts Should Think Like Product Managers</span>
-                <span class="text-xs text-[#5C6470] block mt-2">Writing queries is the easy part. Knowing what to build next is the job.</span>
+            <button onclick="readArticle(2)" id="art-btn-2" class="w-full text-left p-4 rounded-xl border border-slate-200 bg-slate-50 hover:border-blue-600 transition-all block group">
+                <span class="text-blue-800 text-xs font-semibold block uppercase tracking-wider">Product Strategy</span>
+                <span class="text-slate-900 text-base font-bold block mt-1 leading-tight group-hover:text-blue-800">Why Analysts Should Think Like Product Managers</span>
+                <span class="text-xs text-slate-500 block mt-2">Writing queries is the easy part. Knowing what to build next is the job.</span>
             </button>
 
             <!-- Article 3 -->
-            <button onclick="readArticle(3)" id="art-btn-3" class="w-full text-left p-4 rounded-xl border border-black/10 bg-black/[0.01] hover:border-brand-500 transition-all block group">
-                <span class="text-brand-600 text-xs font-semibold block uppercase tracking-wider">A.I. in Practice</span>
-                <span class="text-[#13202E] text-base font-bold block mt-1 leading-tight group-hover:text-brand-600">Where AI Actually Helps With Data Work</span>
-                <span class="text-xs text-[#5C6470] block mt-2">Not for the analysis. For the mess that comes before it.</span>
+            <button onclick="readArticle(3)" id="art-btn-3" class="w-full text-left p-4 rounded-xl border border-slate-200 bg-slate-50 hover:border-blue-600 transition-all block group">
+                <span class="text-blue-800 text-xs font-semibold block uppercase tracking-wider">A.I. in Practice</span>
+                <span class="text-slate-900 text-base font-bold block mt-1 leading-tight group-hover:text-blue-800">Where AI Actually Helps With Data Work</span>
+                <span class="text-xs text-slate-500 block mt-2">Not for the analysis. For the mess that comes before it.</span>
             </button>
         </div>
 
         <!-- Article Reader Panel -->
-        <div class="lg:col-span-7 bg-white border border-black/10 p-6 sm:p-8 rounded-2xl" id="article-reader-body">
+        <div class="lg:col-span-7 bg-white border border-slate-200 p-6 sm:p-8 rounded-2xl" id="article-reader-body">
             <!-- Injected via readArticle() -->
         </div>
     </div>
@@ -680,74 +678,74 @@
 <!-- VIEW: RESUME & TIMELINE -->
 <div id="view-resume" class="hidden max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 animate-fade-in">
     <!-- Header with controls -->
-    <div class="flex flex-col md:flex-row md:items-center md:justify-between pb-8 border-b border-black/10 mb-10 no-print">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between pb-8 border-b border-slate-200 mb-10 no-print">
         <div class="space-y-1">
-            <h1 class="text-3xl sm:text-4xl font-extrabold text-[#13202E]">Tatenda Uta</h1>
-            <p class="text-brand-600 font-bold text-base">AI & Analytics Decision Partner</p>   
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Tatenda Uta</h1>
+            <p class="text-blue-800 font-bold text-base">AI & Analytics Decision Partner</p>   
         </div>
         <div class="mt-4 md:mt-0 flex flex-wrap gap-3">
-            <a href="resume.pdf" target="_blank" class="bg-brand-500 hover:bg-brand-600 text-white font-bold px-4 py-2.5 rounded-lg text-xs uppercase tracking-widest flex items-center space-x-2 shadow-lg shadow-brand-500/15">
+            <a href="resume.pdf" target="_blank" class="bg-blue-600 hover:bg-blue-800 text-white font-bold px-4 py-2.5 rounded-lg text-xs uppercase tracking-widest flex items-center space-x-2 shadow-lg shadow-blue-600/15">
                 <i class="fa-solid fa-file-pdf"></i>
                 <span>Print Resume</span>
             </a>
-            <a href="mailto:tatendauta@gmail.com" class="bg-white hover:bg-black/[0.03] text-[#13202E] border border-black/15 font-bold px-4 py-2.5 rounded-lg text-xs uppercase tracking-widest flex items-center space-x-2">
-                <i class="fa-solid fa-calendar-days"></i>
+            <button onclick="navigateTo('contact')" class="bg-white hover:bg-slate-100 text-slate-900 border border-slate-300 font-bold px-4 py-2.5 rounded-lg text-xs uppercase tracking-widest flex items-center space-x-2">
+                <i class="fa-solid fa-address-card"></i>
                 <span>Contact Tatenda</span>
-            </a>
+            </button>
         </div>
     </div>
 
     <!-- Complete resume template tailored for both web display and professional A4 printouts -->
-    <div class="print-bg-white bg-white border border-black/10 rounded-2xl p-6 sm:p-10 space-y-8 text-sm print-text-dark">
+    <div class="print-bg-white bg-white border border-slate-200 rounded-2xl p-6 sm:p-10 space-y-8 text-sm print-text-dark">
         
         <!-- Header details section -->
-        <div class="text-center pb-6 border-b border-black/10 print-border">
-            <h2 class="text-3xl font-black tracking-tight text-[#13202E] print:text-black">TATENDA UTA</h2>
-            <div class="text-[#2E2E2E] print:text-slate-800 font-medium mt-1">856-938-7333 | tatendauta@gmail.com | www.linkedin.com/in/tatendauta</div>
+        <div class="text-center pb-6 border-b border-slate-200 print-border">
+            <h2 class="text-3xl font-black tracking-tight text-slate-900 print:text-black">TATENDA UTA</h2>
+            <div class="text-slate-700 print:text-slate-800 font-medium mt-1">856-938-7333 | tatendauta@gmail.com | www.linkedin.com/in/tatendauta</div>
         </div>
 
         <!-- Summary -->
         <div class="space-y-2">
-            <h3 class="text-sm font-bold uppercase tracking-widest text-brand-600 border-b border-black/10 pb-1">Professional Summary</h3>
-            <p class="text-[#2E2E2E] print:text-slate-800 font-light leading-relaxed">
+            <h3 class="text-sm font-bold uppercase tracking-widest text-blue-800 border-b border-slate-200 pb-1">Professional Summary</h3>
+            <p class="text-slate-700 print:text-slate-800 font-light leading-relaxed">
                 Business Intelligence and Product Analytics leader with a decade of experience scaling profitability through advanced data modeling and now AI implementation and prompt engineering. Combining deep technical proficiency in SQL, Python, and Power BI with cross-functional project management, I lead transformative product initiatives. I specialize in moving organizations beyond passive reporting to engineer strategic decision engines that challenge assumptions, eliminate structural waste, and unlock multi-million-dollar business value.
             </p>
         </div>
 
         <!-- Technical Stack -->
         <div class="space-y-3">
-            <h3 class="text-sm font-bold uppercase tracking-widest text-brand-600 border-b border-black/10 pb-1">Technical Proficiency & Core Competencies</h3>
+            <h3 class="text-sm font-bold uppercase tracking-widest text-blue-800 border-b border-slate-200 pb-1">Technical Proficiency & Core Competencies</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                    <span class="text-xs font-bold text-[#13202E] print:text-black block">Analytics & Dev Stack</span>
-                    <p class="text-[#2E2E2E] print:text-slate-800 font-light mt-1">SQL, BigQuery, Snowflake, Python, Segment CDP, VS Code, Codex, Tableau, Power BI, GitHub, SAP BW, Asana, Generative A.I., Alteryx, Segment, MS Office Products</p>
+                    <span class="text-xs font-bold text-slate-900 print:text-black block">Analytics & Dev Stack</span>
+                    <p class="text-slate-700 print:text-slate-800 font-light mt-1">SQL, BigQuery, Snowflake, Python, Segment CDP, VS Code, Codex, Tableau, Power BI, GitHub, SAP BW, Asana, Generative A.I., Alteryx, Segment, MS Office Products</p>
                 </div>
                 <div>
-                    <span class="text-xs font-bold text-[#13202E] print:text-black block">Core Competencies</span>
-                    <p class="text-[#2E2E2E] print:text-slate-800 font-light mt-1">AI Prompt Engineering, A/B & MAB Testing, Full-Funnel Optimization, Data Science Modeling, Customer Retention & Cohort Analysis, Customer Segmentation (RFM), Price Variance Analysis, Predictive Churn Modeling</p>
+                    <span class="text-xs font-bold text-slate-900 print:text-black block">Core Competencies</span>
+                    <p class="text-slate-700 print:text-slate-800 font-light mt-1">AI Prompt Engineering, A/B & MAB Testing, Full-Funnel Optimization, Data Science Modeling, Customer Retention & Cohort Analysis, Customer Segmentation (RFM), Price Variance Analysis, Predictive Churn Modeling</p>
                 </div>
             </div>
         </div>
 
         <!-- Experience timeline -->
         <div class="space-y-6">
-            <h3 class="text-sm font-bold uppercase tracking-widest text-brand-600 border-b border-black/10 pb-1">Professional Experience</h3>
+            <h3 class="text-sm font-bold uppercase tracking-widest text-blue-800 border-b border-slate-200 pb-1">Professional Experience</h3>
             
             <!-- JustAnswer -->
             <div class="space-y-4">
                 <div class="flex justify-between items-start font-bold">
                     <div>
-                        <span class="text-base text-[#13202E] print:text-black uppercase">AI ENGINEERING & PRODUCT ANALYTICS</span>  
-                        <div class="text-xs text-brand-600">Pearl (JustAnswer Inc.)</div>
+                        <span class="text-base text-slate-900 print:text-black uppercase">AI ENGINEERING & PRODUCT ANALYTICS</span>  
+                        <div class="text-xs text-blue-800">Pearl (JustAnswer Inc.)</div>
                     </div>
-                    <span class="text-xs text-brand-600 font-bold tracking-wider print:text-slate-700">February 2022 - Present</span>
+                    <span class="text-xs text-blue-800 font-bold tracking-wider print:text-slate-700">February 2022 - Present</span>
                 </div>
-                <p class="text-xs text-[#5C6470] italic">Online platform that combines AI and human experts to provide verified answers to complex questions.</p>
+                <p class="text-xs text-slate-500 italic">Online platform that combines AI and human experts to provide verified answers to complex questions.</p>
                 
                 <!-- Subcategory 1 -->
                 <div class="space-y-2 pl-2">
-                    <h4 class="text-xs font-bold text-[#13202E] print:text-black uppercase tracking-wide border-l-2 border-brand-500 pl-2">Product Strategy & Revenue Growth</h4>
-                    <ul class="space-y-2 text-[#2E2E2E] print:text-slate-800 font-light pl-4 list-disc">
+                    <h4 class="text-xs font-bold text-slate-900 print:text-black uppercase tracking-wide border-l-2 border-blue-600 pl-2">Product Strategy & Revenue Growth</h4>
+                    <ul class="space-y-2 text-slate-700 print:text-slate-800 font-light pl-4 list-disc">
                         <li><strong>Macro Revenue Decompositions:</strong> Decoded an $8M–$15M+ YoY increase in contribution margin by engineering an end-to-end, multi-dimensional full-funnel decomposition across domain type, vertical, channel, country, device, and funnel type. Proved domestic margin expansion was operationally powered by Javatar platform growth (seven-figure expansion) and Japan scaling (seven-figure expansion).</li>
                         <li><strong>Telehealth Standalone Optimization:</strong> Created Power BI profiles and 3-year LTV frameworks for the Telehealth and Urgent Care vertical. Proved cross-sell therapy rates sat at near-zero (&lt;0.2%), successfully shifting product focus to standalone optimizations.</li>
                     </ul>
@@ -755,8 +753,8 @@
 
                 <!-- Subcategory 2 -->
                 <div class="space-y-2 pl-2">
-                    <h4 class="text-xs font-bold text-[#13202E] print:text-black uppercase tracking-wide border-l-2 border-brand-500 pl-2">Marketing & Customer Acquisition Analytics</h4>
-                    <ul class="space-y-2 text-[#2E2E2E] print:text-slate-800 font-light pl-4 list-disc">
+                    <h4 class="text-xs font-bold text-slate-900 print:text-black uppercase tracking-wide border-l-2 border-blue-600 pl-2">Marketing & Customer Acquisition Analytics</h4>
+                    <ul class="space-y-2 text-slate-700 print:text-slate-800 font-light pl-4 list-disc">
                         <li><strong>Performance Max Incrementality Study:</strong> Evaluated keyword cannibalization, proving Performance Max was a net-positive expansion layer that generated over 1M+ net-new queries, $1M+ incremental revenue, and a six-figure margin.</li>
                         <li><strong>Geographic PPC Portfolio Design:</strong> Reconstructed paid search funnels to ZIP levels, identifying 5.2% structural traffic waste while reallocating budget to high-efficiency Rural segments yielding 3.73% landing page conversion rates (LPCR).</li>
                         <li><strong>Health Vertical & Creative Optimization:</strong> Deployed an LLM semantic classification model in dynamically clustering ad copy to accelerate iterative testing. Engineered a data pipeline combining granular Google Ads UI asset text data with backend SQL tables. Conducted Healthcare N-Gram and Headline analysis across 17,000+ vertical conversations, isolating key semantic drivers of profitability and pinpointing negative-margin headlines to drive immediate bid exclusions.</li>
@@ -765,8 +763,8 @@
 
                 <!-- Subcategory 3 -->
                 <div class="space-y-2 pl-2">
-                    <h4 class="text-xs font-bold text-[#13202E] print:text-black uppercase tracking-wide border-l-2 border-brand-500 pl-2">AI & Engineering Operations</h4>
-                    <ul class="space-y-2 text-[#2E2E2E] print:text-slate-800 font-light pl-4 list-disc">
+                    <h4 class="text-xs font-bold text-slate-900 print:text-black uppercase tracking-wide border-l-2 border-blue-600 pl-2">AI & Engineering Operations</h4>
+                    <ul class="space-y-2 text-slate-700 print:text-slate-800 font-light pl-4 list-disc">
                         <li><strong>AI & LLM Product Innovation:</strong> Architected and deployed a standardized "Google Experiment Agent" and "HFS Score Agent" in the internal Agent Hub, reducing pre/post marketing analysis time by 50% under strict statistical protocols.</li>
                         <li><strong>NLP Cancellation Modeling:</strong> Engineered a customer exit feedback processing pipeline leveraging the ChatGPT API to automatically categorize qualitative logs into real-time quantitative retention metrics.</li>
                     </ul>
@@ -774,32 +772,32 @@
             </div>
 
             <!-- Ashley Furniture -->
-            <div class="space-y-2 pt-4 border-t border-black/10 print-border">
+            <div class="space-y-2 pt-4 border-t border-slate-200 print-border">
                 <div class="flex justify-between items-start font-bold">
                     <div>
-                        <span class="text-base text-[#13202E] print:text-black uppercase">SENIOR BUSINESS INTELLIGENCE ANALYST</span>
-                        <div class="text-xs text-brand-600">Ashley Furniture Industries Inc.</div>
+                        <span class="text-base text-slate-900 print:text-black uppercase">SENIOR BUSINESS INTELLIGENCE ANALYST</span>
+                        <div class="text-xs text-blue-800">Ashley Furniture Industries Inc.</div>
                     </div>
-                    <span class="text-xs text-[#5C6470] print:text-slate-700">February 2021 - February 2022</span>
+                    <span class="text-xs text-slate-500 print:text-slate-700">February 2021 - February 2022</span>
                 </div>
-                <p class="text-xs text-[#5C6470] italic">Global manufacturer and retailer of home furnishings.</p>
-                <ul class="space-y-1.5 text-[#2E2E2E] print:text-slate-800 font-light pl-4 list-disc">
+                <p class="text-xs text-slate-500 italic">Global manufacturer and retailer of home furnishings.</p>
+                <ul class="space-y-1.5 text-slate-700 print:text-slate-800 font-light pl-4 list-disc">
                     <li>Led a transformative initiative to deploy Price Variance Analysis, unraveling factors driving sales growth across corporate stores. This allowed the business to shift budgeting, increasing sales by 10%.</li>
                     <li>Built a staffing optimization model using Python and a sophisticated regression model rooted in the sales production function, enhancing operational efficiency and driving cost savings. This optimization reduced overstaffing by more than 50%.</li>
                 </ul>
             </div>
 
             <!-- Tech Data -->
-            <div class="space-y-2 pt-4 border-t border-black/10 print-border">
+            <div class="space-y-2 pt-4 border-t border-slate-200 print-border">
                 <div class="flex justify-between items-start font-bold">
                     <div>
-                        <span class="text-base text-[#13202E] print:text-black uppercase">CITIZEN DATA SCIENTIST - DIGITAL TRANSFORMATION</span>
-                        <div class="text-xs text-brand-600">Tech Data Corporation</div>
+                        <span class="text-base text-slate-900 print:text-black uppercase">CITIZEN DATA SCIENTIST - DIGITAL TRANSFORMATION</span>
+                        <div class="text-xs text-blue-800">Tech Data Corporation</div>
                     </div>
-                    <span class="text-xs text-[#5C6470] print:text-slate-700">August 2020 - February 2021</span>
+                    <span class="text-xs text-slate-500 print:text-slate-700">August 2020 - February 2021</span>
                 </div>
-                <p class="text-xs text-[#5C6470] italic">Global distributor of technology products, services and solutions.</p>
-                <ul class="space-y-1.5 text-[#2E2E2E] print:text-slate-800 font-light pl-4 list-disc">
+                <p class="text-xs text-slate-500 italic">Global distributor of technology products, services and solutions.</p>
+                <ul class="space-y-1.5 text-slate-700 print:text-slate-800 font-light pl-4 list-disc">
                     <li>Engineered a robust churn prediction model within the Small Business Marketing (SMB) domain, resulting in a 12% reduction in customer churn and $500K+ retained revenue.</li>
                     <li>Strategically harnessed Recency, Frequency, Monetary (RFM) analysis using Tableau and Alteryx to identify incremental business opportunities through customer segmentation.</li>
                     <li>Integrated multiple data sources to extract, transform, and blend data for robust predictive data science models, including segmentation, propensity, and forecasting.</li>
@@ -809,31 +807,31 @@
 
         <!-- Education Credentials -->
         <div class="space-y-4">
-            <h3 class="text-sm font-bold uppercase tracking-widest text-brand-600 border-b border-black/10 pb-1">Education & Certifications</h3>
+            <h3 class="text-sm font-bold uppercase tracking-widest text-blue-800 border-b border-slate-200 pb-1">Education & Certifications</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- degree 1 -->
                 <div>
-                    <span class="text-xs font-bold text-[#13202E] print:text-black block">THE UNIVERSITY OF TAMPA, SYKES COLLEGE OF BUSINESS</span>
-                    <span class="text-[#2E2E2E] print:text-slate-800 font-light block">Master of Science in Finance</span>
-                    <span class="text-[#5C6470] print:text-slate-700 text-xs font-semibold block">May 2015 | GPA: 3.9/4.0 | Beta Alpha Psi 2015 Member</span>
+                    <span class="text-xs font-bold text-slate-900 print:text-black block">THE UNIVERSITY OF TAMPA, SYKES COLLEGE OF BUSINESS</span>
+                    <span class="text-slate-700 print:text-slate-800 font-light block">Master of Science in Finance</span>
+                    <span class="text-slate-500 print:text-slate-700 text-xs font-semibold block">May 2015 | GPA: 3.9/4.0 | Beta Alpha Psi 2015 Member</span>
                 </div>
                 <!-- degree 2 -->
                 <div>
-                    <span class="text-xs font-bold text-[#13202E] print:text-black block">KENYON COLLEGE</span>
-                    <span class="text-[#2E2E2E] print:text-slate-800 font-light block">Bachelor of Arts in Economics</span>
-                    <span class="text-[#5C6470] print:text-slate-700 text-xs font-semibold block">May 2012 | GPA: 3.4/4.0 | Davis Projects for Peace $10,000 Grant Winner</span>
+                    <span class="text-xs font-bold text-slate-900 print:text-black block">KENYON COLLEGE</span>
+                    <span class="text-slate-700 print:text-slate-800 font-light block">Bachelor of Arts in Economics</span>
+                    <span class="text-slate-500 print:text-slate-700 text-xs font-semibold block">May 2012 | GPA: 3.4/4.0 | Davis Projects for Peace $10,000 Grant Winner</span>
                 </div>
                 <!-- degree 3 -->
                 <div>
-                    <span class="text-xs font-bold text-[#13202E] print:text-black block">UDACITY</span>
-                    <span class="text-[#2E2E2E] print:text-slate-800 font-light block">Nanodegree in Predictive Analytics for Business</span>
-                    <span class="text-[#5C6470] print:text-slate-700 text-xs font-semibold block">Spring 2020 | Focus on Alteryx & Tableau</span>
+                    <span class="text-xs font-bold text-slate-900 print:text-black block">UDACITY</span>
+                    <span class="text-slate-700 print:text-slate-800 font-light block">Nanodegree in Predictive Analytics for Business</span>
+                    <span class="text-slate-500 print:text-slate-700 text-xs font-semibold block">Spring 2020 | Focus on Alteryx & Tableau</span>
                 </div>
                 <!-- degree 4 -->
                 <div>
-                    <span class="text-xs font-bold text-[#13202E] print:text-black block">AMERICAN UNIVERSITY</span>
-                    <span class="text-[#2E2E2E] print:text-slate-800 font-light block">Washington Semester Program: International Business and Trade</span>
-                    <span class="text-[#5C6470] print:text-slate-700 text-xs font-semibold block">Fall 2010 | GPA: 3.9/4.0</span>
+                    <span class="text-xs font-bold text-slate-900 print:text-black block">AMERICAN UNIVERSITY</span>
+                    <span class="text-slate-700 print:text-slate-800 font-light block">Washington Semester Program: International Business and Trade</span>
+                    <span class="text-slate-500 print:text-slate-700 text-xs font-semibold block">Fall 2010 | GPA: 3.9/4.0</span>
                 </div>
             </div>
         </div>
@@ -843,20 +841,20 @@
 
 <!-- VIEW: CONTACT -->
 <div id="view-contact" class="hidden max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 animate-fade-in no-print font-sans">
-    <div class="bg-white border border-black/10 rounded-2xl p-8 sm:p-12 flex flex-col justify-between items-center text-center space-y-6">
+    <div class="bg-white border border-slate-200 rounded-2xl p-8 sm:p-12 flex flex-col justify-between items-center text-center space-y-6">
         <div>
-            <h1 class="text-3xl font-extrabold text-brand-600 uppercase tracking-widest">Connect Directly</h1>
+            <h1 class="text-3xl font-extrabold text-blue-800 uppercase tracking-widest">Connect Directly</h1>
             
             <div class="flex flex-col sm:flex-row items-center justify-center gap-6 pt-8 max-w-md mx-auto">
-                <a href="mailto:tatendauta@gmail.com" class="flex items-center space-x-3 text-[#2E2E2E] hover:text-[#13202E] transition-colors bg-white border border-black/10 rounded-xl px-5 py-3 w-full sm:w-auto">
-                    <div class="h-9 w-9 bg-black/[0.03] border border-black/10 rounded-lg flex items-center justify-center text-brand-500">
+                <a href="mailto:tatendauta@gmail.com" class="flex items-center space-x-3 text-slate-700 hover:text-slate-900 transition-colors bg-white border border-slate-200 rounded-xl px-5 py-3 w-full sm:w-auto">
+                    <div class="h-9 w-9 bg-slate-100 border border-slate-200 rounded-lg flex items-center justify-center text-blue-600">
                         <i class="fa-regular fa-envelope"></i>
                     </div>
                     <span class="text-sm font-medium">tatendauta@gmail.com</span>
                 </a>
                 
-                <a href="https://www.linkedin.com/in/tatendauta" target="_blank" class="flex items-center space-x-3 text-[#2E2E2E] hover:text-[#13202E] transition-colors bg-white border border-black/10 rounded-xl px-5 py-3 w-full sm:w-auto">
-                    <div class="h-9 w-9 bg-black/[0.02] border border-black/10 rounded-lg flex items-center justify-center text-accent-600">
+                <a href="https://www.linkedin.com/in/tatendauta" target="_blank" class="flex items-center space-x-3 text-slate-700 hover:text-slate-900 transition-colors bg-white border border-slate-200 rounded-xl px-5 py-3 w-full sm:w-auto">
+                    <div class="h-9 w-9 bg-slate-50 border border-slate-200 rounded-lg flex items-center justify-center text-blue-800">
                         <i class="fa-brands fa-linkedin-in"></i>
                     </div>
                     <span class="text-sm font-medium">linkedin.com/in/tatendauta</span>
@@ -871,26 +869,26 @@
 </main>
 
 <!-- Executive Footer -->
-<footer class="mt-20 border-t border-black/10 bg-[#F4F6F8] py-12 relative z-10 no-print">
+<footer class="mt-20 border-t border-slate-200 bg-slate-50 py-12 relative z-10 no-print">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col md:flex-row md:items-center md:justify-between space-y-6 md:space-y-0 pb-8 border-b border-black/10">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between space-y-6 md:space-y-0 pb-8 border-b border-slate-200">
             <div>
-                <span class="text-base font-extrabold text-[#13202E]">Tatenda Uta</span>
-                <span class="block text-xs text-[#5C6470] mt-1">AI & Analytics Decision Partner</span>
+                <span class="text-base font-extrabold text-slate-900">Tatenda Uta</span>
+                <span class="block text-xs text-slate-500 mt-1">AI & Analytics Decision Partner</span>
             </div>
             
-            <div class="flex flex-wrap gap-4 text-xs text-[#5C6470]">
-                <button onclick="navigateTo('home')" class="hover:text-[#13202E]">Home</button>
-                <button onclick="navigateTo('projects')" class="hover:text-[#13202E]">Projects</button>
-                <button onclick="navigateTo('leadership')" class="hover:text-[#13202E]">Philosophy</button>
-                <button onclick="navigateTo('skills')" class="hover:text-[#13202E]">Skills Matrix</button>
-                <button onclick="navigateTo('writing')" class="hover:text-[#13202E]">Insights</button>
-                <button onclick="navigateTo('resume')" class="hover:text-[#13202E]">Resume</button>
-                <button onclick="navigateTo('contact')" class="hover:text-[#13202E]">Contact</button>
+            <div class="flex flex-wrap gap-4 text-xs text-slate-500">
+                <button onclick="navigateTo('home')" class="hover:text-slate-900">Home</button>
+                <button onclick="navigateTo('projects')" class="hover:text-slate-900">Projects</button>
+                <button onclick="navigateTo('leadership')" class="hover:text-slate-900">Philosophy</button>
+                <button onclick="navigateTo('skills')" class="hover:text-slate-900">Skills Matrix</button>
+                <button onclick="navigateTo('writing')" class="hover:text-slate-900">Insights</button>
+                <button onclick="navigateTo('resume')" class="hover:text-slate-900">Resume</button>
+                <button onclick="navigateTo('contact')" class="hover:text-slate-900">Contact</button>
             </div>
         </div>
 
-        <div class="flex flex-col md:flex-row md:items-center md:justify-between space-y-4 md:space-y-0 pt-8 text-xs text-[#8A9099]">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between space-y-4 md:space-y-0 pt-8 text-xs text-slate-400">
             <div class="space-y-1 max-w-lg">
                 <p>© 2026 Tatenda Uta. All rights reserved.</p>
                 <p class="text-[10px] leading-relaxed">
@@ -898,8 +896,8 @@
                 </p>
             </div>
             <div class="flex items-center space-x-4">
-                <a href="https://www.linkedin.com/in/tatendauta" target="_blank" class="hover:text-[#13202E] text-lg"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="mailto:tatendauta@gmail.com" class="hover:text-[#13202E] text-lg"><i class="fa-regular fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/tatendauta" target="_blank" class="hover:text-slate-900 text-lg"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:tatendauta@gmail.com" class="hover:text-slate-900 text-lg"><i class="fa-regular fa-envelope"></i></a>
             </div>
         </div>
     </div>
@@ -1331,11 +1329,11 @@
             const el = document.getElementById(n);
             if (el) {
                 if (n === `nav-${tabName}`) {
-                    el.classList.add('bg-brand-500', 'text-white');
-                    el.classList.remove('text-[#5C6470]', 'hover:bg-black/5');
+                    el.classList.add('bg-blue-600', 'text-white');
+                    el.classList.remove('text-slate-500', 'hover:bg-slate-100');
                 } else {
-                    el.classList.remove('bg-brand-500', 'text-white');
-                    el.classList.add('text-[#5C6470]', 'hover:bg-black/5');
+                    el.classList.remove('bg-blue-600', 'text-white');
+                    el.classList.add('text-slate-500', 'hover:bg-slate-100');
                 }
             }
         });
@@ -1381,19 +1379,19 @@
         
         featuredList.forEach(p => {
             html += `
-                <div class="bg-white border border-black/10 rounded-2xl p-6 flex flex-col justify-between hover:border-brand-500/50 transition-all duration-300 group">
+                <div class="bg-white border border-slate-200 rounded-2xl p-6 flex flex-col justify-between hover:border-blue-600/50 transition-all duration-300 group">
                     <div>
                         <div class="flex items-center justify-between mb-4">
-                            <span class="text-[10px] text-brand-600 font-bold uppercase tracking-widest bg-brand-50 border border-brand-100 px-2.5 py-1 rounded-full">${p.tag}</span>
-                            <span class="text-xs font-bold text-[#13202E] uppercase tracking-wider">${p.impactRange}</span>
+                            <span class="text-[10px] text-blue-800 font-bold uppercase tracking-widest bg-blue-50/80 border border-blue-200 px-2.5 py-1 rounded-full">${p.tag}</span>
+                            <span class="text-xs font-bold text-slate-900 uppercase tracking-wider">${p.impactRange}</span>
                         </div>
-                        <h4 class="text-base font-bold text-[#13202E] group-hover:text-brand-600 transition-colors">${p.title}</h4>
-                        <p class="text-xs text-[#5C6470] mt-2 line-clamp-3">${p.subtitle}</p>
+                        <h4 class="text-base font-bold text-slate-900 group-hover:text-blue-800 transition-colors">${p.title}</h4>
+                        <p class="text-xs text-slate-500 mt-2 line-clamp-3">${p.subtitle}</p>
                     </div>
                     
-                    <div class="pt-6 mt-6 border-t border-black/10 flex items-center justify-between">
-                        <span class="text-[9px] text-[#8A9099] font-bold uppercase tracking-wider">${p.focus}</span>
-                        <button onclick="navigateTo('projects', '${p.id}')" class="text-brand-600 hover:text-brand-500 font-bold text-xs flex items-center space-x-1 group/btn">
+                    <div class="pt-6 mt-6 border-t border-slate-200 flex items-center justify-between">
+                        <span class="text-[9px] text-slate-400 font-bold uppercase tracking-wider">${p.focus}</span>
+                        <button onclick="navigateTo('projects', '${p.id}')" class="text-blue-800 hover:text-blue-600 font-bold text-xs flex items-center space-x-1 group/btn">
                             <span>Read Project Details</span>
                             <i class="fa-solid fa-arrow-right group-hover/btn:translate-x-1 transition-transform"></i>
                         </button>
@@ -1418,19 +1416,19 @@
         let html = '';
         filtered.forEach(p => {
             html += `
-                <div class="bg-white border border-black/10 rounded-2xl p-6 flex flex-col justify-between hover:border-brand-500/50 transition-all duration-300 group">
+                <div class="bg-white border border-slate-200 rounded-2xl p-6 flex flex-col justify-between hover:border-blue-600/50 transition-all duration-300 group">
                     <div>
                         <div class="flex items-center justify-between mb-4">
-                            <span class="text-[10px] text-brand-600 font-bold uppercase tracking-widest bg-brand-50 border border-brand-100 px-2.5 py-1 rounded-full">${p.tag}</span>
-                            <span class="text-xs font-bold text-[#13202E] uppercase tracking-wider">${p.impactRange}</span>
+                            <span class="text-[10px] text-blue-800 font-bold uppercase tracking-widest bg-blue-50/80 border border-blue-200 px-2.5 py-1 rounded-full">${p.tag}</span>
+                            <span class="text-xs font-bold text-slate-900 uppercase tracking-wider">${p.impactRange}</span>
                         </div>
-                        <h4 class="text-base font-bold text-[#13202E] group-hover:text-brand-600 transition-colors">${p.title}</h4>
-                        <p class="text-xs text-[#5C6470] mt-2 line-clamp-3">${p.subtitle}</p>
+                        <h4 class="text-base font-bold text-slate-900 group-hover:text-blue-800 transition-colors">${p.title}</h4>
+                        <p class="text-xs text-slate-500 mt-2 line-clamp-3">${p.subtitle}</p>
                     </div>
                     
-                    <div class="pt-6 mt-6 border-t border-black/10 flex items-center justify-between">
-                        <span class="text-[9px] text-[#8A9099] font-bold uppercase tracking-wider">${p.focus}</span>
-                        <button onclick="navigateTo('projects', '${p.id}')" class="text-brand-600 hover:text-brand-500 font-bold text-xs flex items-center space-x-1 group/btn">
+                    <div class="pt-6 mt-6 border-t border-slate-200 flex items-center justify-between">
+                        <span class="text-[9px] text-slate-400 font-bold uppercase tracking-wider">${p.focus}</span>
+                        <button onclick="navigateTo('projects', '${p.id}')" class="text-blue-800 hover:text-blue-600 font-bold text-xs flex items-center space-x-1 group/btn">
                             <span>Read Project Details</span>
                             <i class="fa-solid fa-arrow-right group-hover/btn:translate-x-1 transition-transform"></i>
                         </button>
@@ -1456,14 +1454,14 @@
         Object.keys(filters).forEach(k => {
             const btn = document.getElementById(filters[k]);
             if (btn) {
-                btn.className = "px-4 py-1.5 rounded-full text-xs font-semibold bg-black/5 hover:bg-black/10 text-[#2E2E2E] transition-all";
+                btn.className = "px-4 py-1.5 rounded-full text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all";
             }
         });
         
         // Highlight chosen
         const activeBtn = document.getElementById(filters[tag]);
         if (activeBtn) {
-            activeBtn.className = "px-4 py-1.5 rounded-full text-xs font-semibold bg-brand-500 text-white transition-all";
+            activeBtn.className = "px-4 py-1.5 rounded-full text-xs font-semibold bg-blue-600 text-white transition-all";
         }
         
         renderProjectsList(tag);
@@ -1479,12 +1477,12 @@
         let stepsHtml = '';
         project.approachFlow.forEach((step, idx) => {
             stepsHtml += `
-                <div class="flex-1 min-w-[150px] p-3 bg-black/[0.02] rounded-lg border border-black/10 text-center relative">
-                    <span class="absolute -top-2 left-3 bg-brand-500 text-white text-[10px] font-black h-4.5 w-4.5 rounded-full flex items-center justify-center">${idx + 1}</span>
-                    <span class="text-xs font-bold text-[#13202E] block mt-1">${step.name}</span>
-                    <span class="text-[10px] text-[#5C6470] block mt-1 leading-snug">${step.desc}</span>
+                <div class="flex-1 min-w-[150px] p-3 bg-slate-50 rounded-lg border border-slate-200 text-center relative">
+                    <span class="absolute -top-2 left-3 bg-blue-600 text-white text-[10px] font-black h-4.5 w-4.5 rounded-full flex items-center justify-center">${idx + 1}</span>
+                    <span class="text-xs font-bold text-slate-900 block mt-1">${step.name}</span>
+                    <span class="text-[10px] text-slate-500 block mt-1 leading-snug">${step.desc}</span>
                 </div>
-                ${idx < project.approachFlow.length - 1 ? `<div class="hidden lg:flex items-center text-black/20"><i class="fa-solid fa-angle-right"></i></div>` : ''}
+                ${idx < project.approachFlow.length - 1 ? `<div class="hidden lg:flex items-center text-slate-300"><i class="fa-solid fa-angle-right"></i></div>` : ''}
             `;
         });
 
@@ -1492,56 +1490,61 @@
         let colrowsHtml = '';
         project.collaboration.forEach(row => {
             colrowsHtml += `
-                <tr class="border-b border-black/10 hover:bg-black/[0.02]">
-                    <td class="py-3 px-4 text-xs font-bold text-[#13202E]">${row.function}</td>
-                    <td class="py-3 px-4 text-xs text-[#2E2E2E]">${row.contribution}</td>
+                <tr class="border-b border-slate-200 hover:bg-slate-50">
+                    <td class="py-3 px-4 text-xs font-bold text-slate-900">${row.function}</td>
+                    <td class="py-3 px-4 text-xs text-slate-700">${row.contribution}</td>
                 </tr>
             `;
         });
 
+        // Revenue/dollar outcomes get the emerald ROI treatment; other metrics stay blue
+        const isDollarImpact = project.impactRange.includes('$');
+        const impactBg = isDollarImpact ? 'bg-emerald-50/80 border-emerald-200' : 'bg-blue-50/80 border-blue-200';
+        const impactText = isDollarImpact ? 'text-emerald-800' : 'text-blue-800';
+
         // Core visual templates as requested
         detailBody.innerHTML = `
             <!-- Header Section -->
-            <div class="border-b border-black/10 pb-6">
-                <span class="text-xs text-brand-600 font-bold uppercase tracking-widest block mb-1">${project.tag}</span>
-                <h1 class="text-3xl font-extrabold text-[#13202E] leading-tight">${project.title}</h1>
-                <p class="text-sm text-[#2E2E2E] mt-2 font-light italic">${project.subtitle}</p>
+            <div class="border-b border-slate-200 pb-6">
+                <span class="text-xs text-blue-800 font-bold uppercase tracking-widest block mb-1">${project.tag}</span>
+                <h1 class="text-3xl font-extrabold text-slate-900 leading-tight">${project.title}</h1>
+                <p class="text-sm text-slate-700 mt-2 font-light italic">${project.subtitle}</p>
             </div>
 
             <!-- Business Context & Ambiguous Challenge -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
                 <div class="space-y-3">
-                    <h3 class="text-sm font-bold text-[#13202E] uppercase tracking-wider flex items-center space-x-2">
-                        <i class="fa-solid fa-briefcase text-brand-500"></i>
+                    <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wider flex items-center space-x-2">
+                        <i class="fa-solid fa-briefcase text-blue-600"></i>
                         <span>Business Context</span>
                     </h3>
-                    <p class="text-xs text-[#2E2E2E] leading-relaxed font-light">${project.context}</p>
+                    <p class="text-xs text-slate-700 leading-relaxed font-light">${project.context}</p>
                 </div>
                 
                 <div class="space-y-3">
-                    <h3 class="text-sm font-bold text-[#13202E] uppercase tracking-wider flex items-center space-x-2">
-                        <i class="fa-solid fa-triangle-exclamation text-brand-500"></i>
+                    <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wider flex items-center space-x-2">
+                        <i class="fa-solid fa-triangle-exclamation text-blue-600"></i>
                         <span>The Challenge & Ambiguity</span>
                     </h3>
-                    <ul class="space-y-2 text-xs text-[#2E2E2E] font-light">
+                    <ul class="space-y-2 text-xs text-slate-700 font-light">
                         ${project.challenge.map(ch => `<li>• ${ch}</li>`).join('')}
                     </ul>
                 </div>
             </div>
 
             <!-- My Role section -->
-            <div class="bg-black/[0.02] p-6 rounded-xl border border-black/10 space-y-3">
-                <h3 class="text-sm font-bold text-[#13202E] uppercase tracking-wider flex items-center space-x-2">
-                    <i class="fa-solid fa-user-tie text-accent-600"></i>
+            <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 space-y-3">
+                <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wider flex items-center space-x-2">
+                    <i class="fa-solid fa-user-tie text-blue-800"></i>
                     <span>My Role & Leadership Focus</span>
                 </h3>
-                <p class="text-xs text-[#2E2E2E] leading-relaxed font-light">${project.role}</p>
+                <p class="text-xs text-slate-700 leading-relaxed font-light">${project.role}</p>
             </div>
 
             <!-- Methodological Framework visual framework block -->
             <div class="space-y-4">
-                <h3 class="text-sm font-bold text-[#13202E] uppercase tracking-wider flex items-center space-x-2">
-                    <i class="fa-solid fa-sitemap text-brand-500"></i>
+                <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wider flex items-center space-x-2">
+                    <i class="fa-solid fa-sitemap text-blue-600"></i>
                     <span>Methodological Framework</span>
                 </h3>
                 
@@ -1549,43 +1552,43 @@
                     ${stepsHtml}
                 </div>
                 
-                <p class="text-xs text-[#2E2E2E] leading-relaxed font-light pt-2 border-t border-black/10">${project.approachDetail}</p>
+                <p class="text-xs text-slate-700 leading-relaxed font-light pt-2 border-t border-slate-200">${project.approachDetail}</p>
             </div>
 
             <!-- Results Metrics & Quantified ROI -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch pt-4">
-                <div class="bg-black/[0.02] border border-black/10 p-6 rounded-xl flex flex-col justify-between">
+                <div class="bg-slate-50 border border-slate-200 p-6 rounded-xl flex flex-col justify-between">
                     <div>
-                        <h3 class="text-sm font-bold text-[#13202E] uppercase tracking-wider flex items-center space-x-2 mb-4">
-                            <i class="fa-solid fa-circle-check text-brand-500"></i>
+                        <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wider flex items-center space-x-2 mb-4">
+                            <i class="fa-solid fa-circle-check text-blue-600"></i>
                             <span>Key Measurable Outcomes</span>
                         </h3>
-                        <ul class="space-y-2 text-xs text-[#2E2E2E] font-light">
+                        <ul class="space-y-2 text-xs text-slate-700 font-light">
                             ${project.outcomes.map(o => `<li>• ${o}</li>`).join('')}
                         </ul>
                     </div>
                 </div>
 
-                <div class="bg-brand-50 border border-brand-100 p-6 rounded-xl text-center flex flex-col justify-center">
-                    <span class="text-xs text-brand-600 uppercase tracking-widest font-semibold block mb-1">Estimated Impact</span>
-                    <div class="text-3xl font-extrabold text-[#13202E] tracking-tight">${project.impactRange}</div>
-                    <span class="text-[10px] text-[#5C6470] mt-1 block">${project.impactMetric || 'Annualized value influenced'}</span>
+                <div class="${impactBg} border p-6 rounded-xl text-center flex flex-col justify-center">
+                    <span class="text-xs ${impactText} uppercase tracking-widest font-semibold block mb-1">Estimated Impact</span>
+                    <div class="text-3xl font-extrabold text-slate-900 tracking-tight">${project.impactRange}</div>
+                    <span class="text-[10px] text-slate-500 mt-1 block">${project.impactMetric || 'Annualized value influenced'}</span>
                 </div>
             </div>
 
             <!-- Cross-Functional Partnership breakdown table -->
             <div class="space-y-3">
-                <h3 class="text-sm font-bold text-[#13202E] uppercase tracking-wider flex items-center space-x-2">
-                    <i class="fa-solid fa-people-group text-accent-600"></i>
+                <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wider flex items-center space-x-2">
+                    <i class="fa-solid fa-people-group text-blue-800"></i>
                     <span>Cross-Functional Collaboration Model</span>
                 </h3>
                 
-                <div class="overflow-x-auto rounded-xl border border-black/10">
+                <div class="overflow-x-auto rounded-xl border border-slate-200">
                     <table class="w-full text-left border-collapse">
                         <thead>
-                            <tr class="bg-black/[0.02] border-b border-black/10">
-                                <th class="py-3 px-4 text-xs font-bold text-[#2E2E2E] uppercase">Partner Function</th>
-                                <th class="py-3 px-4 text-xs font-bold text-[#2E2E2E] uppercase">Operational Contribution & Alignment</th>
+                            <tr class="bg-slate-50 border-b border-slate-200">
+                                <th class="py-3 px-4 text-xs font-bold text-slate-700 uppercase">Partner Function</th>
+                                <th class="py-3 px-4 text-xs font-bold text-slate-700 uppercase">Operational Contribution & Alignment</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1596,12 +1599,12 @@
             </div>
 
             <!-- Lessons Learned Reflection -->
-            <div class="border-t border-black/10 pt-6">
-                <h3 class="text-sm font-bold text-[#13202E] uppercase tracking-wider flex items-center space-x-2 mb-2">
-                    <i class="fa-solid fa-graduation-cap text-brand-500"></i>
+            <div class="border-t border-slate-200 pt-6">
+                <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wider flex items-center space-x-2 mb-2">
+                    <i class="fa-solid fa-graduation-cap text-blue-600"></i>
                     <span>Lessons Learned & Strategic Takeaways</span>
                 </h3>
-                <p class="text-xs text-[#2E2E2E] leading-relaxed font-light italic bg-black/[0.02] p-4 rounded-lg border border-black/10">${project.lessonsLearned}</p>
+                <p class="text-xs text-slate-700 leading-relaxed font-light italic bg-slate-50 p-4 rounded-lg border border-slate-200">${project.lessonsLearned}</p>
             </div>
         `;
     }
@@ -1629,7 +1632,7 @@
                 message = "<strong>ROI Measurement Phase:</strong> Every product update is tracked directly back to bottom-line conversions or operational savings, showing the direct value of strategic analysis.";
                 break;
         }
-        expl.innerHTML = `<i class="fa-solid fa-circle-check text-brand-500 mr-2"></i> ${message}`;
+        expl.innerHTML = `<i class="fa-solid fa-circle-check text-blue-600 mr-2"></i> ${message}`;
     }
 
     // Scenario Interactive simulation loader
@@ -1641,13 +1644,13 @@
         const buttons = document.querySelectorAll('#scenario-selector button');
         buttons.forEach((b, idx) => {
             if (idx === id - 1) {
-                b.classList.remove('border-black/10');
-                if (idx === 0) b.classList.add('border-brand-500');
-                if (idx === 1) b.classList.add('border-accent-500');
-                if (idx === 2) b.classList.add('border-brand-500');
+                b.classList.remove('border-slate-200');
+                if (idx === 0) b.classList.add('border-blue-600');
+                if (idx === 1) b.classList.add('border-blue-600');
+                if (idx === 2) b.classList.add('border-blue-600');
             } else {
-                b.classList.add('border-black/10');
-                b.classList.remove('border-brand-500', 'border-accent-500');
+                b.classList.add('border-slate-200');
+                b.classList.remove('border-blue-600', 'border-blue-600');
             }
         });
 
@@ -1655,9 +1658,9 @@
         if (id === 1) {
             content = `
                 <div class="space-y-3">
-                    <span class="text-brand-600 text-xs font-bold block uppercase">Resolution Strategy</span>
-                    <h4 class="text-[#13202E] text-base font-bold">Investigating shocks from search quality updates</h4>
-                    <p class="text-xs text-[#2E2E2E] leading-relaxed font-light">
+                    <span class="text-blue-800 text-xs font-bold block uppercase">Resolution Strategy</span>
+                    <h4 class="text-slate-900 text-base font-bold">Investigating shocks from search quality updates</h4>
+                    <p class="text-xs text-slate-700 leading-relaxed font-light">
                         1. <strong>Track the shift:</strong> Isolate which specific search terms moved, and where.<br>
                         2. <strong>Find the gaps:</strong> Map which pages lost visibility after the update.<br>
                         3. <strong>Fix the highest-value gaps first:</strong> Work with SEO and content teams to prioritize the pages that matter most, rather than reacting to the overall traffic dip.
@@ -1667,9 +1670,9 @@
         } else if (id === 2) {
             content = `
                 <div class="space-y-3">
-                    <span class="text-accent-600 text-xs font-bold block uppercase">Resolution Strategy</span>
-                    <h4 class="text-[#13202E] text-base font-bold">New ad type, old worries</h4>
-                    <p class="text-xs text-[#2E2E2E] leading-relaxed font-light">
+                    <span class="text-blue-800 text-xs font-bold block uppercase">Resolution Strategy</span>
+                    <h4 class="text-slate-900 text-base font-bold">New ad type, old worries</h4>
+                    <p class="text-xs text-slate-700 leading-relaxed font-light">
                         1. <strong>Compare the actual queries:</strong> Separate what the new ad format is bidding on from what standard search already covers.<br>
                         2. <strong>Measure the real overlap:</strong> Find out how much is genuinely new demand versus the same searches being bid on twice.<br>
                         3. <strong>Quantify the new value:</strong> Show the net-new revenue clearly before anyone decides to scale up or pull back.
@@ -1679,9 +1682,9 @@
         } else if (id === 3) {
             content = `
                 <div class="space-y-3">
-                    <span class="text-brand-600 text-xs font-bold block uppercase">Resolution Strategy</span>
-                    <h4 class="text-[#13202E] text-base font-bold">Unproven cross-sell assumption</h4>
-                    <p class="text-xs text-[#2E2E2E] leading-relaxed font-light">
+                    <span class="text-blue-800 text-xs font-bold block uppercase">Resolution Strategy</span>
+                    <h4 class="text-slate-900 text-base font-bold">Unproven cross-sell assumption</h4>
+                    <p class="text-xs text-slate-700 leading-relaxed font-light">
                         1. <strong>Set the baseline:</strong> Use the actual checkout date as the starting point for tracking each customer.<br>
                         2. <strong>Track what they actually buy next:</strong> Follow real purchase behavior across other treatments over a full 12-month window.<br>
                         3. <strong>Let the data decide the roadmap:</strong> If the assumption doesn't hold, that's months of dev time saved before any code gets written.
@@ -1729,31 +1732,31 @@
         [1, 2, 3].forEach(idx => {
             const btn = document.getElementById(`art-btn-${idx}`);
             if (btn) {
-                btn.className = "w-full text-left p-4 rounded-xl border border-black/10 bg-black/[0.01] hover:border-brand-500 transition-all block group";
+                btn.className = "w-full text-left p-4 rounded-xl border border-slate-200 bg-slate-50 hover:border-blue-600 transition-all block group";
             }
         });
 
         // Set active styling on selected article
-        const colorClass = art.color === 'accent' ? 'accent-500' : 'brand-500';
+        const colorClass = art.color === 'accent' ? 'blue-600' : 'blue-600';
         const activeBtn = document.getElementById(`art-btn-${id}`);
         if (activeBtn) {
             activeBtn.className = `w-full text-left p-4 rounded-xl border border-${colorClass}/60 bg-white transition-all block group`;
         }
 
-        const textColor = art.color === 'accent' ? 'text-accent-600' : 'text-brand-600';
+        const textColor = art.color === 'accent' ? 'text-blue-800' : 'text-blue-800';
         reader.innerHTML = `
             <span class="${textColor} text-xs font-bold uppercase block mb-1">${art.tag}</span>
-            <h2 class="text-2xl font-extrabold text-[#13202E] leading-tight mb-6">${art.title}</h2>
+            <h2 class="text-2xl font-extrabold text-slate-900 leading-tight mb-6">${art.title}</h2>
             
-            <div class="space-y-4 text-[#2E2E2E] text-sm leading-relaxed font-light">
+            <div class="space-y-4 text-slate-700 text-sm leading-relaxed font-light">
                 <p>${art.p1}</p>
                 <p>${art.p2}</p>
                 <p>${art.p3}</p>
             </div>
             
-            <div class="mt-8 pt-6 border-t border-black/10 flex items-center justify-between">
-                <span class="text-xs text-[#5C6470]">Written by Tatenda Uta</span>
-                <button onclick="navigateTo('contact')" class="text-brand-600 hover:text-brand-500 text-xs font-bold flex items-center space-x-1">
+            <div class="mt-8 pt-6 border-t border-slate-200 flex items-center justify-between">
+                <span class="text-xs text-slate-500">Written by Tatenda Uta</span>
+                <button onclick="navigateTo('contact')" class="text-blue-800 hover:text-blue-600 text-xs font-bold flex items-center space-x-1">
                     <span>Discuss this Strategy</span>
                     <i class="fa-solid fa-chevron-right"></i>
                 </button>
