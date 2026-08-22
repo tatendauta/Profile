@@ -746,7 +746,7 @@
                 <div class="space-y-2 pl-2">
                     <h4 class="text-xs font-bold text-slate-900 print:text-black uppercase tracking-wide border-l-2 border-blue-600 pl-2">Product Strategy & Revenue Growth</h4>
                     <ul class="space-y-2 text-slate-700 print:text-slate-800 font-light pl-4 list-disc">
-                        <li><strong>Macro Revenue Decompositions:</strong> Decoded an $8M–$15M+ YoY increase in contribution margin by engineering an end-to-end, multi-dimensional full-funnel decomposition across domain type, vertical, channel, country, device, and funnel type. Proved domestic margin expansion was operationally powered by Javatar platform growth (seven-figure expansion) and Japan scaling (seven-figure expansion).</li>
+                        <li><strong>Macro Revenue Decompositions:</strong> Decoded an Millions of YoY increase in contribution margin by engineering an end-to-end, multi-dimensional full-funnel decomposition across domain type, vertical, channel, country, device, and funnel type. Proved domestic margin expansion was operationally powered by Javatar platform growth (seven-figure expansion) and Japan scaling (seven-figure expansion).</li>
                         <li><strong>Telehealth Standalone Optimization:</strong> Created Power BI profiles and 3-year LTV frameworks for the Telehealth and Urgent Care vertical. Proved cross-sell therapy rates sat at near-zero (&lt;0.2%), successfully shifting product focus to standalone optimizations.</li>
                     </ul>
                 </div>
@@ -913,28 +913,28 @@
         {
             id: 'ja-growth-decomp',
             title: 'Macro Revenue & CM Growth Decomposition',
-            subtitle: 'Found the real drivers behind an $8M–$15M+ jump in margin — and the analysis became the basis for next year\'s executive planning. (Pearl Award winner.)',
+            subtitle: 'Found the real drivers behind an jump in margin — and the analysis became the basis for executive planning. (Pearl Award winner.)',
             tag: 'Revenue & Conversion',
-            impactRange: '$8M–$15M+ YoY CM Growth',
+            impactRange: 'YoY CM Growth',
             impactMetric: 'Decoded contribution margin expansion',
             focus: 'SQL, BigQuery, Attribution Modeling, Waterfall Decomps',
-            context: 'At JustAnswer, leadership had three different teams — paid search, product, and SEO — each with their own theory about what drove an $8M–$15M+ jump in contribution margin. That disagreement was holding up 2026 budget planning.',
+            context: 'At JustAnswer, leadership wanted to understand the jump in contribution margin for 2026 budget planning. This would drive the conversation of what is working and what is not working and how to excelerate growth.',
             challenge: [
                 'There was no clean way to tell passive growth, like currency shifts, apart from real operational wins.',
-                'Paid search, SEO, and product teams all wanted credit for the same gains, with no agreed-upon way to split it.',
+                'All the different insights and theories where isolated and not in one location.'
                 'The existing dashboards were too high-level to show whether more people were buying, or each purchase was just more profitable.'
             ],
-            role: 'I owned the analysis end to end. I built a model in SQL that broke the margin growth apart by channel, vertical, device, domain, and geography — so each team\'s real contribution was visible separately.',
+            role: 'I owned the analysis end to end on contribution margin drivers. I built a model in SQL that broke the margin growth apart by channel, vertical, device, domain, and geography — so each contribution was visible separately.',
             approachFlow: [
                 { name: 'Gather the data', desc: 'Consolidated transactional and marketing logs across domains' },
                 { name: 'Separate the variables', desc: 'Wrote SHAP-style attribution rules to prevent double-counting lifts' },
                 { name: 'Track the mix shift', desc: 'Isolated transaction volume drops from margin-per-transaction gains' },
                 { name: 'Check the geography', desc: 'Separated domestic product performance from currency fluctuations' },
-                { name: 'Tell the story', desc: 'Crafted simple waterfall charts to present findings to VPs' }
+                { name: 'Tell the story', desc: 'Crafted simple waterfall charts to present findings to Executive Leadership' }
             ],
-            approachDetail: 'I built SQL models that separated how many people were buying from how much each purchase was worth. That showed domestic growth came mainly from the Javatar platform and Japan scaling — both seven-figure gains — while the Cars vertical was actually losing money, due to mobile ad overspend.',
+            approachDetail: 'I built SQL models that separated the combined drives to get a the most accurate picture that showed were domestic growth came mainly from and which verticals and regions where actually losing money.',
             outcomes: [
-                'Found the real drivers behind the $8M–$15M+ margin growth.',
+                'Found the real drivers behind the margin growth.',
                 'Won JustAnswer\'s Pearl Award for the analysis.',
                 'Became the basis for 2026 budget planning.',
                 'Showed leadership the gains came from real product work, not market luck.'
@@ -960,11 +960,11 @@
                 'The written comments were too messy and varied to sort through by hand at scale.',
                 'Product managers had no fast way to connect what customers were saying to what was actually changing in the product.'
             ],
-            role: 'I built the pipeline myself — Python scripts that used the ChatGPT API to sort messy comments into clean, useful categories.',
+            role: 'I built the pipeline — Python scripts that used the ChatGPT API to sort messy comments into clean, useful categories.',
             approachFlow: [
                 { name: 'Pull the data', desc: 'Extracted raw exit logs from BigQuery databases' },
                 { name: 'Design the prompts', desc: 'Optimized prompts to categorize complex, qualitative comments' },
-                { name: 'Connect the API', desc: 'Partnered with ML engineers to scale the model using Prompt Studio' },
+                { name: 'Connect the API', desc: 'ML engineered the process to scale the model using batch processing ChatGPT API' },
                 { name: 'Visualize the results', desc: 'Mapped qualitative classifications onto quantitative metrics' },
                 { name: 'Act on it', desc: 'Delivered insights to retention managers to prioritize form updates' }
             ],
@@ -1041,8 +1041,8 @@
             ],
             approachDetail: 'I built models that joined conversion data with location data, showing the search team exactly where their ad dollars were working — and where they weren\'t.',
             outcomes: [
-                'Found that 5.2% of total ad traffic was pure waste.',
-                'Found an underused rural segment converting at 3.73% — well above average.',
+                'Found that %XX of total ad traffic was pure waste.',
+                'Found an underused rural segment converting well above average.',
                 'Helped the team reallocate spend toward what actually worked.',
                 'Set up a standard process for targeting campaigns by location going forward.'
             ],
