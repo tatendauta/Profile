@@ -14,7 +14,8 @@ A single-page portfolio/resume site for Tatenda Uta (AI & Analytics Decision Par
 | :--- | :--- |
 | `index.html` | The entire site — markup, Tailwind config, all styling, and all JS (navigation, project data, article/scenario content) in one file. This is what's deployed. |
 | `Resume Site Color Palette.md` | The color system used across `index.html` — palette, component-by-component color rules, and anti-patterns. Update this file whenever colors change in the site; treat it as documentation of current state, not aspiration. |
-| `resume.pdf` | Downloadable resume, linked from the site's "Print Resume"/"View Resume" buttons and the footer. |
+| `Tatenda Uta Resume.html` | The resume the "Print Resume" button links to (`href="Tatenda%20Uta%20Resume.html"`, opened in a new tab). A self-contained "artifact bundle" HTML file — it unpacks embedded assets into blob URLs via inline JS at load time rather than being plain static markup. Don't hand-edit it; if the resume changes, regenerate/replace the whole file. |
+| `resume.pdf` | Older downloadable resume copy. No longer linked from anywhere in `index.html` (superseded by `Tatenda Uta Resume.html` for the Print Resume button) — kept in the repo but currently orphaned; ask before deleting. |
 | `google47b8eb96dcbce620.html` | Google Search Console site-verification file. Don't touch unless re-verifying ownership. |
 | `sitemap.xml` | Single-URL sitemap pointing at the GitHub Pages URL. |
 | `Tatenda Resume DS 2026.docx` / `Tatenda Resume DS 2026.pdf` | Source resume documents (not deployed — `resume.pdf` is the deployed copy; these are the editable/original versions and reference material the on-site copy is drawn from). |
