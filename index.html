@@ -645,28 +645,7 @@
 
     <!-- Live Article Selector list -->
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-        <div class="lg:col-span-5 space-y-4" id="articles-menu">
-            <!-- Article 1 -->
-            <button onclick="readArticle(1)" id="art-btn-1" class="w-full text-left p-4 rounded-xl border border-blue-600/40 bg-white hover:border-blue-600 transition-all block group">
-                <span class="text-blue-800 text-xs font-semibold block uppercase tracking-wider">Revenue Analytics</span>
-                <span class="text-slate-900 text-base font-bold block mt-1 leading-tight group-hover:text-blue-800">What Funding Funnels Taught Me About Revenue Leakage</span>
-                <span class="text-xs text-slate-500 block mt-2">It's rarely the traffic. It's almost always the last step before checkout.</span>
-            </button>
-            
-            <!-- Article 2 -->
-            <button onclick="readArticle(2)" id="art-btn-2" class="w-full text-left p-4 rounded-xl border border-slate-200 bg-slate-50 hover:border-blue-600 transition-all block group">
-                <span class="text-blue-800 text-xs font-semibold block uppercase tracking-wider">Product Strategy</span>
-                <span class="text-slate-900 text-base font-bold block mt-1 leading-tight group-hover:text-blue-800">Why Analysts Should Think Like Product Managers</span>
-                <span class="text-xs text-slate-500 block mt-2">Writing queries is the easy part. Knowing what to build next is the job.</span>
-            </button>
-
-            <!-- Article 3 -->
-            <button onclick="readArticle(3)" id="art-btn-3" class="w-full text-left p-4 rounded-xl border border-slate-200 bg-slate-50 hover:border-blue-600 transition-all block group">
-                <span class="text-blue-800 text-xs font-semibold block uppercase tracking-wider">A.I. in Practice</span>
-                <span class="text-slate-900 text-base font-bold block mt-1 leading-tight group-hover:text-blue-800">Where AI Actually Helps With Data Work</span>
-                <span class="text-xs text-slate-500 block mt-2">Not for the analysis. For the mess that comes before it.</span>
-            </button>
-        </div>
+        <div class="lg:col-span-5 space-y-4" id="articles-menu"></div>
 
         <!-- Article Reader Panel -->
         <div class="lg:col-span-7 bg-white border border-slate-200 p-6 sm:p-8 rounded-2xl" id="article-reader-body">
@@ -730,79 +709,8 @@
         <!-- Experience timeline -->
         <div class="space-y-6">
             <h3 class="text-sm font-bold uppercase tracking-widest text-blue-800 border-b border-slate-200 pb-1">Professional Experience</h3>
-            
-            <!-- JustAnswer -->
-            <div class="space-y-4">
-                <div class="flex justify-between items-start font-bold">
-                    <div>
-                        <span class="text-base text-slate-900 print:text-black uppercase">AI ENGINEERING & PRODUCT ANALYTICS</span>  
-                        <div class="text-xs text-blue-800">Pearl (JustAnswer Inc.)</div>
-                    </div>
-                    <span class="text-xs text-blue-800 font-bold tracking-wider print:text-slate-700">February 2022 - Present</span>
-                </div>
-                <p class="text-xs text-slate-500 italic">Online platform that combines AI and human experts to provide verified answers to complex questions.</p>
-                
-                <!-- Subcategory 1 -->
-                <div class="space-y-2 pl-2">
-                    <h4 class="text-xs font-bold text-slate-900 print:text-black uppercase tracking-wide border-l-2 border-blue-600 pl-2">Product Strategy & Revenue Growth</h4>
-                    <ul class="space-y-2 text-slate-700 print:text-slate-800 font-light pl-4 list-disc">
-                        <li><strong>Macro Revenue Decompositions:</strong> Decoded Millions of Dollars in YoY increase in contribution margin by engineering an end-to-end, multi-dimensional full-funnel decomposition across domain type, vertical, channel, country, device, and funnel type. Proved domestic margin expansion was operationally powered by Javatar platform growth (seven-figure expansion) and Japan scaling (seven-figure expansion).</li>
-                        <li><strong>Telehealth Standalone Optimization:</strong> Created Power BI profiles and 3-year LTV frameworks for the Telehealth and Urgent Care vertical. Proved cross-sell therapy rates sat at near-zero (&lt;0.2%), successfully shifting product focus to standalone optimizations.</li>
-                    </ul>
-                </div>
 
-                <!-- Subcategory 2 -->
-                <div class="space-y-2 pl-2">
-                    <h4 class="text-xs font-bold text-slate-900 print:text-black uppercase tracking-wide border-l-2 border-blue-600 pl-2">Marketing & Customer Acquisition Analytics</h4>
-                    <ul class="space-y-2 text-slate-700 print:text-slate-800 font-light pl-4 list-disc">
-                        <li><strong>Performance Max Incrementality Study:</strong> Evaluated keyword cannibalization, proving Performance Max was a net-positive expansion layer that generated over 1M+ net-new queries, $1M+ incremental revenue, and a six-figure margin.</li>
-                        <li><strong>Geographic PPC Portfolio Design:</strong> Reconstructed paid search funnels to ZIP levels, identifying 5.2% structural traffic waste while reallocating budget to high-efficiency Rural segments yielding 3.73% landing page conversion rates (LPCR).</li>
-                        <li><strong>Health Vertical & Creative Optimization:</strong> Deployed an LLM semantic classification model in dynamically clustering ad copy to accelerate iterative testing. Engineered a data pipeline combining granular Google Ads UI asset text data with backend SQL tables. Conducted Healthcare N-Gram and Headline analysis across 17,000+ vertical conversations, isolating key semantic drivers of profitability and pinpointing negative-margin headlines to drive immediate bid exclusions.</li>
-                    </ul>
-                </div>
-
-                <!-- Subcategory 3 -->
-                <div class="space-y-2 pl-2">
-                    <h4 class="text-xs font-bold text-slate-900 print:text-black uppercase tracking-wide border-l-2 border-blue-600 pl-2">AI & Engineering Operations</h4>
-                    <ul class="space-y-2 text-slate-700 print:text-slate-800 font-light pl-4 list-disc">
-                        <li><strong>AI & LLM Product Innovation:</strong> Architected and deployed a standardized "Google Experiment Agent" and "HFS Score Agent" in the internal Agent Hub, reducing pre/post marketing analysis time by 50% under strict statistical protocols.</li>
-                        <li><strong>NLP Cancellation Modeling:</strong> Engineered a customer exit feedback processing pipeline leveraging the ChatGPT API to automatically categorize qualitative logs into real-time quantitative retention metrics.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Ashley Furniture -->
-            <div class="space-y-2 pt-4 border-t border-slate-200 print-border">
-                <div class="flex justify-between items-start font-bold">
-                    <div>
-                        <span class="text-base text-slate-900 print:text-black uppercase">SENIOR BUSINESS INTELLIGENCE ANALYST</span>
-                        <div class="text-xs text-blue-800">Ashley Furniture Industries Inc.</div>
-                    </div>
-                    <span class="text-xs text-slate-500 print:text-slate-700">February 2021 - February 2022</span>
-                </div>
-                <p class="text-xs text-slate-500 italic">Global manufacturer and retailer of home furnishings.</p>
-                <ul class="space-y-1.5 text-slate-700 print:text-slate-800 font-light pl-4 list-disc">
-                    <li>Led a transformative initiative to deploy Price Variance Analysis, unraveling factors driving sales growth across corporate stores. This allowed the business to shift budgeting, increasing sales by 10%.</li>
-                    <li>Built a staffing optimization model using Python and a sophisticated regression model rooted in the sales production function, enhancing operational efficiency and driving cost savings. This optimization reduced overstaffing by more than 50%.</li>
-                </ul>
-            </div>
-
-            <!-- Tech Data -->
-            <div class="space-y-2 pt-4 border-t border-slate-200 print-border">
-                <div class="flex justify-between items-start font-bold">
-                    <div>
-                        <span class="text-base text-slate-900 print:text-black uppercase">CITIZEN DATA SCIENTIST - DIGITAL TRANSFORMATION</span>
-                        <div class="text-xs text-blue-800">Tech Data Corporation</div>
-                    </div>
-                    <span class="text-xs text-slate-500 print:text-slate-700">August 2020 - February 2021</span>
-                </div>
-                <p class="text-xs text-slate-500 italic">Global distributor of technology products, services and solutions.</p>
-                <ul class="space-y-1.5 text-slate-700 print:text-slate-800 font-light pl-4 list-disc">
-                    <li>Engineered a robust churn prediction model within the Small Business Marketing (SMB) domain, resulting in a 12% reduction in customer churn and $500K+ retained revenue.</li>
-                    <li>Strategically harnessed Recency, Frequency, Monetary (RFM) analysis using Tableau and Alteryx to identify incremental business opportunities through customer segmentation.</li>
-                    <li>Integrated multiple data sources to extract, transform, and blend data for robust predictive data science models, including segmentation, propensity, and forecasting.</li>
-                </ul>
-            </div>
+            <div id="resume-experience" class="space-y-6"></div>
         </div>
 
         <!-- Education Credentials -->
@@ -915,6 +823,11 @@
             title: 'Macro Revenue & CM Growth Decomposition',
             subtitle: 'Found the real drivers behind the jump in margin — and the analysis became the basis for executive planning. (Pearl Award winner.)',
             tag: 'Revenue & Conversion',
+            employer: 'justanswer',
+            resumeCategory: 'Product Strategy & Revenue Growth',
+            resumeOrder: 1,
+            resumeBulletLabel: 'Macro Revenue Decompositions',
+            resumeBulletText: 'Decoded Millions of Dollars in YoY increase in contribution margin by engineering an end-to-end, multi-dimensional full-funnel decomposition across domain type, vertical, channel, country, device, and funnel type. Proved domestic margin expansion was operationally powered by Javatar platform growth (seven-figure expansion) and Japan scaling (seven-figure expansion).',
             impactRange: 'Millions of Dollars in YoY CM Growth',
             impactMetric: 'Decoded contribution margin expansion',
             focus: 'SQL, BigQuery, Attribution Modeling, Waterfall Decomps',
@@ -951,6 +864,11 @@
             title: 'AI-Powered Cancellation Insights',
             subtitle: 'Used AI to sort thousands of cancellation comments into clear themes — turning feedback nobody had time to read into a real retention plan.',
             tag: 'Experimentation',
+            employer: 'justanswer',
+            resumeCategory: 'AI & Engineering Operations',
+            resumeOrder: 7,
+            resumeBulletLabel: 'NLP Cancellation Modeling',
+            resumeBulletText: 'Engineered a customer exit feedback processing pipeline leveraging the ChatGPT API to automatically categorize qualitative logs into real-time quantitative retention metrics.',
             impactRange: '5% Retention Increase',
             impactMetric: 'Projected uplift in subscription retention rates',
             focus: 'Python, ChatGPT API, BigQuery NLP, Prompt Engineering',
@@ -986,6 +904,11 @@
             title: 'Finding the Ad Headlines Losing Money',
             subtitle: 'Some healthcare ad headlines looked fine on the surface but lost money on every click. I found them and got them cut.',
             tag: 'Revenue & Conversion',
+            employer: 'justanswer',
+            resumeCategory: 'Marketing & Customer Acquisition Analytics',
+            resumeOrder: 5,
+            resumeBulletLabel: 'Health Vertical & Creative Optimization',
+            resumeBulletText: 'Deployed an LLM semantic classification model in dynamically clustering ad copy to accelerate iterative testing. Engineered a data pipeline combining granular Google Ads UI asset text data with backend SQL tables. Conducted Healthcare N-Gram and Headline analysis across 17,000+ vertical conversations, isolating key semantic drivers of profitability and pinpointing negative-margin headlines to drive immediate bid exclusions.',
             impactRange: 'Eliminated Large-Scale Ad Waste',
             impactMetric: 'High relative margin creative optimization',
             focus: 'SQL, Power BI, LLMs, Google Ads API',
@@ -1022,6 +945,11 @@
             title: 'Finding the Ad Spend That Was Quietly Wasted',
             subtitle: 'State-level reports looked fine. Zip-code-level data told a different story — some areas were burning budget with zero conversions, while a rural segment was quietly outperforming everyone.',
             tag: 'Metric Integrity',
+            employer: 'justanswer',
+            resumeCategory: 'Marketing & Customer Acquisition Analytics',
+            resumeOrder: 4,
+            resumeBulletLabel: 'Geographic PPC Portfolio Design',
+            resumeBulletText: 'Reconstructed paid search funnels to ZIP levels, identifying 5.2% structural traffic waste while reallocating budget to high-efficiency Rural segments yielding 3.73% landing page conversion rates (LPCR).',
             impactRange: '5.2% of Ad Spend Was Pure Waste',
             impactMetric: 'Reallocated budget to high-performance local zones',
             focus: 'BigQuery SQL, Geographic Metadata, LPCR Matrices',
@@ -1058,6 +986,11 @@
             title: 'Settling Whether a New Ad Type Was Just Bidding Against Itself',
             subtitle: 'When Google rolled out a new automated ad format, the team worried it was just outbidding our own existing search campaigns. The data said otherwise.',
             tag: 'Revenue & Conversion',
+            employer: 'justanswer',
+            resumeCategory: 'Marketing & Customer Acquisition Analytics',
+            resumeOrder: 3,
+            resumeBulletLabel: 'Performance Max Incrementality Study',
+            resumeBulletText: 'Evaluated keyword cannibalization, proving Performance Max was a net-positive expansion layer that generated over 1M+ net-new queries, $1M+ incremental revenue, and a six-figure margin.',
             impactRange: '$1M+ Incremental Revenue',
             impactMetric: 'Validated ad channel performance and net margins',
             focus: 'BigQuery, AdvertisingChannel Segments, Query Overlaps',
@@ -1094,6 +1027,11 @@
             title: 'Stopping a Roadmap Built on an Untested Assumption in Urgent Care Telehealth',
             subtitle: 'Everyone assumed urgent-care patients would buy other treatments later. I checked — they didn\'t, and that saved the team months of work on features nobody needed.',
             tag: 'Revenue & Conversion',
+            employer: 'justanswer',
+            resumeCategory: 'Product Strategy & Revenue Growth',
+            resumeOrder: 2,
+            resumeBulletLabel: 'Telehealth Standalone Optimization',
+            resumeBulletText: 'Created Power BI profiles and 3-year LTV frameworks for the Telehealth and Urgent Care vertical. Proved cross-sell therapy rates sat at near-zero (&lt;0.2%), successfully shifting product focus to standalone optimizations.',
             focus: 'BigQuery, Cohort Retention Curves, Power BI',
             impactRange: 'Saved Quarters of Dev Time',
             impactMetric: 'Pivot product focus from cross-selling to standalone experience',
@@ -1130,6 +1068,11 @@
             title: 'AI-Driven PPC Experimentation Agent',
             subtitle: 'The team was running more experiments than analysts could evaluate by hand. I built a tool that standardized the analysis and cut turnaround time in half.',
             tag: 'Experimentation',
+            employer: 'justanswer',
+            resumeCategory: 'AI & Engineering Operations',
+            resumeOrder: 6,
+            resumeBulletLabel: 'AI & LLM Product Innovation',
+            resumeBulletText: 'Architected and deployed a standardized "Google Experiment Agent" and "HFS Score Agent" in the internal Agent Hub, reducing pre/post marketing analysis time by 50% under strict statistical protocols.',
             impactRange: '50% Faster Reporting Cycles',
             impactMetric: 'Shortened marketing and product testing life cycles',
             focus: 'Prompt Studio, Experimentation Agent, Power BI',
@@ -1275,6 +1218,8 @@
             title: 'Predictive B2B Churn Prevention Engine',
             subtitle: 'Sales reps found out an account was leaving only after it was too late. I built an early-warning system that gave them time to act.',
             tag: 'Risk & Compliance',
+            employer: 'techdata',
+            resumeBulletText: 'Engineered a robust churn prediction model within the Small Business Marketing (SMB) domain, resulting in a 12% reduction in customer churn and $500K+ retained revenue.',
             impactRange: '$500K+ Retained Revenue',
             impactMetric: '12% reduction in small business account churn',
             focus: 'Alteryx, Tableau, Churn Propensity Models',
@@ -1305,8 +1250,331 @@
                 { function: 'Database Admins', contribution: 'Connected legacy systems to our central Alteryx analytics platform.' }
             ],
             lessonsLearned: 'You can\'t save an account you don\'t know is in trouble. Early detection is what turns churn prevention from a reaction into something sales can actually act on in time.'
+        },
+        {
+            id: 'ja-google-search-agent',
+            title: 'Google Search Combined Analyst (AI Agent)',
+            subtitle: 'Built an AI agent that turns a plain-English business question into a validated, executive-ready performance diagnosis — no SQL or dashboard-building required.',
+            tag: 'Experimentation',
+            employer: 'justanswer',
+            resumeCategory: 'AI & Engineering Operations',
+            resumeOrder: 8,
+            resumeBulletLabel: 'Google Search Combined Analyst (AI Agent)',
+            resumeBulletText: 'Built an AI agent that translates plain-English executive questions into a scoped analytical plan, executes governed SQL/Power BI logic, validates results against a trailing 12-week baseline, and delivers a root-cause diagnosis with recommended next steps. Presented at the company Hackathon.',
+            impactRange: 'Question to Validated Diagnosis',
+            impactMetric: 'Automated root-cause analysis across JustAnswer, Javatar & Pearl',
+            focus: 'Prompt Studio, SQL, Power BI, LLM Agents',
+            context: 'Answering a broad executive performance question normally meant an analyst manually pulling data, checking calculations, building charts, and writing a summary from scratch — a slow, repeatable process across JustAnswer, Javatar, and Pearl.',
+            challenge: [
+                'A broad question like "why did margin decline this week?" required rebuilding SQL, charts, and a summary from scratch every time it came up.',
+                'Without a structured scoping step, it was easy to analyze the wrong time period, metric, or filter (e.g. accidentally including Performance Max traffic that should be excluded).',
+                'Telling a real performance problem apart from normal week-to-week noise requires comparing against a historical baseline — a step manual ad hoc analysis often skips.'
+            ],
+            role: 'I designed and built the agent end to end — the scoping step that turns a plain-English question into a structured plan, the execution step that runs the approved SQL/Power BI logic, and the narrative layer that explains results in plain English — and presented it at the company Hackathon.',
+            approachFlow: [
+                { name: 'Confirm the question', desc: 'Agent translates a plain-English business question into a structured analytical plan and confirms scope, filters, and definitions' },
+                { name: 'Execute the analysis', desc: 'Retrieves approved documentation and applies established SQL/Power BI metric definitions to the latest completed week' },
+                { name: 'Validate against baseline', desc: 'Compares results to a trailing 12-week baseline using z-scores and percentiles' },
+                { name: 'Separate direction from health', desc: 'Distinguishes "did it get worse" from "is this historically unusual," explained in plain English' },
+                { name: 'Recommend next steps', desc: 'Walks the root-cause chain and closes with prioritized, specific follow-up actions' }
+            ],
+            approachDetail: 'The agent chains together scope confirmation, governed SQL/Power BI execution, trailing-baseline validation, and a plain-English narrative — so a user gets a validated executive summary, supporting evidence, root-cause diagnosis, and next steps from one guided workflow instead of a manual multi-step process.',
+            outcomes: [
+                'Replaced a manual, multi-step "pull data, build charts, write summary" process with one guided workflow.',
+                'Presented the agent at the company Hackathon.',
+                'Currently tracking adoption as the next step toward broader rollout.'
+            ],
+            collaboration: [
+                { function: 'Analytics Leadership', contribution: 'Reviewed and provided feedback on the agent at the company Hackathon.' },
+                { function: 'Google Search Analysts', contribution: 'Early users providing feedback to guide adoption.' }
+            ],
+            lessonsLearned: 'The hardest part of an analytics agent isn\'t generating an answer — it\'s confirming the agent is answering the right question, with the right filters, before it runs. The scoping-confirmation step is what makes the rest of the output trustworthy.'
+        },
+        {
+            id: 'ja-pmax-rpa-breakdown',
+            title: 'PMax vs. Search: Breaking Down the Revenue-Per-Acquisition Gap',
+            subtitle: 'Explained a 13.9% customer-value gap between two paid-media channels, found where it was concentrated, and showed it barely mattered for ROAS.',
+            tag: 'Revenue & Conversion',
+            employer: 'justanswer',
+            resumeCategory: 'Marketing & Customer Acquisition Analytics',
+            resumeOrder: 6,
+            resumeBulletLabel: 'PMax vs. Search RPA Decomposition',
+            resumeBulletText: 'Led a cross-channel paid-media analysis explaining a 13.9% customer-value gap between automated and traditional paid search, identifying three high-volume segments responsible for ~87% of the within-segment shortfall, and showing a 13.1% acquisition-cost advantage limited the overall ROAS difference to under 1%.',
+            impactRange: '13.9% Value Gap Explained',
+            impactMetric: 'Limited ROAS difference to under 1% via cost offset',
+            focus: 'SQL, Decomposition Analysis, Cross-Channel Attribution',
+            context: 'Executive reporting showed a 13.9% difference in customer value per acquisition between Performance Max and traditional paid search, but it was unclear whether the gap came from traffic mix, landing pages, network composition, or genuine performance differences.',
+            challenge: [
+                'The existing analysis only covered traffic with available search-term data, not the full PMax population, so conclusions risked being based on an incomplete sample.',
+                'It wasn\'t clear whether the value gap was caused by which customers PMax was reaching (mix) or how it performed within the same customer segments as Search.',
+                'Channel, landing-page, and customer-segment effects were tangled together, making it hard to know where to prioritize optimization.'
+            ],
+            role: 'I led the analysis — standardizing the metrics across channels, reconciling detailed data with executive reporting, and building a decomposition model to separate traffic-mix effects from actual performance differences.',
+            approachFlow: [
+                { name: 'Standardize the metrics', desc: 'Aligned value, conversion, acquisition-cost, and return definitions across both channels' },
+                { name: 'Reconcile the data', desc: 'Matched detailed channel-level data to executive summary reporting' },
+                { name: 'Segment the traffic', desc: 'Broke performance down by customer category, landing-page experience, and network' },
+                { name: 'Decompose mix vs. performance', desc: 'Applied counterfactual decomposition to separate traffic-mix effects from within-segment performance' },
+                { name: 'Rank the opportunities', desc: 'Prioritized findings by both gap size and share of business volume' }
+            ],
+            approachDetail: 'The decomposition showed PMax Search RPA was 27.0% lower than Search–Search ($100.03 vs. $137.10), concentrated in core PMax Search inventory and weakest in Pets, Health, and Tech. But PMax\'s 26.9% lower CPA offset almost all of that gap, leaving conversion-value ROAS only 0.2% lower.',
+            outcomes: [
+                'Found the lower customer value was driven by weaker within-segment performance, not an unfavorable customer mix.',
+                'Identified three high-volume categories responsible for ~87% of the within-segment shortfall.',
+                'Found landing-page distribution explained ~76% of the aggregate value gap.',
+                'Showed a 13.1% lower acquisition cost offset most of the value disadvantage, leaving the ROAS difference under 1%.'
+            ],
+            collaboration: [
+                { function: 'Paid Media Leadership', contribution: 'Used the decomposition to redirect optimization from broad traffic reallocation to targeted segment improvements.' },
+                { function: 'Marketing Analytics', contribution: 'Adopted the standardized metric definitions for ongoing channel reconciliation.' }
+            ],
+            lessonsLearned: 'A headline value gap can hide two very different stories — "we\'re reaching worse customers" versus "we perform worse with the same customers." Decomposing mix from performance is what tells you which one it actually is, and where to focus.'
+        },
+        {
+            id: 'ja-fue-compliance-dashboard',
+            title: 'AI-Powered Ad Compliance Classification at Scale (FUE)',
+            subtitle: 'Used an LLM to screen nearly 400K auto-generated ad assets for compliance risk, then pinpointed the fraction of flagged spend that actually mattered.',
+            tag: 'Risk & Compliance',
+            employer: 'justanswer',
+            resumeCategory: 'AI & Engineering Operations',
+            resumeOrder: 9,
+            resumeBulletLabel: 'AI-Powered Ad Compliance Classification (FUE)',
+            resumeBulletText: 'Designed and implemented an AI-powered classification workflow evaluating ~400K Performance Max ad assets for compliance signals (99.8% classification success rate), then segmented results to show ~82% of flagged spend was concentrated in six campaign segments — turning a broad manual review problem into a prioritized remediation plan.',
+            impactRange: '400K Assets Classified, 99.8% Success',
+            impactMetric: 'Concentrated 82% of flagged spend into 6 actionable campaign segments',
+            focus: 'SQL, Prompt Studio, Gemini LLM, Power BI, Claude',
+            context: 'A large-scale Performance Max program was generating hundreds of thousands of dynamic ad assets through Final URL Expansion. Manually reviewing them for brand references, support-language claims, and misleading claims wasn\'t scalable.',
+            challenge: [
+                'The ad asset volume (nearly 400K) made manual compliance review impossible to scale.',
+                'Not every flagged asset carried the same risk — treating all flagged assets equally would waste remediation effort on low-impact issues.',
+                'Compliance signals needed to be connected to actual advertising performance data to know where exposure was concentrated, not just where it existed.'
+            ],
+            role: 'I designed and built the end-to-end workflow myself — from SQL data retrieval through LLM classification to the Power BI reporting layer — and led the segmentation analysis that turned raw classification output into a prioritized remediation plan.',
+            approachFlow: [
+                { name: 'Retrieve & prepare data', desc: 'Used SQL to structure advertising asset and performance data for classification' },
+                { name: 'Classify with an LLM', desc: 'Built a Prompt Studio + Gemini classification framework across brand, support-claim, positioning, and misleading-claim dimensions' },
+                { name: 'Join to performance', desc: 'Appended classification results to the advertising dataset alongside spend, impressions, and conversions' },
+                { name: 'Segment the exposure', desc: 'Identified which signal combinations, campaigns, and creative surfaces carried the most meaningful risk' },
+                { name: 'Build the dashboard', desc: 'Used Claude to help design an interactive Power BI dashboard for ongoing compliance monitoring' }
+            ],
+            approachDetail: 'The workflow runs SQL data retrieval into Gemini LLM classification, then analytical segmentation, then a Claude-assisted Power BI dashboard — connecting unstructured ad creative text to structured performance data so compliance exposure could be measured and prioritized, not just flagged.',
+            outcomes: [
+                'Classified ~400K assets with a 99.8% success rate.',
+                'Found ~55% of assets (and ~55% of spend, ~56% of impressions) carried at least one review signal — a portfolio-wide issue, not an isolated one.',
+                'Found ~84% of the highest-risk signal combination lacked proper positioning language, defining a clear remediation target.',
+                'Found ~82% of flagged spend concentrated in just six campaign segments, with headlines carrying ~10x more high-priority exposure than descriptions — both sharpening exactly where to focus.'
+            ],
+            collaboration: [
+                { function: 'Compliance Team', contribution: 'Used the classification framework and dashboard to prioritize which assets needed human review.' },
+                { function: 'PMax / Paid Acquisition', contribution: 'Used the campaign-segment breakdown to plan remediation without disrupting performance broadly.' }
+            ],
+            lessonsLearned: 'At this scale, "flag everything and review manually" isn\'t a strategy. The classification only became useful once it was joined to performance data and segmented — that\'s what turned a portfolio-wide problem into a six-campaign-segment, headline-focused action plan.'
+        },
+        {
+            id: 'ja-governed-analytics-workflow',
+            title: 'Governed Analytics Workflow for Profitability Drivers & Reusable AI Agents',
+            subtitle: 'Built a repeatable, review-gated process for diagnosing profitability drivers — and turned it into reusable analyst and AI agent methods.',
+            tag: 'Metric Integrity',
+            employer: 'justanswer',
+            resumeCategory: 'AI & Engineering Operations',
+            resumeOrder: 10,
+            resumeBulletLabel: 'Governed Analytics & AI Agent Methods',
+            resumeBulletText: 'Led the design of a reusable, review-gated workflow for diagnosing profitability drivers — governed SQL, reconciled notebooks, and source-traceable evidence — and translated it into reusable analyst and AI agent methods, presented to leadership (CM Driver Process, Analytics Agents).',
+            impactRange: 'Reusable Agent & Review-Gate Framework',
+            impactMetric: 'Established quality gates for AI-assisted analysis before executive presentation',
+            focus: 'SQL, Reproducible Notebooks, AI Agent Methodology',
+            context: 'Analytical methods and AI agents were emerging across the team, but their outputs needed consistent definitions, review standards, and a clear path to business decisions before leadership could trust them.',
+            challenge: [
+                'There was no consistent review standard for AI-assisted analysis before it reached executive presentations.',
+                'Without source tracing, findings couldn\'t easily be checked back against the underlying data.',
+                'Repeatable business questions were being re-investigated from scratch each time instead of using a reusable method.'
+            ],
+            role: 'I led the analytical design — building the governed SQL and reconciled notebooks, defining the review gates, and documenting the reusable agent methods.',
+            approachFlow: [
+                { name: 'Govern the data', desc: 'Built governed SQL and reconciled, reproducible notebooks with defined metrics and time periods' },
+                { name: 'Set the review gates', desc: 'Established checks for data quality, calculation accuracy, and evidence strength before anything reached an executive deck' },
+                { name: 'Trace to source', desc: 'Made sure every finding could be traced back to source data' },
+                { name: 'Diagnose the drivers', desc: 'Identified underlying profitability drivers and prioritized the highest-impact opportunities' },
+                { name: 'Document the method', desc: 'Turned the workflow into reusable analyst and AI agent methods for future repeatable questions' }
+            ],
+            approachDetail: 'The process combines governed SQL, reconciled notebooks, and explicit review gates (data quality, calculation accuracy, evidence strength) so every finding is source-traceable before it reaches an executive audience — then documents the method so it\'s reusable for the next repeatable business question.',
+            outcomes: [
+                'Identified underlying profitability drivers and prioritized the highest-impact optimization opportunities.',
+                'Established a repeatable way to review and communicate analytical evidence.',
+                'Documented reusable analyst and AI agent methods for future repeatable questions.',
+                'Presented the framework to leadership (CM Driver Process, Analytics Agents).'
+            ],
+            collaboration: [
+                { function: 'Analytics Leadership', contribution: 'Reviewed and adopted the review-gate standards for AI-assisted analysis.' },
+                { function: 'Analyst Team', contribution: 'Used the reusable agent methods for repeatable business questions.' }
+            ],
+            lessonsLearned: 'As AI agents take on more of the analysis itself, review gates matter more, not less — a repeatable method is only trustworthy if every finding can still be traced back to source data and checked before it reaches a decision-maker.'
+        },
+        {
+            id: 'ja-codex-rag-cm-analysis',
+            title: 'Codex Skills & RAG-Grounded Contribution Margin Analysis',
+            subtitle: 'Built custom Codex skills and RAG reference files so AI-assisted financial analysis stays grounded in real metric definitions — then used them to investigate Q2-Q3 CM growth drivers.',
+            tag: 'Metric Integrity',
+            employer: 'justanswer',
+            resumeCategory: 'AI & Engineering Operations',
+            resumeOrder: 11,
+            resumeBulletLabel: 'Codex Skills & RAG-Grounded CM Analysis',
+            resumeBulletText: 'Developed custom Codex skills and organized RAG reference files (metric definitions, SQL templates, validation rules) to ground AI-assisted financial analysis, then led a validated Q2–Q3 contribution margin driver analysis that informed targeted optimization recommendations.',
+            impactRange: 'Reusable Codex + RAG Analysis Workflow',
+            impactMetric: 'Identified material CM drivers across acquisition volume, value, and cost',
+            focus: 'SQL, Python, Codex, RAG',
+            context: 'Investigating contribution margin performance required consistent business definitions across several data sources, plus careful treatment of recent customer cohorts that hadn\'t fully matured yet.',
+            challenge: [
+                'Without grounded reference material, AI-assisted analysis risked using inconsistent or incorrect metric definitions.',
+                'Recent customer cohorts hadn\'t fully matured, so naive period-over-period comparisons could mislead.',
+                'The analysis needed to be both defensible to executives and reusable for the next quarter\'s version of the same question.'
+            ],
+            role: 'I built the Codex skills and RAG reference files myself, then used them alongside SQL and Python to decompose the margin performance and reconcile the findings.',
+            approachFlow: [
+                { name: 'Build the reference files', desc: 'Organized RAG reference files with metric definitions, SQL templates, and validation rules' },
+                { name: 'Build the Codex skills', desc: 'Turned those references into repeatable Codex skills for financial analysis and executive storytelling' },
+                { name: 'Set comparison rules', desc: 'Established comparison periods, denominator rules, and data-maturity checks' },
+                { name: 'Decompose the drivers', desc: 'Used SQL, Python, and Codex-assisted workflows to break down CM performance changes' },
+                { name: 'Reconcile & present', desc: 'Reconciled findings against governed data and built the executive presentation' }
+            ],
+            approachDetail: 'Grounding Codex in RAG reference files (metric definitions, SQL templates, validation rules) meant the AI-assisted decomposition of contribution margin performance stayed consistent with governed data — rather than re-deriving definitions from scratch each time.',
+            outcomes: [
+                'Identified material contribution margin drivers across acquisition volume, customer value per acquisition, and cost components.',
+                'Delivered a repeatable Codex-assisted workflow for future contribution margin analyses.',
+                'Established comparison-period and data-maturity rules that clarified which findings were reliable versus directional.',
+                'Informed targeted optimization recommendations in executive presentations.'
+            ],
+            collaboration: [
+                { function: 'Finance', contribution: 'Used the CM driver findings to inform targeted optimization priorities.' },
+                { function: 'Analytics Leadership', contribution: 'Reviewed the Codex-assisted workflow for reuse in future quarters.' }
+            ],
+            lessonsLearned: 'An AI coding assistant is only as good as what it\'s grounded in. Building the RAG reference files first — before using Codex for the actual analysis — is what kept the output consistent with governed definitions instead of plausible-sounding guesses.'
         }
     ];
+
+    // Static per-employer header info for the Resume view's Experience section.
+    // `key` matches a project's optional `employer` field so its resumeBulletText
+    // gets grouped under the right block by renderResumeExperience().
+    const employerMeta = [
+        {
+            key: 'justanswer',
+            role: 'AI ENGINEERING & PRODUCT ANALYTICS',
+            company: 'Pearl (JustAnswer Inc.)',
+            dates: 'February 2022 - Present',
+            current: true,
+            description: 'Online platform that combines AI and human experts to provide verified answers to complex questions.',
+            resumeCategoryOrder: ['Product Strategy & Revenue Growth', 'Marketing & Customer Acquisition Analytics', 'AI & Engineering Operations']
+        },
+        {
+            key: 'ashley',
+            role: 'SENIOR BUSINESS INTELLIGENCE ANALYST',
+            company: 'Ashley Furniture Industries Inc.',
+            dates: 'February 2021 - February 2022',
+            current: false,
+            description: 'Global manufacturer and retailer of home furnishings.'
+        },
+        {
+            key: 'techdata',
+            role: 'CITIZEN DATA SCIENTIST - DIGITAL TRANSFORMATION',
+            company: 'Tech Data Corporation',
+            dates: 'August 2020 - February 2021',
+            current: false,
+            description: 'Global distributor of technology products, services and solutions.'
+        }
+    ];
+
+    // Resume bullets with no corresponding projectsData entry (no full case study
+    // exists for these). Kept verbatim; prefer adding resumeBulletText to a real
+    // project entry instead of adding here, whenever a project exists.
+    const legacyResumeBullets = {
+        ashley: [
+            { label: null, text: 'Led a transformative initiative to deploy Price Variance Analysis, unraveling factors driving sales growth across corporate stores. This allowed the business to shift budgeting, increasing sales by 10%.' },
+            { label: null, text: 'Built a staffing optimization model using Python and a sophisticated regression model rooted in the sales production function, enhancing operational efficiency and driving cost savings. This optimization reduced overstaffing by more than 50%.' }
+        ],
+        techdata: [
+            { label: null, text: 'Strategically harnessed Recency, Frequency, Monetary (RFM) analysis using Tableau and Alteryx to identify incremental business opportunities through customer segmentation.' },
+            { label: null, text: 'Integrated multiple data sources to extract, transform, and blend data for robust predictive data science models, including segmentation, propensity, and forecasting.' }
+        ]
+    };
+
+    // Builds the Resume view's Experience section from employerMeta + any
+    // projectsData entries carrying resumeBulletText + legacyResumeBullets.
+    // Adding a new project's resume fields is the only step needed to add a
+    // bullet here — no HTML to hand-edit.
+    function renderResumeExperience() {
+        const container = document.getElementById('resume-experience');
+        if (!container) return;
+
+        const bulletHtml = (b) => `<li>${b.label ? `<strong>${b.label}:</strong> ` : ''}${b.text}</li>`;
+
+        let html = '';
+        employerMeta.forEach((emp, idx) => {
+            const grouped = [];
+            let flatBullets = [];
+
+            projectsData
+                .filter(p => p.employer === emp.key && p.resumeBulletText)
+                .forEach(p => {
+                    const bullet = { label: p.resumeBulletLabel || null, text: p.resumeBulletText, order: p.resumeOrder || 0 };
+                    if (p.resumeCategory) {
+                        let group = grouped.find(g => g.name === p.resumeCategory);
+                        if (!group) {
+                            group = { name: p.resumeCategory, bullets: [] };
+                            grouped.push(group);
+                        }
+                        group.bullets.push(bullet);
+                    } else {
+                        flatBullets.push(bullet);
+                    }
+                });
+
+            // Explicit category order (if given) beats first-appearance order,
+            // since projectsData's own array order doesn't match resume order.
+            if (emp.resumeCategoryOrder) {
+                grouped.sort((a, b) => emp.resumeCategoryOrder.indexOf(a.name) - emp.resumeCategoryOrder.indexOf(b.name));
+            }
+            grouped.forEach(group => group.bullets.sort((a, b) => a.order - b.order));
+
+            flatBullets = flatBullets.concat(legacyResumeBullets[emp.key] || []);
+
+            let bodyHtml = '';
+            grouped.forEach(group => {
+                bodyHtml += `
+                <div class="space-y-2 pl-2">
+                    <h4 class="text-xs font-bold text-slate-900 print:text-black uppercase tracking-wide border-l-2 border-blue-600 pl-2">${group.name}</h4>
+                    <ul class="space-y-2 text-slate-700 print:text-slate-800 font-light pl-4 list-disc">
+                        ${group.bullets.map(bulletHtml).join('')}
+                    </ul>
+                </div>`;
+            });
+            if (flatBullets.length) {
+                bodyHtml += `
+                <ul class="space-y-1.5 text-slate-700 print:text-slate-800 font-light pl-4 list-disc">
+                    ${flatBullets.map(bulletHtml).join('')}
+                </ul>`;
+            }
+
+            const datesClass = emp.current
+                ? 'text-xs text-blue-800 font-bold tracking-wider print:text-slate-700'
+                : 'text-xs text-slate-500 print:text-slate-700';
+            const wrapperClass = idx === 0 ? 'space-y-4' : 'space-y-2 pt-4 border-t border-slate-200 print-border';
+
+            html += `
+            <div class="${wrapperClass}">
+                <div class="flex justify-between items-start font-bold">
+                    <div>
+                        <span class="text-base text-slate-900 print:text-black uppercase">${emp.role}</span>
+                        <div class="text-xs text-blue-800">${emp.company}</div>
+                    </div>
+                    <span class="${datesClass}">${emp.dates}</span>
+                </div>
+                <p class="text-xs text-slate-500 italic">${emp.description}</p>
+                ${bodyHtml}
+            </div>`;
+        });
+
+        container.innerHTML = html;
+    }
 
     // Navigation function
     function navigateTo(tabName, projectId = null) {
@@ -1700,6 +1968,7 @@
         1: {
             title: "What Funding Funnels Taught Me About Revenue Leakage",
             tag: "Revenue Analytics",
+            teaser: "It's rarely the traffic. It's almost always the last step before checkout.",
             color: "brand",
             p1: "When conversion drops, the instinct is to blame the traffic and pour more budget into ads. In my experience, that's usually the wrong fix.",
             p2: "The real leak is almost always later in the journey — a confusing payment screen, a failed bank verification, a form that resets itself. These are boring problems compared to 'our ads aren't working,' which is exactly why they go unnoticed.",
@@ -1708,6 +1977,7 @@
         2: {
             title: "Why Analysts Should Think Like Product Managers",
             tag: "Product Strategy",
+            teaser: "Writing queries is the easy part. Knowing what to build next is the job.",
             color: "accent",
             p1: "The traditional analyst role is reactive: someone asks a question, you write a query, you hand over a chart. That model creates bottlenecks and misses the bigger opportunities.",
             p2: "Analysts who think like product managers study the whole customer journey, not just the metric they were asked about. They understand how a number connects to an actual decision someone is trying to make.",
@@ -1716,20 +1986,82 @@
         3: {
             title: "Where AI Actually Helps With Data Work",
             tag: "A.I. in Practice",
+            teaser: "Not for the analysis. For the mess that comes before it.",
             color: "brand",
             p1: "AI tools are genuinely useful for one specific problem: messy, unstructured text that used to take a human days to sort through — like thousands of customer comments.",
             p2: "I feed that kind of text to an AI model and get back clean categories I can join against real transaction data. That turns \"customers are unhappy\" into \"12% of cancellations mention billing confusion specifically.\"",
             p3: "The output still needs a human to check it and decide what to do next. But it turns a week of manual reading into an afternoon."
+        },
+        4: {
+            title: "The Hardest Part of an AI Analyst Isn't the Answer",
+            tag: "AI Agents",
+            teaser: "Confirming scope matters more than generating the answer.",
+            color: "accent",
+            p1: "Building an AI agent to answer questions like \"why did margin decline this week\" taught me that generating an answer is the easy part. The real risk is the agent confidently answering the wrong question — the wrong time period, the wrong filter, the wrong metric.",
+            p2: "Before our agent runs any analysis, it restates its interpretation of the question back in plain English: which weeks, which filters, which definitions. That one confirmation step catches more real errors than any amount of model tuning ever would.",
+            p3: "The output is only as trustworthy as the scoping behind it. If you're building an analytics agent, spend more time on \"are we even asking the right question\" than on the eventual chart."
+        },
+        5: {
+            title: "A Gap in the Numbers Isn't Always the Story",
+            tag: "Marketing Analytics",
+            teaser: "Decomposing mix from performance changed the whole conclusion.",
+            color: "brand",
+            p1: "A 13.9% customer-value gap between two ad channels looked damning at first glance. The obvious read was \"this channel performs worse.\"",
+            p2: "But decomposing the gap into traffic mix versus within-segment performance told a different story: the channels were reaching similar customers, and a lower acquisition cost quietly offset almost all of the value difference — leaving the actual ROAS gap under 1%.",
+            p3: "A single headline metric rarely tells you what to do next. Before reallocating budget off a \"worse-performing\" channel, decompose the gap first — you might find the channel is fine, and the real opportunity is somewhere narrower."
+        },
+        6: {
+            title: "Flagging Everything Isn't a Compliance Strategy",
+            tag: "AI & Compliance",
+            teaser: "400K assets flagged is not the same as 400K problems.",
+            color: "accent",
+            p1: "When an LLM classifier flags over half of 400,000 ad assets for potential compliance review, the instinct is to treat that as a crisis. It isn't — it's a starting point.",
+            p2: "The flag only became useful once we joined it to performance data and segmented it: which signal combinations, which campaigns, which creative surfaces actually carried the exposure. That turned a portfolio-wide flag into a six-campaign-segment action list.",
+            p3: "An AI classifier's job is to surface candidates, not make the final call. The real work — and the real value — is in the segmentation that tells you which flagged items actually matter."
+        },
+        7: {
+            title: "AI Agents Make Review Gates More Important, Not Less",
+            tag: "Analytics Leadership",
+            teaser: "A repeatable method is only as good as its traceability.",
+            color: "brand",
+            p1: "As more of our analysis started running through AI agents, I expected the need for human review to shrink. It didn't — it just moved earlier in the process.",
+            p2: "We built review gates for data quality, calculation accuracy, and evidence strength before anything reached an executive deck, with every finding traceable back to source data. That's what made the agent-assisted output something leadership could actually trust.",
+            p3: "Speed from automation is only valuable if the output is still defensible. The teams getting real value from AI agents aren't skipping review — they're building it into the workflow itself."
+        },
+        8: {
+            title: "An AI Coding Assistant Is Only as Good as What It's Grounded In",
+            tag: "AI Tooling",
+            teaser: "Building the reference files came before writing a single prompt.",
+            color: "accent",
+            p1: "The temptation with a tool like Codex is to just start asking it to analyze things. We didn't — we built the reference material first.",
+            p2: "Organizing metric definitions, SQL templates, and validation rules into RAG reference files meant every Codex-assisted analysis used the same grounded definitions, instead of plausible-sounding guesses recreated from scratch each time.",
+            p3: "If you want AI-assisted analysis you can actually defend to executives, the unglamorous work of documenting your definitions and rules isn't optional — it's the thing that makes the AI's output trustworthy instead of just fluent."
         }
     };
+
+    // Builds the Insights sidebar menu from articlesData. Adding a new article
+    // is just adding one entry here with the next numeric key — no button HTML
+    // to hand-write.
+    function renderArticlesMenu() {
+        const menu = document.getElementById('articles-menu');
+        if (!menu) return;
+
+        menu.innerHTML = Object.keys(articlesData).map(id => `
+            <button onclick="readArticle(${id})" id="art-btn-${id}" class="w-full text-left p-4 rounded-xl border border-slate-200 bg-slate-50 hover:border-blue-600 transition-all block group">
+                <span class="text-blue-800 text-xs font-semibold block uppercase tracking-wider">${articlesData[id].tag}</span>
+                <span class="text-slate-900 text-base font-bold block mt-1 leading-tight group-hover:text-blue-800">${articlesData[id].title}</span>
+                <span class="text-xs text-slate-500 block mt-2">${articlesData[id].teaser}</span>
+            </button>
+        `).join('');
+    }
 
     function readArticle(id) {
         const art = articlesData[id];
         const reader = document.getElementById('article-reader-body');
         if (!art || !reader) return;
-        
+
         // Reset active borders in menu
-        [1, 2, 3].forEach(idx => {
+        Object.keys(articlesData).forEach(idx => {
             const btn = document.getElementById(`art-btn-${idx}`);
             if (btn) {
                 btn.className = "w-full text-left p-4 rounded-xl border border-slate-200 bg-slate-50 hover:border-blue-600 transition-all block group";
@@ -1783,6 +2115,8 @@
     window.onload = function() {
         renderFeaturedProjects();
         renderProjectsList();
+        renderResumeExperience();
+        renderArticlesMenu();
         readArticle(1);
     }
 </script>

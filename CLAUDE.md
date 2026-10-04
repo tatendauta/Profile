@@ -28,7 +28,25 @@ A single-page portfolio/resume site for Tatenda Uta (AI & Analytics Decision Par
 
 Project case studies live in a single `projectsData` array (JS objects with `title`, `tag`, `impactRange`, `context`, `challenge`, `approachFlow`, `outcomes`, `collaboration`, `lessonsLearned`, etc.). `renderProjectDetail(id)` and `renderProjectsList()`/`renderFeaturedProjects()` build the project cards/detail pages from this array at runtime via template strings — there's no separate template file.
 
+The on-site **Resume Experience section** (`<div id="resume-experience">`) and the **Insights sidebar menu** (`<div id="articles-menu">`) are also data-driven, not static HTML — see "Adding a new project" below for how they connect to `projectsData`.
+
 Article content (`articlesData`) and leadership scenario copy (`triggerScenario()`) work the same way: inline data objects rendered via template strings on click.
+
+### Adding a new project
+
+When the user describes something new they've completed, add it to `projectsData` (full field list: `id, title, subtitle, tag, impactRange, impactMetric, focus, context, challenge, role, approachFlow, approachDetail, outcomes, collaboration, lessonsLearned` — ask for whatever's missing rather than requiring a rigid template). `tag` must be one of the four values with an existing filter button (`Revenue & Conversion`, `Metric Integrity`, `Experimentation`, `Risk & Compliance`) — a new tag value needs a new filter button hand-added near line ~437, since that part isn't data-driven.
+
+To also put it on the on-site resume, add four more optional fields to the same project object:
+- `employer` — must match a `key` in `employerMeta` (currently `'justanswer'`, `'ashley'`, `'techdata'`)
+- `resumeCategory` — optional subcategory heading (omit for employers that list bullets flat); if used, must also appear in that employer's `resumeCategoryOrder` in `employerMeta`, or it won't be positioned predictably
+- `resumeOrder` — a number controlling bullet order within its category (sorted ascending) — **required whenever `resumeCategory` is set**, since `projectsData`'s own array order doesn't drive resume order
+- `resumeBulletLabel` (optional, omit for an unlabeled flat bullet) and `resumeBulletText` — the bold lead-in and bullet prose
+
+Don't add these four fields if the project shouldn't appear on the resume — ask the user.
+
+For an **Insights article**, ask the user once whether they want one (don't assume yes) — if so, add an entry to `articlesData` with the next unused numeric key and all of: `title`, `tag`, `teaser` (the short sidebar preview line), `p1`/`p2`/`p3` (exactly three paragraphs; the reader UI doesn't support more or fewer). `color` is a vestigial field (both values render identically now) — fine to set `"brand"` by convention, doesn't matter functionally.
+
+After any of the above: run a Node syntax check on the extracted `<script>` block (`split` on `<script>`/`</script>`, `new Function(js)`), then open `index.html` in a browser and visually confirm Projects/Resume (incl. print preview)/Insights all look right before considering it done.
 
 `submitForm()` (bottom of the script) is dead code — it references a `#contact-form`/`#form-name`/`#form-status` that don't exist in the current markup (no actual `<form>` in the Contact view, just mailto/LinkedIn link cards). Leave it alone unless you're deliberately adding a real contact form.
 
