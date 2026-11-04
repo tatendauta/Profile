@@ -1449,6 +1449,401 @@
                 { function: 'Analytics Leadership', contribution: 'Reviewed the Codex-assisted workflow for reuse in future quarters.' }
             ],
             lessonsLearned: 'An AI coding assistant is only as good as what it\'s grounded in. Building the RAG reference files first — before using Codex for the actual analysis — is what kept the output consistent with governed definitions instead of plausible-sounding guesses.'
+        },
+        {
+            id: 'ja-search-term-shift-javatar',
+            title: 'Search Term Shift Analysis: Javatar vs. JA',
+            subtitle: 'After a Google Ad Quality update hit Javatar hard, I measured exactly how much of that lost demand JustAnswer actually recovered — and where it didn\'t.',
+            tag: 'Revenue & Conversion',
+            employer: 'justanswer',
+            resumeCategory: 'Marketing & Customer Acquisition Analytics',
+            resumeOrder: 7,
+            resumeBulletLabel: 'Search Term Shift Analysis (Javatar vs. JA)',
+            resumeBulletText: 'Quantified search-demand migration after a Google Ad Quality update, finding JA recovered the full ecosystem loss in Tech (+$360.1K) and Pets (+$56.7K) but not in Health (-$58.9K net decline), and that only 20–30% of JA\'s gains came from direct same-term capture rather than broader growth.',
+            impactRange: '$360K Ecosystem Recovery in Tech',
+            impactMetric: 'Identified Health as the primary remediation vertical',
+            focus: 'SQL, Search Term Analysis, Cross-Domain Attribution',
+            context: 'A second wave of Google\'s Ad Quality update hit Javatar hard in April, while JustAnswer (JA) stayed flat or grew in several areas. Leadership needed to know whether JA was actually absorbing the demand Javatar lost, or whether the business was losing ground overall.',
+            challenge: [
+                'It wasn\'t enough to look at total traffic — the real question was whether JA was capturing the specific search terms Javatar lost, or just growing separately.',
+                'Performance varied sharply by vertical, so a single blended number would have hidden where the real problem was.',
+                'Distinguishing "JA grew" from "JA replaced what Javatar lost" required matching search terms across two separate domains pre- and post-update.'
+            ],
+            role: 'I designed and ran the analysis — matching normalized search terms between Javatar and JA across Health, Pets, and Tech to measure exactly how much lost demand was recaptured versus genuinely new.',
+            approachFlow: [
+                { name: 'Identify the losses', desc: 'Found every search term where Javatar clicks declined from pre- to post-period, by vertical' },
+                { name: 'Check for capture', desc: 'Matched those same normalized terms against JA to see where JA gained on exactly what Javatar lost' },
+                { name: 'Measure the offset', desc: 'Calculated whether JA\'s gain on those terms was large enough to offset Javatar\'s loss' },
+                { name: 'Check the ecosystem', desc: 'Looked at total JA + Javatar performance, not just same-term capture, to see net business impact' },
+                { name: 'Rank the gaps', desc: 'Identified which verticals had the largest set of high-value terms neither brand was capturing' }
+            ],
+            approachDetail: 'Tech showed strong same-term capture (58.3% of lost clicks, 88.6% of lost conversion value) and total ecosystem growth of +$360.1K. Pets recovered at the ecosystem level (+$56.7K) despite weaker direct capture. Health was the clear gap — only 22.4% same-term capture and a net ecosystem decline of -$58.9K, with over 70% of Javatar\'s lost terms missing from JA entirely.',
+            outcomes: [
+                'Found Tech had the strongest capture and the clearest evidence JA absorbed Javatar\'s lost demand.',
+                'Found Pets recovered overall, but mainly through broader JA growth rather than exact-term replacement.',
+                'Found Health was the one vertical where the combined JA + Javatar ecosystem declined — flagging it as the priority for remediation.',
+                'Showed that across all three verticals, only 20–30% of JA\'s gains were direct same-term capture — most of JA\'s growth was separate from Javatar\'s losses.'
+            ],
+            collaboration: [
+                { function: 'SEO / Paid Search Leadership', contribution: 'Used the vertical breakdown to prioritize Health as the primary remediation target.' },
+                { function: 'Content & Creative', contribution: 'Reviewed the missing-term gaps to inform where JA needed broader keyword coverage.' }
+            ],
+            lessonsLearned: '"We grew overall" and "we replaced what we lost" are two different claims, and conflating them hides exactly where the business is actually exposed. Matching the same search terms across both brands is what separated real recovery from coincidental growth elsewhere.'
+        },
+        {
+            id: 'ja-law-ngram-analysis',
+            title: 'Law Vertical N-Gram Headline Analysis',
+            subtitle: 'Mined ad headline language across the Law vertical to find exactly which words turn a click into a profitable conversion — and which practice areas are an untapped opportunity.',
+            tag: 'Revenue & Conversion',
+            employer: 'justanswer',
+            resumeCategory: 'Marketing & Customer Acquisition Analytics',
+            resumeOrder: 8,
+            resumeBulletLabel: 'Law Vertical N-Gram Headline Analysis',
+            resumeBulletText: 'Led an N-gram analysis of Law vertical ad headlines, identifying cost-transparency messaging ("no retainers," "hourly fees") and immediate-access language as the strongest profit differentiators, and flagging Family Law as a high-intent practice-area opportunity — translating findings into a reusable headline-recommendation framework.',
+            impactRange: 'Law Headline Messaging Framework',
+            impactMetric: 'Identified top 3 profit-driving message themes + a new practice-area segment',
+            focus: 'SQL, N-Gram Analysis, Google Ads API, Power BI',
+            context: 'Unlike the Health vertical, where speed and expert access dominated performance, it wasn\'t clear what actually drove profitable clicks in the Law vertical — or whether the same creative strategy would even apply.',
+            challenge: [
+                'There was no existing breakdown of which specific words and phrases in Law ad headlines correlated with profit versus just volume.',
+                'Assuming the Health vertical\'s winning messaging (speed, expert access) would transfer directly to Law risked missing what Law searchers actually respond to.',
+                'With thousands of live headlines, finding the handful of phrase patterns that mattered required a systematic, not manual, approach.'
+            ],
+            role: 'I ran the N-gram analysis myself — mining bi-gram and tri-gram patterns across enabled Law headlines and ranking them by margin, then translating the findings into concrete creative and testing recommendations.',
+            approachFlow: [
+                { name: 'Scope the dataset', desc: 'Filtered to enabled Responsive Search Ad headlines in the Law vertical over a defined date range' },
+                { name: 'Mine the phrases', desc: 'Ran bi-gram and tri-gram analysis to find which word combinations appeared most in profitable ads' },
+                { name: 'Rank by margin', desc: 'Sorted phrase patterns by profitability, not just volume, to separate popular from profitable' },
+                { name: 'Segment by theme', desc: 'Grouped winning phrases into message themes: affordability, access, lawyer connection, trust, locality' },
+                { name: 'Translate to action', desc: 'Converted each theme into concrete headline examples and a practice-area opportunity list' }
+            ],
+            approachDetail: 'Cost-transparency phrases ("no retainers," "no hourly fees") dominated both bi-gram and tri-gram profitability rankings by margin. Immediate-access language ("lawyer online now," "24/7 online chat") drove scale, and direct lawyer-connection phrases built trust and conversion. Family Law-specific phrases ranked among the top trigrams despite smaller volume, flagging it as a distinct high-intent segment.',
+            outcomes: [
+                'Identified cost transparency as the single strongest competitive differentiator in Law headline performance.',
+                'Found immediate-access and direct-lawyer-connection messaging as the next two strongest profit drivers.',
+                'Flagged Family Law as a high-intent practice-area opportunity worth dedicated creative.',
+                'Delivered a reusable 3-theme messaging framework (affordability, access, expert connection) for future headline generation.'
+            ],
+            collaboration: [
+                { function: 'Creative / Copywriting', contribution: 'Used the messaging framework to prioritize new headline variations for testing.' },
+                { function: 'Paid Marketing (Law)', contribution: 'Applied the practice-area findings to scope dedicated Family Law campaigns.' }
+            ],
+            lessonsLearned: 'What wins in one vertical doesn\'t automatically win in another — Law responds to affordability and access, not the speed-and-expertise framing that worked in Health. The N-gram method generalizes; the winning message themes don\'t.'
+        },
+        {
+            id: 'ja-funnel-emotional-intelligence',
+            title: 'Enhancing Customer Experience Through Emotional Intelligence',
+            subtitle: 'Classified emotional sentiment across 17,000+ chat conversations per vertical to find exactly where bot-to-expert handoffs were losing customers — presented at two company hackathons.',
+            tag: 'Metric Integrity',
+            employer: 'justanswer',
+            resumeCategory: 'Product Strategy & Revenue Growth',
+            resumeOrder: 3,
+            resumeBulletLabel: 'Customer Emotional Intelligence Analysis',
+            resumeBulletText: 'Classified emotional sentiment before and after expert handoff across 17,000+ chat conversations per vertical (Law funnel focus), identifying bot-handling and handoff-personalization gaps; presented findings and feature proposals at both the Analytics and Engineering Hackathons.',
+            impactRange: '17,000+ Conversations Analyzed',
+            impactMetric: 'Presented at 2 company Hackathons (Analytics & Engineering)',
+            focus: 'NLP Sentiment Classification, Chat Data Analysis, Prompt Studio',
+            context: 'The Law vertical has high monetization potential but no visibility into how customer emotion shifted during a chat — whether a frustrated customer got worse or better after being handed off from a bot to a human expert.',
+            challenge: [
+                'Emotional state wasn\'t tracked anywhere in the existing chat data, only outcomes like conversion or churn.',
+                'Thousands of chat transcripts made manual review of emotional tone impossible at scale.',
+                'Without a "before and after handoff" comparison, it was impossible to tell whether the bot or the expert stage was actually causing frustration.'
+            ],
+            role: 'I designed and ran the analysis — classifying emotional state at two key moments (before and after the expert handoff) across thousands of conversations, then translating the sentiment shifts into concrete product recommendations.',
+            approachFlow: [
+                { name: 'Define the moments', desc: 'Identified pre-handoff (bot) and post-handoff (expert) as the two emotional checkpoints to measure' },
+                { name: 'Classify at scale', desc: 'Used NLP/LLM-based sentiment classification across 17,000+ conversations per vertical' },
+                { name: 'Measure the shift', desc: 'Compared emotional state before and after handoff to isolate where frustration was created or resolved' },
+                { name: 'Segment the patterns', desc: 'Grouped findings by customer emotional trajectory, not just final outcome' },
+                { name: 'Propose features', desc: 'Converted findings into concrete feature proposals: real-time emotion tagging, emotion summaries, resolution clarity' }
+            ],
+            approachDetail: 'The analysis found specific, fixable gaps: unhappy customers needed earlier bot intervention and sentiment-based routing to an expert, and expert handoffs that didn\'t acknowledge prior frustration made things worse. These became three concrete feature proposals — real-time emotion tagging, pre-handoff emotion summaries for experts, and clearer resolution summaries for customers.',
+            outcomes: [
+                'Identified specific points where bot handling escalated rather than resolved customer frustration.',
+                'Proposed real-time emotion tagging and emotion summaries to personalize expert handoffs.',
+                'Presented the analysis and feature proposals at both the Analytics Hackathon and the Engineering Hackathon.',
+                'Gave the Law vertical team a data-backed framework for where to invest in funnel experience improvements.'
+            ],
+            collaboration: [
+                { function: 'Funnel / Product Team', contribution: 'Used the emotional-journey findings to prioritize bot-handling and handoff improvements.' },
+                { function: 'Engineering', contribution: 'Evaluated feasibility of real-time emotion tagging and summary features proposed at the hackathon.' }
+            ],
+            lessonsLearned: 'Outcome metrics like conversion tell you what happened, not what the customer felt along the way. Measuring sentiment before and after the handoff — not just at the end — is what revealed the handoff itself was often where frustration got worse, not better.'
+        },
+        {
+            id: 'ja-ca-analyst-onboarding',
+            title: 'Customer Acquisition Analyst Onboarding Program',
+            subtitle: 'Designed and ran an end-to-end training program that took a new analyst from zero to independently running A/B and Multi-Armed Bandit experiments.',
+            tag: 'Metric Integrity',
+            employer: 'justanswer',
+            resumeCategory: 'Team Leadership & Enablement',
+            resumeOrder: 1,
+            resumeBulletLabel: 'Customer Acquisition Analyst Onboarding',
+            resumeBulletText: 'Designed and delivered a structured onboarding program (BigQuery, TAS, TROQ, Revizely, A/B & Multi-Armed Bandit testing) for a new Customer Acquisition analyst, producing reusable training artifacts and ramping the hire to independent, stakeholder-ready experimentation in a short timeframe.',
+            impactRange: 'Full Experimentation Onboarding Delivered',
+            impactMetric: 'Reusable training package for future hires (decks, notebooks, cheat sheets)',
+            focus: 'BigQuery, TAS, TROQ, Revizely, A/B & MAB Testing',
+            context: 'A new analyst joined the Customer Acquisition team needing to get up to speed on both the team\'s core data tooling and its full experimentation methodology before they could independently design, run, and interpret tests.',
+            challenge: [
+                'The training needed to cover both foundational tooling (BigQuery, TAS, TROQ) and the full experiment lifecycle — hypothesis framing through stakeholder presentation — not just one or the other.',
+                'Without a structured curriculum, onboarding tends to be ad hoc and inconsistent, slowing ramp time and risking inconsistent experiment methodology down the line.',
+                'The training needed to leave behind reusable material, not just a one-time walkthrough, so future hires could ramp faster too.'
+            ],
+            role: 'I designed and delivered the entire program myself — structuring the curriculum, running hands-on sessions, and building the reusable artifacts the team could use for future onboarding.',
+            approachFlow: [
+                { name: 'Cover the fundamentals', desc: 'Trained on BigQuery, TAS, TROQ, and core company metrics' },
+                { name: 'Teach the experiment lifecycle', desc: 'Covered hypothesis framing, power/sample-size calculation, and stopping rules' },
+                { name: 'Go hands-on in Revizely', desc: 'Ran live sessions on experiment configuration and rollout, plus A/B vs. Multi-Armed Bandit tradeoffs' },
+                { name: 'Walk the full pipeline', desc: 'Demonstrated setup in Revizely through data capture in BigQuery to analysis in TAS/TROQ to presentation' },
+                { name: 'Leave reusable artifacts', desc: 'Built slide decks, BigQuery notebooks, Revizely walkthroughs, and one-page cheat sheets for future use' }
+            ],
+            approachDetail: 'Rather than a one-off walkthrough, the program combined structured curriculum, hands-on Revizely sessions, and live review of the trainee\'s first real experiment designs — with every session producing a reusable artifact (deck, notebook, or cheat sheet) the team keeps using for future onboarding.',
+            outcomes: [
+                'Ramped the new analyst to independently configuring, analyzing, and presenting experiments in a short timeframe.',
+                'Improved team-wide experiment consistency by teaching standard protocols for power, stopping rules, and when to use MAB versus A/B.',
+                'Delivered a repeatable onboarding package (decks, notebooks, cheat sheets, Revizely guides) the team can reuse going forward.',
+                'Increased team capacity for rigorous experimentation without adding headcount to the training burden.'
+            ],
+            collaboration: [
+                { function: 'New Analyst (Trainee)', contribution: 'Completed hands-on exercises and ran first experiment designs under live review.' },
+                { function: 'Customer Acquisition Leadership', contribution: 'Adopted the training package as the team\'s standard onboarding reference.' }
+            ],
+            lessonsLearned: 'The best onboarding doesn\'t just transfer knowledge once — it leaves behind artifacts. Building the decks, notebooks, and cheat sheets as part of the training (not after it) is what turned a one-time ramp-up into something the team could reuse for the next hire.'
+        },
+        {
+            id: 'ja-bid-simulator-dashboard',
+            title: 'Bid Simulator Dashboard for Target ROAS Strategy',
+            subtitle: 'Built a Power BI tool that lets the paid-media team see simulated margin against actual margin before committing to a bid strategy change.',
+            tag: 'Revenue & Conversion',
+            employer: 'justanswer',
+            resumeCategory: 'Marketing & Customer Acquisition Analytics',
+            resumeOrder: 9,
+            resumeBulletLabel: 'Bid Simulator Dashboard (Target ROAS)',
+            resumeBulletText: 'Built a Power BI dashboard plotting actual vs. simulated margin against Target ROAS, with cost-weighted weekly ROAS calculations and independent date controls, giving the bid-strategy team a way to pressure-test a strategy change against real data before committing to it.',
+            impactRange: 'Actual vs. Simulated Margin Decision Tool',
+            impactMetric: 'Supports bid-strategy decisions against cost-weighted Target ROAS',
+            focus: 'Power BI, DAX, Bid Strategy Modeling',
+            context: 'The bid-strategy team needed a way to see how a proposed Target ROAS change would have performed against what actually happened, rather than committing to a strategy change and finding out after the fact.',
+            challenge: [
+                'Actual margin and a simulated "what-if" margin needed to be compared on the same chart without conflating their very different update cadences.',
+                'Target ROAS changes mid-week, so a simple weekly average would misrepresent the real cost-weighted target.',
+                'The tool needed independent date controls for the simulation start date versus the actual reporting period, without breaking filter consistency across other dashboard pages.'
+            ],
+            role: 'I built the dashboard page myself — defining the cost-weighted ROAS calculation, the dual date-control logic, and the performance-optimized aggregation behind it.',
+            approachFlow: [
+                { name: 'Define the metric', desc: 'Calculated cost-weighted Target ROAS (Σ(cost·target_roas)/Σ(cost)) to handle mid-week target changes correctly' },
+                { name: 'Aggregate for performance', desc: 'Pre-computed weekly aggregates so the chart stays responsive at scale' },
+                { name: 'Build dual date controls', desc: 'Separated the simulated start date from the actual reporting period as independent, non-conflicting filters' },
+                { name: 'Add strategy filtering', desc: 'Enabled filtering by bid strategy and domain, propagated consistently across dashboard pages' },
+                { name: 'Surface the comparison', desc: 'Plotted actual (blue) vs. simulated (orange) margin against Target ROAS with tooltips clarifying what updates when' }
+            ],
+            approachDetail: 'The dashboard plots weekly actual margin against a cost-weighted Target ROAS on one axis, with a simulated margin series for any selected bid strategy and start date overlaid for direct comparison — so a strategy change can be evaluated against real outcomes before it\'s ever run live.',
+            outcomes: [
+                'Gave the bid-strategy team a direct, visual way to compare actual results against a simulated alternative strategy.',
+                'Solved the mid-week target-change problem with a cost-weighted ROAS calculation instead of a naive average.',
+                'Delivered independent date controls so simulation and actual-period views don\'t interfere with each other.',
+                'Built for performance at scale via pre-computed weekly aggregates.'
+            ],
+            collaboration: [
+                { function: 'Bid Strategy / Paid Media', contribution: 'Used the simulator to evaluate proposed Target ROAS changes before implementation.' },
+                { function: 'BI Engineering', contribution: 'Reviewed the aggregation approach for consistency with other dashboard pages.' }
+            ],
+            lessonsLearned: 'A simulation tool is only trustworthy if its baseline math is right — getting the cost-weighted ROAS calculation correct for mid-week target changes mattered more to adoption than any visual polish on the dashboard itself.'
+        },
+        {
+            id: 'ja-ldi-test-dashboard',
+            title: 'Test Performance Dashboard',
+            subtitle: 'Built the single dashboard leadership and PMs actually used to see how every live test was performing, instead of waiting on a report.',
+            tag: 'Metric Integrity',
+            employer: 'justanswer',
+            resumeCategory: 'AI & Engineering Operations',
+            resumeOrder: 12,
+            resumeBulletLabel: 'Test Performance Dashboard',
+            resumeBulletText: 'Built and maintained a Power BI dashboard (backed by complex SQL) summarizing every test\'s metrics by variation, giving leadership and PMs a standing, self-serve view of experiment performance over time instead of one-off reports.',
+            impactRange: 'Standing Self-Serve Test Dashboard',
+            impactMetric: 'Replaced one-off reporting with a persistent leadership/PM view',
+            focus: 'Power BI, SQL, Test Automation System (TAS)',
+            context: 'Leadership and product managers needed to understand how every live and completed test was performing — but that meant pulling together ad hoc reports every time, with no consistent, up-to-date view.',
+            challenge: [
+                'Test data lived across a complex set of SQL queries not designed for easy, repeated executive reporting.',
+                'Different stakeholders wanted different cuts (by test, by variation, by time), which a single static report couldn\'t serve well.',
+                'Without a persistent dashboard, leadership\'s understanding of test performance was only as current as the last report someone happened to pull.'
+            ],
+            role: 'I built and maintained the dashboard — writing the underlying SQL and designing the Power BI views that let leadership and PMs self-serve the answer instead of waiting on a report.',
+            approachFlow: [
+                { name: 'Consolidate the data', desc: 'Wrote SQL to pull every test\'s metrics by variation into a single, queryable structure' },
+                { name: 'Design for multiple audiences', desc: 'Built Power BI views that let leadership and PMs filter by test, variation, or time period' },
+                { name: 'Summarize performance', desc: 'Surfaced each test\'s key metrics compared across variations in one view' },
+                { name: 'Keep it current', desc: 'Set up the dashboard to stay live and current, rather than being a point-in-time snapshot' },
+                { name: 'Gather feedback', desc: 'Iterated the dashboard based on what leadership and PMs actually used it for' }
+            ],
+            approachDetail: 'The dashboard runs on SQL queries complex enough to consolidate every test\'s variation-level metrics into one place, then surfaces them in Power BI in a way leadership and PMs could self-serve — replacing a cycle of one-off reports with a single, standing source of truth for test performance.',
+            outcomes: [
+                'Gave leadership and PMs a persistent, self-serve view of test performance instead of ad hoc reporting.',
+                'Became the standard reference for understanding how tests were performing by variation over time.',
+                'Reduced the reporting burden on the analytics team by replacing recurring manual pulls with a live dashboard.'
+            ],
+            collaboration: [
+                { function: 'Leadership', contribution: 'Used the dashboard directly for test performance reviews instead of requesting custom reports.' },
+                { function: 'Product Managers', contribution: 'Used the variation-level breakdown to make test extend/stop decisions.' }
+            ],
+            lessonsLearned: 'A dashboard only replaces a reporting cycle if it\'s actually trustworthy enough that people stop asking for the manual version. Getting the SQL right once meant leadership could rely on the dashboard directly, instead of treating it as a nice-to-have alongside the "real" report.'
+        },
+        {
+            id: 'ja-ps-phone-default-analysis',
+            title: 'Premium Services Phone Default Analysis',
+            subtitle: 'Measured what actually happens when a customer is defaulted into the phone channel instead of chat — and whether it helps or hurts.',
+            tag: 'Metric Integrity',
+            employer: 'justanswer',
+            resumeCategory: 'Product Strategy & Revenue Growth',
+            resumeOrder: 4,
+            resumeBulletLabel: 'Premium Services Phone Default Analysis',
+            resumeBulletText: 'Measured conversion rate, LTV, CSAT, and fulfillment outcomes for customers defaulted into the phone channel across multiple Phone Call tests, benchmarking the defaulted cohort against overall metrics to inform channel-defaulting strategy.',
+            impactRange: 'Phone-Default Cohort Benchmarked',
+            impactMetric: 'Compared CR, LTV, CSAT & fulfillment vs. overall metrics',
+            focus: 'SQL, Cohort Analysis, Premium Services Funnel',
+            context: 'Multiple Phone Call tests had defaulted some customers into the phone channel, but nobody had systematically checked whether that defaulting actually helped or hurt the customer outcome compared to the overall base.',
+            challenge: [
+                'The defaulted-to-phone cohort needed to be isolated cleanly across multiple separate tests, not just one.',
+                'Conversion rate alone wouldn\'t tell the full story — LTV, CSAT, and fulfillment all needed to be compared to see the complete picture.',
+                'Without a clear benchmark against overall metrics, it was impossible to say whether the phone default was a net positive or negative.'
+            ],
+            role: 'I led the analysis — defining the defaulted cohort across tests and benchmarking its CR, LTV, CSAT, and fulfillment against overall metrics.',
+            approachFlow: [
+                { name: 'Define the cohort', desc: 'Identified customers defaulted into the phone channel across multiple Phone Call tests' },
+                { name: 'Pull the outcome metrics', desc: 'Gathered CR, LTV, CSAT, and Phone Call fulfillment for the defaulted cohort' },
+                { name: 'Build the benchmark', desc: 'Compared defaulted-cohort metrics against overall base metrics' },
+                { name: 'Document the findings', desc: 'Wrote up the summary and vertical breakdown for stakeholders' },
+                { name: 'Share the data', desc: 'Delivered the underlying dataset alongside the written analysis for further exploration' }
+            ],
+            approachDetail: 'By isolating the phone-defaulted cohort across several tests and comparing it against overall CR, LTV, CSAT, and fulfillment metrics, the analysis gave a clear, vertical-by-vertical answer to whether defaulting customers to phone was helping or hurting the business — rather than leaving each test\'s result to be interpreted in isolation.',
+            outcomes: [
+                'Benchmarked the phone-defaulted cohort\'s conversion, LTV, CSAT, and fulfillment against overall metrics.',
+                'Delivered a vertical-by-vertical breakdown rather than one blended answer.',
+                'Gave Premium Services stakeholders a clear basis for deciding when phone-defaulting helps versus hurts.'
+            ],
+            collaboration: [
+                { function: 'Premium Services Product', contribution: 'Used the cohort benchmark to refine when and where to default customers to phone.' },
+                { function: 'Customer Operations', contribution: 'Reviewed CSAT and fulfillment findings to assess phone-channel capacity needs.' }
+            ],
+            lessonsLearned: 'A test that "defaults" customers into a channel needs its own outcome analysis — the defaulted cohort doesn\'t behave like the overall base, and assuming it does would have hidden real differences in LTV and satisfaction.'
+        },
+        {
+            id: 'ja-health-category-business-review',
+            title: 'Health Category Business Review & Premium Services Normalization',
+            subtitle: 'An executive deep dive into the Health category that leadership singled out in a global company meeting.',
+            tag: 'Revenue & Conversion',
+            employer: 'justanswer',
+            resumeCategory: 'Product Strategy & Revenue Growth',
+            resumeOrder: 5,
+            resumeBulletLabel: 'Health Category Business Review',
+            resumeBulletText: 'Led an executive business review analyzing Health category performance and premium-services normalization to inform leadership\'s direction on premium services strategy; presented to a global company meeting and singled out by leadership as a standout deep dive.',
+            impactRange: 'Global Meeting Executive Presentation',
+            impactMetric: 'Informed leadership direction on premium services strategy',
+            focus: 'SQL, Power BI, Executive Storytelling',
+            context: 'Leadership needed to understand where the Health category stood and what direction to take with premium services normalization — a decision with direct implications for the broader premium services strategy.',
+            challenge: [
+                'The review needed to work for an executive audience, not just analysts — translating category performance into a clear strategic narrative.',
+                'Premium services normalization touched multiple parts of the business, so the analysis needed to connect category performance to the broader strategic question leadership was actually trying to answer.',
+                'The findings needed to hold up under scrutiny in a global, cross-functional meeting.'
+            ],
+            role: 'I owned the analysis and the presentation — building the underlying data story and presenting it directly to leadership in a global company meeting.',
+            approachFlow: [
+                { name: 'Analyze the category', desc: 'Reviewed Health category performance across the relevant business metrics' },
+                { name: 'Assess normalization', desc: 'Evaluated the premium-services normalization and its effect on category performance' },
+                { name: 'Build the narrative', desc: 'Translated the analysis into a clear strategic story for an executive audience' },
+                { name: 'Present to leadership', desc: 'Delivered the review, video, and deck to a global company meeting' },
+                { name: 'Incorporate feedback', desc: 'Took direct feedback from leadership on content and delivery' }
+            ],
+            approachDetail: 'The review connected Health category performance directly to the premium-services normalization question leadership was weighing, giving a clear "here\'s where we are, here\'s the direction to take" narrative rather than a purely descriptive performance recap.',
+            outcomes: [
+                'Helped leadership understand the Health category\'s current position and the direction to take with premium services.',
+                'Presented to a global company meeting, with leadership specifically calling it out as a standout deep dive.',
+                'Directly informed the broader premium services normalization strategy.'
+            ],
+            collaboration: [
+                { function: 'Executive Leadership', contribution: 'Used the review to set direction on premium services normalization strategy.' },
+                { function: 'Premium Services Product', contribution: 'Aligned category-level findings with ongoing normalization work.' }
+            ],
+            lessonsLearned: 'An executive audience needs the strategic "so what," not just the performance numbers — the review landed because it connected Health category data directly to the specific decision leadership was trying to make, not because of how much data was in it.'
+        },
+        {
+            id: 'ja-payment-failure-cart-abandonment',
+            title: 'Payment Failure & Cart Abandonment Opportunity Analysis',
+            subtitle: 'Sized the opportunity for a cart-abandonment email flow by tracing exactly how often a failed payment turns into a lost customer.',
+            tag: 'Revenue & Conversion',
+            employer: 'justanswer',
+            resumeCategory: 'Product Strategy & Revenue Growth',
+            resumeOrder: 6,
+            resumeBulletLabel: 'Payment Failure & Cart Abandonment Sizing',
+            resumeBulletText: 'Developed an analysis tracing how often a user attempts payment, fails, and never converts, sizing the email-capture opportunity to inform a proposed cart-abandonment flow.',
+            impactRange: 'Cart Abandonment Flow Opportunity Sized',
+            impactMetric: 'Quantified emails collected from non-converting failed-payment users',
+            focus: 'SQL, Funnel Tracing, Opportunity Sizing',
+            context: 'The team was considering adding a "Cart Abandonment" email flow for users who attempt payment, have it fail, and never come back — but needed to know how big that opportunity actually was before building it.',
+            challenge: [
+                'Payment failures and subsequent non-conversion weren\'t tracked together as a single sequence, so the size of the problem wasn\'t visible anywhere.',
+                'Not every failed payment represents a real opportunity — some users retry and convert anyway, so the analysis needed to isolate the ones who truly never came back.',
+                'The business case for a new email flow needed a concrete opportunity size, not just a hunch that it would help.'
+            ],
+            role: 'I built the analysis myself — tracing the full payment-attempt-to-non-conversion sequence and sizing the resulting email-capture opportunity.',
+            approachFlow: [
+                { name: 'Trace the sequence', desc: 'Identified users who attempted payment, had it fail, and never converted afterward' },
+                { name: 'Quantify the pattern', desc: 'Measured how often this exact sequence occurred' },
+                { name: 'Size the opportunity', desc: 'Calculated the volume of emails collected from these non-converting users' },
+                { name: 'Frame the business case', desc: 'Connected the opportunity size directly to the proposed Cart Abandonment flow' }
+            ],
+            approachDetail: 'By tracing the exact sequence of payment attempt, failure, and non-conversion, the analysis turned a vague "we might be losing people to payment failures" concern into a concrete, sized opportunity for a specific, proposed fix — a Cart Abandonment email flow.',
+            outcomes: [
+                'Quantified exactly how often a failed payment led to a lost (non-converting) customer.',
+                'Sized the email-capture opportunity for a proposed Cart Abandonment flow.',
+                'Gave the team a concrete business case to evaluate before building the new flow.'
+            ],
+            collaboration: [
+                { function: 'Product / Growth', contribution: 'Used the sized opportunity to evaluate prioritization of the Cart Abandonment flow.' },
+                { function: 'Email Marketing', contribution: 'Reviewed the email-capture volume to plan the proposed flow\'s scope.' }
+            ],
+            lessonsLearned: 'A feature proposal is a lot easier to prioritize once "this probably helps" becomes an actual number. Tracing the specific attempt-fail-never-return sequence is what turned a plausible idea into a sizeable, defensible opportunity.'
+        },
+        {
+            id: 'ja-marketplace-demand-test',
+            title: 'JA Marketplace Demand Test Design',
+            subtitle: 'Designed the test plan to answer a simple but expensive question: do customers actually want to pick their own professional?',
+            tag: 'Metric Integrity',
+            employer: 'justanswer',
+            resumeCategory: 'Product Strategy & Revenue Growth',
+            resumeOrder: 7,
+            resumeBulletLabel: 'JA Marketplace Demand Test Design',
+            resumeBulletText: 'Designed a demand-validation test plan for a two-sided marketplace experience on the SIP page (letting customers select their preferred professional), defining Pro Selection Rate as the primary leading-indicator metric rather than prematurely forecasting direct revenue.',
+            impactRange: 'Marketplace Demand Test Plan Designed',
+            impactMetric: 'Defined Pro Selection Rate as the primary leading-indicator metric',
+            focus: 'Experiment Design, Leading-Indicator Metrics, SIP Funnel',
+            context: 'Product wanted to know whether customers would actually want to select their own professional on the SIP page — a potential new marketplace experience — before committing engineering investment to build it out.',
+            challenge: [
+                'A true two-sided marketplace experience is expensive to build fully, so the test needed to validate demand cheaply before committing to the full build.',
+                'Forecasting a direct revenue number this early would have been premature and could have misled prioritization.',
+                'The test needed a primary metric that genuinely reflected user demand for the concept, not just a proxy that happened to be easy to measure.'
+            ],
+            role: 'I helped design the test plan — defining the success metrics and the expected-impact framing that let the team validate demand without overcommitting to an unproven revenue forecast.',
+            approachFlow: [
+                { name: 'Reframe the goal', desc: 'Shifted the test\'s objective from forecasting revenue to validating leading indicators of demand' },
+                { name: 'Define the primary metric', desc: 'Selected Pro Selection Rate — the share of users who actively engage with or select a professional — as the clearest demand signal' },
+                { name: 'Add supporting metrics', desc: 'Layered in SIP-to-CC conversion lift, click-through on professional cards, and time-on-page as secondary signals' },
+                { name: 'Frame the business case', desc: 'Scoped illustrative impact sizing (e.g. incremental conversions per 100K sessions) without overstating certainty' },
+                { name: 'Document for the team', desc: 'Wrote the metrics and impact framing directly into the test plan for engineering and product to build against' }
+            ],
+            approachDetail: 'Rather than forecasting a premature revenue number, the test plan centers on Pro Selection Rate as the clearest leading indicator of genuine marketplace demand, with SIP-to-CC conversion lift and engagement metrics as supporting signals — giving the team a defensible way to decide whether to invest further without overpromising on an unproven concept.',
+            outcomes: [
+                'Defined Pro Selection Rate as the test\'s primary, demand-focused success metric.',
+                'Established supporting metrics (conversion lift, click-through, time-on-page) to round out the demand picture.',
+                'Gave the team an illustrative, appropriately-caveated impact sizing instead of a premature revenue forecast.',
+                'Provided a reusable framework for scoping future demand-validation tests before a full build commitment.'
+            ],
+            collaboration: [
+                { function: 'Product Management', contribution: 'Used the test plan to scope the initial marketplace demand experiment.' },
+                { function: 'Engineering', contribution: 'Scoped the minimum build needed to test demand rather than the full marketplace feature.' }
+            ],
+            lessonsLearned: 'When you don\'t yet know if customers want something, measuring demand directly (did they choose to engage?) is more honest than forecasting revenue for a feature that doesn\'t exist yet. The right primary metric protects the team from over- or under-investing based on a guess.'
         }
     ];
 
@@ -1463,7 +1858,7 @@
             dates: 'February 2022 - Present',
             current: true,
             description: 'Online platform that combines AI and human experts to provide verified answers to complex questions.',
-            resumeCategoryOrder: ['Product Strategy & Revenue Growth', 'Marketing & Customer Acquisition Analytics', 'AI & Engineering Operations']
+            resumeCategoryOrder: ['Team Leadership & Enablement', 'Product Strategy & Revenue Growth', 'Marketing & Customer Acquisition Analytics', 'AI & Engineering Operations']
         },
         {
             key: 'ashley',
