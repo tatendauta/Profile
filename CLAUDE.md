@@ -34,7 +34,7 @@ Article content (`articlesData`) and leadership scenario copy (`triggerScenario(
 
 ### Adding a new project
 
-When the user describes something new they've completed, add it to `projectsData` (full field list: `id, title, subtitle, tag, impactRange, impactMetric, focus, context, challenge, role, approachFlow, approachDetail, outcomes, collaboration, lessonsLearned` — ask for whatever's missing rather than requiring a rigid template). `tag` must be one of the four values with an existing filter button (`Revenue & Conversion`, `Metric Integrity`, `Experimentation`, `Risk & Compliance`) — a new tag value needs a new filter button hand-added near line ~437, since that part isn't data-driven.
+When the user describes something new they've completed, add it to `projectsData` (full field list: `id, title, subtitle, tag, impactRange, impactMetric, focus, context, challenge, role, approachFlow, approachDetail, outcomes, collaboration, lessonsLearned` — ask for whatever's missing rather than requiring a rigid template). `tag` must be one of the four values with an existing filter button (`Revenue & Conversion`, `Metric Integrity`, `Business Agents`, `Risk & Compliance`) — a new tag value needs a new filter button hand-added near line ~437, since that part isn't data-driven. `Business Agents` (renamed from `Experimentation`) is for anything centrally about an AI agent/automated agentic workflow, not just anything that happens to use AI — use judgment, and re-tag an existing project into it if a later addition reveals it's really agent work.
 
 To also put it on the on-site resume, add four more optional fields to the same project object:
 - `employer` — must match a `key` in `employerMeta` (currently `'justanswer'`, `'ashley'`, `'techdata'`)
