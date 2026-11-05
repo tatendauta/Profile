@@ -1218,31 +1218,31 @@
             title: 'Predictive B2B Churn Prevention Engine',
             subtitle: 'Sales reps found out an account was leaving only after it was too late. I built an early-warning system that gave them time to act.',
             tag: 'Risk & Compliance',
-            employer: 'techdata',
-            resumeBulletText: 'Built a churn-propensity model for the SMB segment that gave Sales early-warning alerts, cutting churn 12% and retaining $500K+ in partner revenue.',
-            impactRange: '$500K+ Retained Revenue',
-            impactMetric: '12% reduction in small business account churn',
-            focus: 'Alteryx, Tableau, Churn Propensity Models',
+            employer: 'techdata-citizen-ds',
+            resumeBulletText: 'Built an ensemble churn model (Logistic Regression, Decision Tree, Boosted Model, Random Forest) in Alteryx R for the SMB segment, preventing 12% of churn — $670K in retained revenue — and feeding targeted marketing campaigns.',
+            impactRange: '$670K Retained Revenue',
+            impactMetric: '12% reduction in SMB customer churn',
+            focus: 'Alteryx R, Ensemble Modeling (Logistic Regression, Decision Tree, Random Forest), Tableau',
             context: 'In Tech Data\'s small business segment, the early warning signs of an account about to churn were going completely undetected. High-value partners often stopped buying before sales even knew there was a problem.',
             challenge: [
                 'The data needed to spot a problem was spread across different systems — order history, partner sites, internal records — that didn\'t talk to each other.',
                 'Sales reps had no clear, early signal telling them which partners were at risk.',
                 'There wasn\'t even an agreed-upon definition of when an account counted as "inactive."'
             ],
-            role: 'I built the churn model myself — using Alteryx to clean and combine the scattered data, and Tableau to put clear, actionable alerts directly in front of the sales team.',
+            role: 'I built the churn model myself — using Alteryx R to clean and combine the scattered data into an ensemble model, and Tableau to put clear, actionable alerts directly in front of the sales team.',
             approachFlow: [
                 { name: 'Audit order history', desc: 'Aggregates purchasing habits across active SMBs' },
-                { name: 'Model the behavior', desc: 'Builds propensity models in Alteryx' },
+                { name: 'Model the behavior', desc: 'Built an ensemble model in Alteryx R combining Logistic Regression, Decision Tree, Boosted Model, and Random Forest' },
                 { name: 'Score the risk', desc: 'Assigns daily risk scores to accounts' },
                 { name: 'Send the alerts', desc: 'Renders high-risk accounts inside sales dashboards' },
-                { name: 'Act on the warning', desc: 'Team reaches out with custom offers to save accounts' }
+                { name: 'Act on the warning', desc: 'Team reaches out with custom offers to save accounts, backed by targeted marketing campaigns' }
             ],
-            approachDetail: 'I built Alteryx workflows that combined purchase trends with support history, which let me flag accounts showing early signs of drop-off — before they actually left.',
+            approachDetail: 'I built an ensemble model in Alteryx R — combining Logistic Regression, Decision Tree, Boosted Model, and Random Forest — on top of workflows that merged purchase trends with support history, flagging accounts showing early signs of drop-off before they actually left.',
             outcomes: [
-                'Built the model that helped cut customer churn by 12%.',
-                'Retained over $500K in small business partner revenue.',
+                'Built the ensemble model that helped prevent 12% of customer churn.',
+                'Retained $670K in small business partner revenue.',
                 'Gave sales early warning, shifting their outreach from reactive to proactive.',
-                'Set up a standard pipeline connecting customer data across multiple old systems.'
+                'Fed targeted marketing campaigns aimed at at-risk accounts.'
             ],
             collaboration: [
                 { function: 'Sales Leads', contribution: 'Used Tableau alerts to guide partner outreach and customer rescue conversations.' },
@@ -1844,6 +1844,166 @@
                 { function: 'Engineering', contribution: 'Scoped the minimum build needed to test demand rather than the full marketplace feature.' }
             ],
             lessonsLearned: 'When you don\'t yet know if customers want something, measuring demand directly (did they choose to engage?) is more honest than forecasting revenue for a feature that doesn\'t exist yet. The right primary metric protects the team from over- or under-investing based on a guess.'
+        },
+        {
+            id: 'ja-pharmacy-performance-dashboard',
+            title: 'JA Pharmacy Performance Dashboard',
+            subtitle: 'Built the single dashboard that connects pharmacy demand, customer behavior, and business value — so the team can see whether Urgent Care customers are actually worth scaling.',
+            tag: 'Metric Integrity',
+            employer: 'justanswer',
+            resumeCategory: 'Pharmacy & New Business Lines',
+            resumeOrder: 2,
+            resumeBulletLabel: 'JA Pharmacy Performance Dashboard',
+            resumeBulletText: 'Built a weekly Power BI dashboard connecting pharmacy demand, customer behavior, and LTV/margin — the standing reference for whether to keep scaling Urgent Care.',
+            impactRange: 'Unified UC vs. Wellness Performance View',
+            impactMetric: 'Weekly-refreshed dashboard spanning demand, behavior, and LTV/margin',
+            focus: 'Power BI, DAX, WLMD-to-JA Identity Matching',
+            context: 'JustAnswer launched a pharmacy/telehealth program spanning Urgent Care and Wellness therapies, but leadership had no single view connecting pharmacy demand to downstream customer value — each question (who\'s buying, is UC working, does fulfillment matter) required a separate ad hoc pull.',
+            challenge: [
+                'Pharmacy order data lived with an external partner (White Label MD) and had to be matched to internal JustAnswer customer records before any value analysis was possible.',
+                'Leadership needed to compare Urgent Care customers against a fair baseline, not just raw totals — requiring a matched Non-UC Health comparison group from the same campaigns.',
+                'Whether a pharmacy order actually got fulfilled changed the customer\'s value profile, so the dashboard needed to split fulfilled from unfulfilled, not just report blended averages.'
+            ],
+            role: 'I designed and built the dashboard end to end — defining the three-section structure, the UC/Non-UC and fulfilled/unfulfilled comparison methodology, and the DAX measures behind every metric.',
+            approachFlow: [
+                { name: 'Match the identities', desc: 'Matched WLMD pharmacy order records to JustAnswer customer IDs via email and external customer ID' },
+                { name: 'Build the summary layer', desc: 'Surfaced total orders, customers, UC vs. Wellness mix, and top therapies/products' },
+                { name: 'Track UC behavior', desc: 'Built retention, 2nd-pay-rate, LTV, margin, and risk (refunds/chargebacks) views for UC customers' },
+                { name: 'Build the comparison groups', desc: 'Selected a Non-UC Health baseline from the same campaigns/ad groups, and split UC by fulfillment status' },
+                { name: 'Ship for weekly use', desc: 'Set the dashboard to refresh weekly so the team tracks scale, behavior, and value continuously' }
+            ],
+            approachDetail: 'The dashboard is organized into three layers — Pharmacy Performance (summary/trends), Urgent Care Customer Analysis (retention, LTV, margin, risk), and Comparative Views (UC vs. matched Non-UC Health, and Fulfilled vs. Unfulfilled UC) — so any stakeholder can move from "what\'s happening" to "is it actually working" without a new ad hoc pull.',
+            outcomes: [
+                'Gave leadership and product a single, weekly-refreshed view spanning pharmacy demand, customer behavior, and LTV/margin.',
+                'Built a matched Non-UC Health comparison group so UC performance could be judged against a fair baseline, not raw totals.',
+                'Isolated fulfilled vs. unfulfilled UC customers, surfacing exactly how fulfillment affects CSAT, retention, and value.',
+                'Became the standing reference for deciding whether to keep scaling Urgent Care.'
+            ],
+            collaboration: [
+                { function: 'Pharmacy Program Leadership', contribution: 'Used the dashboard to track program performance and inform scaling decisions.' },
+                { function: 'Data Engineering / Partner Ops', contribution: 'Supported the WLMD-to-JA identity matching feeding the dashboard.' }
+            ],
+            lessonsLearned: 'A pharmacy order being fulfilled or not changes everything about that customer\'s value — blending fulfilled and unfulfilled UC customers into one number would have hidden the exact relationship leadership needed to see.'
+        },
+        {
+            id: 'ja-pharmacy-ltv-data-pipeline',
+            title: 'JA Pharmacy Customer & LTV Data Pipeline',
+            subtitle: 'Engineered the SQL backbone that turns a third-party pharmacy vendor\'s order data into a trustworthy, customer-level LTV and margin dataset.',
+            tag: 'Metric Integrity',
+            employer: 'justanswer',
+            resumeCategory: 'Pharmacy & New Business Lines',
+            resumeOrder: 1,
+            resumeBulletLabel: 'Pharmacy Customer & LTV Data Pipeline',
+            resumeBulletText: 'Engineered the SQL identity-resolution pipeline linking third-party pharmacy orders to JustAnswer customer data, producing the single LTV/margin dataset every pharmacy analysis relies on.',
+            impactRange: '15+ Source Tables Unified into One Analytical Table',
+            impactMetric: 'One row per customer, from first conversion through 3-year LTV',
+            focus: 'SQL, Identity Resolution, Multi-Source Data Modeling',
+            context: 'Every pharmacy analysis — the dashboard, the economics study, the pre/post launch results — depended on being able to connect a third-party vendor\'s order records to JustAnswer\'s own customer, revenue, and retention data. That connection didn\'t exist yet.',
+            challenge: [
+                'Pharmacy orders were only identifiable by email, and not every email matched cleanly to an internal JustAnswer customer ID — some needed a secondary identity-resolution path.',
+                'A fair comparison required building a matched Non-UC Health population from the same campaigns, not just analyzing pharmacy customers in isolation.',
+                'The final dataset needed to support both actual LTV (observed revenue by customer-age window) and forecasted 3-year LTV, margin, and CAC — each sourced from different systems.'
+            ],
+            role: 'I designed and wrote the SQL pipeline myself — the identity resolution logic, the matched comparison population, and the final customer-level table every other pharmacy analysis builds on.',
+            approachFlow: [
+                { name: 'Aggregate order economics', desc: 'Summarized Pharmacy order amounts, costs, refunds, and discounts by Pharmacy customer ID' },
+                { name: 'Resolve identity', desc: 'Matched Pharmacy records to JustAnswer customer IDs via email, falling back to an invariant identity table' },
+                { name: 'Flag fulfillment', desc: 'Counted orders per customer and classified each as fulfilled or unfulfilled' },
+                { name: 'Build the comparison population', desc: 'Identified a Non-UC Health population from the same campaigns/ad groups to serve as a matched baseline' },
+                { name: 'Join the economics', desc: 'Appended payment, subscription, retention, expert payout, CAC, and 3-year LTV/margin measures to produce one row per customer' }
+            ],
+            approachDetail: 'The pipeline runs through 11 steps — from raw order aggregation through identity resolution, fulfillment classification, matched-population construction, and finally joining payment, retention, and forecasted LTV/margin data — landing in a single analytical table keyed to each customer\'s first qualifying conversion.',
+            outcomes: [
+                'Produced the single customer-level table every downstream pharmacy analysis (dashboard, economics, pre/post) relies on.',
+                'Resolved identity matching across two methods (email + invariant identity), maximizing how many pharmacy orders could be tied to real JustAnswer customers.',
+                'Built the matched Non-UC Health comparison population that made every other pharmacy conclusion defensible against a fair baseline.',
+                'Supported both actual LTV (by customer-age window) and forecasted 3-year LTV/margin in the same dataset.'
+            ],
+            collaboration: [
+                { function: 'Data Engineering', contribution: 'Reviewed schema and identity-resolution approach for the pharmacy marketing/order source tables.' },
+                { function: 'Analytics Leadership', contribution: 'Relied on the resulting dataset for every pharmacy performance conclusion presented.' }
+            ],
+            lessonsLearned: 'Every pharmacy conclusion downstream — "UC is profitable," "the program improved after launch" — was only as trustworthy as the identity matching underneath it. Getting the email-and-fallback resolution right once meant every later analysis could just build on top instead of re-solving the same problem.'
+        },
+        {
+            id: 'ja-pharmacy-uc-economics-prepost',
+            title: 'Urgent Care Program Economics & Pre/Post Impact Analysis',
+            subtitle: 'Proved Urgent Care customers are profitable on their own, then proved the program got meaningfully more profitable after launch — not just bigger.',
+            tag: 'Revenue & Conversion',
+            employer: 'justanswer',
+            resumeCategory: 'Pharmacy & New Business Lines',
+            resumeOrder: 3,
+            resumeBulletLabel: 'Urgent Care Economics & Pre/Post Analysis',
+            resumeBulletText: 'Proved Urgent Care is profitable standalone and grew more profitable post-launch, nearly doubling contribution margin ($358K to $610K) on a per-conversion basis.',
+            impactRange: 'Margin Nearly Doubled: $358K to $610K',
+            impactMetric: '+13% LTV per conversion, +11% margin per conversion post-launch',
+            focus: 'Pre/Post Analysis, Cohort Economics, Contribution Margin Modeling',
+            context: 'JustAnswer\'s Urgent Care program offers free prescriptions, raising an obvious question: is giving away prescriptions actually a profitable, value-accretive channel, or just a cost center dressed up as engagement?',
+            challenge: [
+                'Free prescriptions could easily look unprofitable on the surface unless the analysis fully accounted for expert payouts, CAC, transaction fees, VAT, and retained team costs.',
+                'A pre/post comparison needed to control for seasonality and volume growth, or any improvement could be wrongly attributed to the program instead of just more customers.',
+                'Leadership needed two separate questions answered: are UC customers profitable at all, and did the program specifically get better after it launched.'
+            ],
+            role: 'I designed and ran both analyses myself — first establishing UC\'s standalone unit economics baseline, then building the matched five-month pre/post comparison to isolate the program\'s actual impact.',
+            approachFlow: [
+                { name: 'Establish the baseline', desc: 'Calculated forecasted 3-year LTV and full contribution margin per UC conversion, net of all major costs' },
+                { name: 'Design the pre/post window', desc: 'Set matched five-month pre- and post-launch periods (March-July vs. August-December) to control for seasonality' },
+                { name: 'Compare per-conversion economics', desc: 'Measured LTV, net revenue, and margin per conversion in both periods, not just totals' },
+                { name: 'Isolate pharmacy-order customers', desc: 'Cut the analysis down to customers who completed a UC pharmacy order specifically, to check fulfillment didn\'t dilute profitability' },
+                { name: 'Separate volume from unit economics', desc: 'Confirmed the improvement held on a per-conversion basis, not just because of higher volume' }
+            ],
+            approachDetail: 'The baseline analysis showed UC customers generate ~$145 in forecasted 3-year LTV and ~$39 in contribution margin per conversion — profitable on their own. The pre/post comparison then showed that after launch, 3-year LTV per conversion rose 13% ($122 to $138) and margin per conversion rose 11% ($25 to $28), with total contribution margin nearly doubling ($358K to $610K) even as converter volume grew from 14,365 to 22,075.',
+            outcomes: [
+                'Established that UC customers are profitable standalone — ~$39 margin per conversion — even before any before/after comparison.',
+                'Proved the program got more profitable after launch on a per-conversion basis, not just bigger: +13% LTV, +11% margin per conversion.',
+                'Showed total contribution margin nearly doubled ($358K to $610K) post-launch.',
+                'Confirmed pharmacy-order customers specifically remain profitable even after fully allocating telehealth costs to them.'
+            ],
+            collaboration: [
+                { function: 'Pharmacy Program Leadership', contribution: 'Used the pre/post results to validate continued investment in the Urgent Care program.' },
+                { function: 'Finance', contribution: 'Reviewed the contribution margin methodology (expert fees, CAC, VAT, retained team costs).' }
+            ],
+            lessonsLearned: 'A program can grow in total size for reasons that have nothing to do with it actually working better. Proving the per-conversion economics improved — not just the totals — is what separated "the program is scaling" from "the program is scaling profitably."'
+        },
+        {
+            id: 'ja-pharmacy-wlmd-cross-sell',
+            title: 'WLMD Pharmacy Cross-Sell & Multi-Product Engagement Analysis',
+            subtitle: 'Checked whether Urgent Care customers would cross-buy into Wellness therapies — and found the answer was decisively no.',
+            tag: 'Metric Integrity',
+            employer: 'justanswer',
+            resumeCategory: 'Pharmacy & New Business Lines',
+            resumeOrder: 4,
+            resumeBulletLabel: 'WLMD Cross-Sell Analysis',
+            resumeBulletText: 'Found under 0.3% of Urgent Care customers cross-buy into Wellness, steering Product to invest in UC as a standalone channel instead of cross-sell tooling.',
+            impactRange: 'Under 0.3% Cross-Buy Rate',
+            impactMetric: 'Determined UC should be treated as a standalone channel, not a cross-sell gateway',
+            focus: 'Cohort Analysis, SQL, Behavioral Segmentation',
+            context: 'With Urgent Care and Wellness both live on the pharmacy platform, the natural strategic question was whether UC could become an acquisition gateway into the higher-margin Wellness therapies — which would change how much to invest in cross-sell tooling and targeting.',
+            challenge: [
+                'Any ML or rules-based cross-sell recommendation system is only worth building if there\'s a real behavioral signal to target.',
+                'The analysis needed to distinguish true cross-sell (UC first, then another therapy) from customers who simply happened to buy both at different times.',
+                'With a cohort of only a few thousand UC customers, the analysis needed to be precise enough that a small-sample fluke wouldn\'t be mistaken for a real pattern.'
+            ],
+            role: 'I ran the analysis myself — sizing the UC cohort, checking cross-therapy purchase behavior, and testing whether any "next best therapy" signal existed worth acting on.',
+            approachFlow: [
+                { name: 'Size the cohort', desc: 'Established the full UC customer base (2,729 customers) as the denominator for every rate calculated' },
+                { name: 'Check for any cross-buy', desc: 'Measured how many UC customers ever purchased a different therapy, at any point' },
+                { name: 'Isolate true cross-sell', desc: 'Narrowed to customers who bought another therapy specifically after their UC purchase' },
+                { name: 'Check depth, not just occurrence', desc: 'Looked at order counts, not just customer counts, to see if cross-buying customers kept engaging or just dabbled once' },
+                { name: 'Stress-test the "next best therapy" idea', desc: 'Checked whether any therapy showed a strong enough signal to justify a targeted recommendation push' }
+            ],
+            approachDetail: 'Out of 2,729 UC customers, fewer than 0.3% ever purchased another therapy, and fewer than 0.3% did so after their UC purchase specifically. Even where cross-buying happened, it was shallow — mostly one-off follow-ups spread thinly across four unrelated therapies, with no concentration strong enough to support a "next best therapy" targeting strategy.',
+            outcomes: [
+                'Found 99.7% of UC customers never buy a second therapy — UC behaves as a single-intent, terminal purchase.',
+                'Found true cross-sell (UC then another therapy) at under 0.3%, too small for any ML or rules-based targeting to move meaningfully.',
+                'Concluded UC should be treated and invested in as a standalone channel, not built out as a cross-therapy gateway.',
+                'Saved the team from building cross-sell targeting infrastructure for a behavior pattern that doesn\'t meaningfully exist.'
+            ],
+            collaboration: [
+                { function: 'Pharmacy Product', contribution: 'Used the finding to deprioritize cross-sell tooling in favor of standalone UC investment.' },
+                { function: 'Marketing', contribution: 'Adjusted targeting strategy to treat UC and Wellness as separate acquisition motions.' }
+            ],
+            lessonsLearned: 'Sometimes the most valuable answer an analysis can give is "don\'t build this." Confirming cross-sell demand didn\'t exist, with real numbers, prevented the team from investing in targeting infrastructure for a pattern that wasn\'t there.'
         }
     ];
 
@@ -1858,7 +2018,7 @@
             dates: 'February 2022 - Present',
             current: true,
             description: 'Online platform that combines AI and human experts to provide verified answers to complex questions.',
-            resumeCategoryOrder: ['Team Leadership & Enablement', 'Product Strategy & Revenue Growth', 'Marketing & Customer Acquisition Analytics', 'AI & Engineering Operations']
+            resumeCategoryOrder: ['Team Leadership & Enablement', 'Product Strategy & Revenue Growth', 'Marketing & Customer Acquisition Analytics', 'Pharmacy & New Business Lines', 'AI & Engineering Operations']
         },
         {
             key: 'ashley',
@@ -1869,12 +2029,28 @@
             description: 'Global manufacturer and retailer of home furnishings.'
         },
         {
-            key: 'techdata',
+            key: 'techdata-citizen-ds',
             role: 'CITIZEN DATA SCIENTIST - DIGITAL TRANSFORMATION',
             company: 'Tech Data Corporation',
             dates: 'August 2020 - February 2021',
             current: false,
             description: 'Global distributor of technology products, services and solutions.'
+        },
+        {
+            key: 'techdata-fpa',
+            role: 'SENIOR BUSINESS ANALYST - US ANALYTICS FP&A',
+            company: 'Tech Data Corporation',
+            dates: 'November 2018 - August 2020',
+            current: false,
+            description: 'Global distributor of technology products, services and solutions.'
+        },
+        {
+            key: 'rms',
+            role: 'SENIOR ANALYST - MCDONALD\'S CANADA CONSULTING TEAM',
+            company: 'Revenue Management Solutions (RMS)',
+            dates: 'January 2017 - November 2018',
+            current: false,
+            description: 'Data-driven consulting firm focused on increasing profits for operators.'
         }
     ];
 
@@ -1886,9 +2062,24 @@
             { label: null, text: 'Led a Price Variance Analysis initiative that unraveled sales-growth drivers across corporate stores, shifting budgeting strategy and increasing sales 10%.' },
             { label: null, text: 'Built a Python-based staffing optimization model rooted in the sales production function, cutting overstaffing more than 50% and driving measurable cost savings.' }
         ],
-        techdata: [
-            { label: null, text: 'Applied RFM (Recency, Frequency, Monetary) analysis in Tableau and Alteryx to uncover incremental business opportunities through customer segmentation.' },
-            { label: null, text: 'Integrated multiple data sources into a unified pipeline powering predictive models for segmentation, propensity, and forecasting.' }
+        'techdata-citizen-ds': [
+            { label: null, text: 'Delivered customer-experience insights for partners and vendors in Tableau and Alteryx as a core member of the digital transformation team.' },
+            { label: null, text: 'Partnered with Marketing, Vendor Management, and Sales to translate business objectives into measurable KPIs and benchmarks for process effectiveness.' },
+            { label: null, text: 'Applied RFM (Recency, Frequency, Monetary) segmentation in Tableau and Alteryx to uncover incremental business opportunities, becoming the basis for new Marketing campaigns.' }
+        ],
+        'techdata-fpa': [
+            { label: null, text: 'Reported business metrics in Tableau for senior leadership (Managers, Directors, VPs) to track team goals and map customer profiles for strategic direction.' },
+            { label: null, text: 'Served as the analytics point of contact for Sales and Vendor teams, driving profitability and go-to-market strategy through trend analysis and visualization.' },
+            { label: null, text: 'Managed a team of entry-level analysts, running biweekly reviews on projects, process improvements, and analytical technique.' },
+            { label: null, text: 'Integrated multiple data sources in Alteryx into a unified ETL pipeline powering predictive models for segmentation, propensity, forecasting, and efficiency initiatives.' }
+        ],
+        rms: [
+            { label: null, text: 'Served as the primary analytics point of contact for McDonald\'s Canada franchisees across Ontario, British Columbia, Manitoba, Alberta, and Saskatchewan.' },
+            { label: null, text: 'Built a SQL price-elasticity model powering revenue forecasts and pricing recommendations, visualized in Power BI for franchisee pricing decisions.' },
+            { label: null, text: 'Advised franchisees independently across business strategy, revenue management, and sales analysis — building strong leadership and executive presentation skills.' },
+            { label: null, text: 'Ran SQL-based A/B tests to validate new test products ahead of market release.' },
+            { label: null, text: 'Designed custom client reports via SQL stored procedures built to each franchisee\'s specifications.' },
+            { label: null, text: 'Trained entry-level analysts on pricing methodology and ad hoc analysis in Excel, R, and SQL.' }
         ]
     };
 
@@ -1930,7 +2121,7 @@
             }
             grouped.forEach(group => group.bullets.sort((a, b) => a.order - b.order));
 
-            flatBullets = flatBullets.concat(legacyResumeBullets[emp.key] || []);
+            flatBullets = (legacyResumeBullets[emp.key] || []).concat(flatBullets);
 
             let bodyHtml = '';
             grouped.forEach(group => {
