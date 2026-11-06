@@ -2032,15 +2032,7 @@
             key: 'techdata-citizen-ds',
             role: 'CITIZEN DATA SCIENTIST - DIGITAL TRANSFORMATION',
             company: 'Tech Data Corporation',
-            dates: 'August 2020 - February 2021',
-            current: false,
-            description: 'Global distributor of technology products, services and solutions.'
-        },
-        {
-            key: 'techdata-fpa',
-            role: 'SENIOR BUSINESS ANALYST - US ANALYTICS FP&A',
-            company: 'Tech Data Corporation',
-            dates: 'November 2018 - August 2020',
+            dates: 'November 2018 - February 2021',
             current: false,
             description: 'Global distributor of technology products, services and solutions.'
         },
@@ -2059,19 +2051,14 @@
     // project entry instead of adding here, whenever a project exists.
     const legacyResumeBullets = {
         ashley: [
-            { label: null, text: 'Led a Price Variance Analysis initiative that unraveled sales-growth drivers across corporate stores, shifting budgeting strategy and increasing sales 10%.' },
-            { label: null, text: 'Built a Python-based staffing optimization model rooted in the sales production function, cutting overstaffing more than 50% and driving measurable cost savings.' }
+            { label: null, text: 'Led a transformative initiative to deploy Price Variance Analysis, unraveling factors driving sales growth across corporate stores. This allowed the business to shift budgeting, increasing sales by 10%.' },
+            { label: null, text: 'Built a staffing optimization model using Python and a sophisticated regression model rooted in the sales production function, enhancing operational efficiency and driving cost savings. This optimization reduced overstaffing by more than 50%.' }
         ],
         'techdata-citizen-ds': [
             { label: null, text: 'Delivered customer-experience insights for partners and vendors in Tableau and Alteryx as a core member of the digital transformation team.' },
             { label: null, text: 'Partnered with Marketing, Vendor Management, and Sales to translate business objectives into measurable KPIs and benchmarks for process effectiveness.' },
-            { label: null, text: 'Applied RFM (Recency, Frequency, Monetary) segmentation in Tableau and Alteryx to uncover incremental business opportunities, becoming the basis for new Marketing campaigns.' }
-        ],
-        'techdata-fpa': [
-            { label: null, text: 'Reported business metrics in Tableau for senior leadership (Managers, Directors, VPs) to track team goals and map customer profiles for strategic direction.' },
-            { label: null, text: 'Served as the analytics point of contact for Sales and Vendor teams, driving profitability and go-to-market strategy through trend analysis and visualization.' },
-            { label: null, text: 'Managed a team of entry-level analysts, running biweekly reviews on projects, process improvements, and analytical technique.' },
-            { label: null, text: 'Integrated multiple data sources in Alteryx into a unified ETL pipeline powering predictive models for segmentation, propensity, forecasting, and efficiency initiatives.' }
+            { label: null, text: 'Applied RFM (Recency, Frequency, Monetary) segmentation in Tableau and Alteryx to uncover incremental business opportunities, becoming the basis for new Marketing campaigns.' },
+            { label: null, text: 'Managed a team of entry-level analysts, running biweekly reviews on projects, process improvements, and analytical technique.' }
         ],
         rms: [
             { label: null, text: 'Served as the primary analytics point of contact for McDonald\'s Canada franchisees across Ontario, British Columbia, Manitoba, Alberta, and Saskatchewan.' },
@@ -2622,6 +2609,42 @@
             p1: "The temptation with a tool like Codex is to just start asking it to analyze things. We didn't — we built the reference material first.",
             p2: "Organizing metric definitions, SQL templates, and validation rules into RAG reference files meant every Codex-assisted analysis used the same grounded definitions, instead of plausible-sounding guesses recreated from scratch each time.",
             p3: "If you want AI-assisted analysis you can actually defend to executives, the unglamorous work of documenting your definitions and rules isn't optional — it's the thing that makes the AI's output trustworthy instead of just fluent."
+        },
+        9: {
+            title: "One Dashboard Beats Five Ad Hoc Pulls",
+            tag: "Dashboards & Reporting",
+            teaser: "Fulfilled and unfulfilled customers aren't the same customer.",
+            color: "brand",
+            p1: "When a new program launches, the instinct is to answer each new question with a fresh pull — who's buying, is it working, does fulfillment matter. That approach doesn't scale, and it means nobody ever looks at the same numbers twice.",
+            p2: "Building the pharmacy dashboard meant deciding upfront what the recurring questions would be — demand, behavior, and value — and then splitting customers by whether their order was actually fulfilled, not just whether they placed one. That one split changed the read on the whole program.",
+            p3: "A dashboard is only as useful as the comparisons it forces you to make. Matching UC customers against a real baseline, and fulfilled against unfulfilled, is what turned a reporting tool into a decision tool."
+        },
+        10: {
+            title: "Every Conclusion Is Only as Good as the Identity Match Underneath It",
+            tag: "Data Engineering",
+            teaser: "A third-party vendor's email field decided whether an analysis was trustworthy.",
+            color: "accent",
+            p1: "A new pharmacy partner meant a new set of customer records that lived nowhere near our own systems — connected only by an email address.",
+            p2: "Before any LTV or margin number could mean anything, that email had to be matched to a real JustAnswer customer, with a fallback path for the ones that didn't match cleanly. Skipping that step, or doing it carelessly, would have quietly corrupted every number built on top of it.",
+            p3: "Nobody gets excited about identity resolution. But every headline result that came later — UC is profitable, the program improved after launch — was only as real as that unglamorous matching step underneath it."
+        },
+        11: {
+            title: "A Program Can Grow Without Actually Getting Better",
+            tag: "Program Economics",
+            teaser: "More customers isn't the same as more profitable customers.",
+            color: "brand",
+            p1: "After a program launches, total volume almost always goes up — more customers, more orders, bigger numbers on every chart. It's tempting to call that success.",
+            p2: "The real question is whether the economics improved per customer, not just in total. For the Urgent Care program, that meant checking margin and LTV per conversion separately from the raw totals — and only then could we say the program got more profitable, not just bigger.",
+            p3: "Scaling and improving are two different claims. A result only holds up if it survives being checked on a per-unit basis, not just in the aggregate."
+        },
+        12: {
+            title: "Sometimes the Best Finding Is \"Don't Build This\"",
+            tag: "Strategic Analysis",
+            teaser: "0.3% of customers crossed over. That answer saved a roadmap item.",
+            color: "accent",
+            p1: "It's easy to assume that customers who try one product will naturally try another — that cross-sell is just a matter of building the right recommendation engine.",
+            p2: "Checking the actual data on Urgent Care customers showed almost nobody crossed into other therapies — under 0.3%. No targeting system, however well built, would have changed that number meaningfully.",
+            p3: "Confirming something doesn't work, with real numbers, is still a valuable result. It stopped the team from investing in cross-sell infrastructure for a behavior that simply wasn't there."
         }
     };
 

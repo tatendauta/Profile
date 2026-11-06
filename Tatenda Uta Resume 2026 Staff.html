@@ -9,26 +9,26 @@
 html,body{margin:0;padding:0;background:oklch(0.93 0.003 240)}
 html{-webkit-font-smoothing:antialiased}
 a{color:oklch(0.42 0.09 240);text-decoration:none}
-.page{width:8.5in;height:11in;margin:0 auto;padding:0.45in 0.6in;display:flex;flex-direction:column;gap:8px;font-family:'Inter',Helvetica,Arial,sans-serif;color:oklch(0.2 0.005 240);background:oklch(0.995 0.002 90)}
-h1{font-family:'Libre Baskerville',Georgia,serif;margin:0;font-size:25px;font-weight:700;letter-spacing:0.03em}
+.page{width:8.5in;height:11in;margin:0 auto;padding:0.38in 0.55in;display:flex;flex-direction:column;gap:7px;font-family:'Inter',Helvetica,Arial,sans-serif;color:oklch(0.2 0.005 240);background:oklch(0.995 0.002 90);font-feature-settings:'cv11','ss01'}
+h1{font-family:'Libre Baskerville',Georgia,serif;margin:0;font-size:26px;font-weight:700;letter-spacing:0.04em}
 .hdr{display:flex;flex-direction:column;align-items:center;gap:3px;border-bottom:2.4px solid oklch(0.2 0.005 240);padding-bottom:8px}
-.contact{font-size:10px;color:oklch(0.35 0.005 240);display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
-.sec-title{font-weight:700;font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;color:oklch(0.4 0.1 240);border-bottom:1.4px solid oklch(0.4 0.1 240);padding-bottom:3px;margin:0 0 5px 0}
-.summary{margin:0;font-size:10.1px;line-height:1.42}
-.tech{margin:5px 0 0 0;font-size:10.1px;line-height:1.4}
-.comp{display:grid;grid-template-columns:repeat(4,auto);justify-content:space-between;gap:2px 10px;font-size:9.7px}
+.contact{font-size:10px;color:oklch(0.35 0.005 240);display:flex;gap:7px;flex-wrap:wrap;justify-content:center}
+.sec-title{font-weight:700;font-size:10.5px;letter-spacing:0.15em;text-transform:uppercase;color:oklch(0.4 0.1 240);border-bottom:1.2px solid oklch(0.4 0.1 240);padding-bottom:3px;margin:0 0 5px 0}
+.summary{margin:0;font-size:10.3px;line-height:1.44}
+.tech{margin:5px 0 0 0;font-size:10.3px;line-height:1.4}
+.comp{display:grid;grid-template-columns:repeat(4,auto);justify-content:space-between;gap:3px 10px;font-size:10.0px}
 .exp{flex:1}
 .job{margin-bottom:6px}
 .row{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
-.job-title{font-weight:700;font-size:11px;letter-spacing:0.02em}
-.job-sub{font-size:10px;color:oklch(0.4 0.005 240);font-style:italic;margin-top:1px}
+.job-title{font-weight:700;font-size:11.2px;letter-spacing:0.01em}
+.job-sub{font-size:10px;color:oklch(0.42 0.005 240);font-style:italic;margin-top:1px}
 .job-date{font-size:10px;font-weight:600;color:oklch(0.4 0.1 240);white-space:nowrap}
-.cat{font-size:10px;font-weight:700;color:oklch(0.35 0.005 240);margin-top:4px}
-ul.bullets{margin:2px 0 0 0;padding-left:14px}
-ul.bullets li{font-size:10.1px;line-height:1.38;margin-bottom:2px}
+.cat{font-size:10.2px;font-weight:700;color:oklch(0.32 0.005 240);margin-top:4px}
+ul.bullets{margin:2px 0 0 0;padding-left:15px}
+ul.bullets li{font-size:10.3px;line-height:1.4;margin-bottom:2px;padding-left:1px}
 ul.bullets li::marker{color:oklch(0.4 0.1 240)}
 ul.bullets li b{font-weight:600}
-.edu{display:grid;grid-template-columns:1fr 1fr;gap:3px 16px;font-size:9.799999999999999px}
+.edu{display:grid;grid-template-columns:1fr 1fr;gap:4px 20px;font-size:10.100000000000001px}
 .edu>div{display:flex;justify-content:space-between;gap:8px}
 @media screen{body{padding:24px 0} .page{box-shadow:0 2px 12px rgba(0,0,0,.12)}}
 @media print{html,body{background:none} .page{margin:0}}
@@ -47,21 +47,21 @@ ul.bullets li b{font-weight:600}
 
   <div>
     <div class="sec-title">Summary</div>
-    <p class="summary">Product analytics leader with 6+ years turning experimentation, funnel economics, and AI tooling into product and growth decisions at a two-sided expert marketplace. I set experimentation standards, build AI agents that scale analysis across teams, and mentor analysts&mdash;work that includes decomposing an $8M&ndash;$15M+ contribution-margin increase and proving $1M+ in incremental revenue from Performance Max.</p>
-    <p class="tech"><b>Technical proficiency:</b> SQL, Python, BigQuery, Snowflake, GA4, Power BI, Tableau, Segment CDP, GitHub, VS Code, Codex, Generative AI &amp; LLM APIs, Alteryx, SAP BW, Asana, MS Office</p>
+    <p class="summary">Product analytics leader with nearly a decade of experience driving product strategy at the intersection of experimentation and funnel economics. Combines technical execution across SQL, Python, and causal inference with agentic AI design. Architect of custom GenAI agents that automate complex analysis pipelines, cutting analysis cycles by 50% and scaling analytical throughput org-wide. Dedicated player-coach and mentor skilled in guiding junior analysts, institutionalizing rigorous testing guardrails, and turning data into defensible margin growth.</p>
+    <p class="tech"><b>Technical proficiency:</b> SQL, Python, R, BigQuery, Snowflake, GA4, Power BI, Tableau, Segment CDP, Alteryx, GitHub, Claude, Codex, ChatGPT, LLM APIs</p>
   </div>
 
   <div>
     <div class="sec-title">Core Competencies</div>
     <div class="comp">
       <div>&bull; A/B, MAB &amp; Sequential Testing</div>
-      <div>&bull; AI Agents &amp; Prompt Engineering</div>
-      <div>&bull; Full-Funnel &amp; Marketplace Analytics</div>
-      <div>&bull; Paid Acquisition &amp; Incrementality</div>
-      <div>&bull; LTV, Retention &amp; Cohort Analysis</div>
-      <div>&bull; Predictive &amp; Churn Modeling</div>
+      <div>&bull; Causal Inference &amp; Incrementality</div>
+      <div>&bull; Subscription LTV &amp; Churn Modeling</div>
+      <div>&bull; Full-Funnel Conversion Analytics</div>
+      <div>&bull; Paid Channel Measurement</div>
+      <div>&bull; Price Elasticity &amp; Testing</div>
       <div>&bull; Customer Segmentation (RFM)</div>
-      <div>&bull; Analyst Mentorship &amp; Enablement</div>
+      <div>&bull; Analyst Mentorship &amp; AI Agents</div>
     </div>
   </div>
 
@@ -70,27 +70,27 @@ ul.bullets li b{font-weight:600}
 
     <div class="job">
       <div class="row"><div class="job-title">AI Engineering &amp; Product Analytics</div><div class="job-date">February 2022&ndash;Present</div></div>
-      <div class="job-sub">Pearl (JustAnswer Inc.) &mdash; Online platform that combines AI and human experts to provide verified answers to complex questions</div>
+      <div class="job-sub">Pearl (JustAnswer Inc.) &mdash; Subscription platform combining AI and human experts, including a telehealth and online pharmacy business</div>
 
       <div class="cat">Experimentation &amp; Analytics Leadership</div>
       <ul class="bullets">
-        <li><b>Experimentation Standards:</b> Owned primary-metric design for the company experimentation platform (TAS). Made Net LTV 08 the primary metric for Lead Generation sequential tests, caught and fixed a lift-reporting defect, and validated automated readouts so results were decision-grade for product teams.</li>
-        <li><b>Product Team Partnership:</b> Lead analyst for Funnel and Customer Acquisition product teams, presenting readouts after every experiment (A/B or MAB) and turning results into the next test roadmap.</li>
-        <li><b>Team Development:</b> Train new analysts on experimentation (A/B and MAB design, power and sample sizing, instrumentation, BigQuery) and analytics with reusable decks, notebooks, and video trainings; ramped a new Customer Acquisition analyst to independent experiment ownership.</li>
+        <li><b>Experimentation Standards:</b> Owned primary-metric design for the company experimentation platform (TAS); made Net LTV the primary metric for Lead Generation sequential tests, caught and fixed a lift-reporting defect, and validated automated readouts for product teams.</li>
+        <li><b>Product Team Partnership:</b> Lead analyst for Funnel and Acquisition product teams, turning each A/B and MAB readout into the next roadmap.</li>
+        <li><b>Team Development:</b> Train analysts on A/B and MAB design, power and sample sizing, and instrumentation with reusable decks, notebooks, and videos; ramped a new analyst to independent experiment ownership.</li>
       </ul>
 
-      <div class="cat">Product Strategy &amp; Revenue Growth</div>
+      <div class="cat">Telehealth &amp; Pharmacy Economics</div>
       <ul class="bullets">
-        <li><b>Macro Revenue Decompositions:</b> Decoded an $8M&ndash;$15M+ YoY contribution-margin increase with an end-to-end full-funnel decomposition across domain, vertical, channel, country, device, and funnel type, proving growth was driven by Javatar platform expansion and Japan scaling (seven figures each).</li>
-        <li><b>Telehealth Standalone Optimization:</b> Built Power BI profiles and 3-year LTV frameworks for Telehealth and Urgent Care. Proved therapy cross-sell sat near zero (&lt;0.2%), shifting product focus to standalone optimization.</li>
-        <li><b>Sentiment-Driven Product Strategy:</b> Measured emotional shifts across ~17,000 expert conversations per vertical and turned them into three prioritized, testable features (real-time emotion tagging, expert emotion summaries, resolution summaries), presented at company Analytics and Engineering hackathons.</li>
+        <li><b>Pharmacy Performance Dashboard:</b> Built the Power BI dashboard and SQL pipeline for JA Pharmacy, matching partner telehealth orders to JustAnswer customers and comparing Urgent Care patients with same-campaign Health customers on retention, 2nd-pay rate, LTV, and margin; used weekly by leadership, Marketing, Product, and Finance.</li>
+        <li><b>Urgent Care Launch Economics:</b> Ran a matched five-month pre/post analysis of the Urgent Care launch showing forecasted 3-year LTV per conversion up 13% and contribution margin per conversion up 11% while converters grew 54%.</li>
+        <li><b>Telehealth Standalone Strategy:</b> Built 3-year LTV models showing fewer than 0.3% of Urgent Care patients ever bought a wellness therapy, shifting the roadmap from cross-sell to standalone optimization and saving months of engineering work.</li>
       </ul>
 
-      <div class="cat">Marketing &amp; Customer Acquisition Analytics</div>
+      <div class="cat">Marketing &amp; Growth Analytics</div>
       <ul class="bullets">
-        <li><b>Performance Max Incrementality Study:</b> Evaluated keyword cannibalization, proving Performance Max was a net-positive expansion layer generating 1M+ net-new queries, $1M+ incremental revenue, and a six-figure margin.</li>
-        <li><b>Geographic PPC Portfolio Design:</b> Rebuilt paid search funnels to ZIP level, identifying 5.2% structural traffic waste and reallocating budget to high-efficiency rural segments converting at 3.73% LPCR.</li>
-        <li><b>Margin Decision Tools:</b> Built a bid-strategy simulator comparing actual vs. simulated margin against cost-weighted Target ROAS, with quarter-level projections across Google Search, Javatar, and Pearl, letting acquisition leaders test bidding decisions before committing budget.</li>
+        <li><b>Performance Max Incrementality:</b> Proved through a query-overlap incrementality study that Performance Max was adding net-new demand, not cannibalizing search: 1M+ net-new queries, $1M+ incremental revenue, and a six-figure margin; Marketing scaled spend.</li>
+        <li><b>Growth Decomposition:</b> Decoded an $8M&ndash;$15M+ YoY contribution-margin increase across channel, vertical, country, device, and funnel type, proving growth came from Javatar expansion and Japan scaling; became the basis for 2026 budget planning.</li>
+        <li><b>ZIP-Level PPC Design:</b> Rebuilt paid search to ZIP level, finding 5.2% wasted traffic and moving budget to rural segments converting at 3.73%.</li>
       </ul>
 
       <div class="cat">AI &amp; Engineering Operations</div>
@@ -104,8 +104,8 @@ ul.bullets li b{font-weight:600}
       <div class="row"><div class="job-title">Senior Business Intelligence Analyst</div><div class="job-date">February 2021&ndash;February 2022</div></div>
       <div class="job-sub">Ashley Furniture Industries Inc. &mdash; Global manufacturer and retailer of home furnishings</div>
       <ul class="bullets">
-        <li>Led a Price Variance Analysis initiative isolating the drivers of sales growth across corporate stores, shifting budget allocation and increasing sales by 10%.</li>
-        <li>Built a Python regression-based staffing optimization model rooted in the sales production function, reducing overstaffing by more than 50%.</li>
+        <li>Led a transformative initiative to deploy Price Variance Analysis, unraveling factors driving sales growth across corporate stores. This allowed the business to shift budgeting, increasing sales by 10%.</li>
+        <li>Built a staffing optimization model using Python and a sophisticated regression model rooted in the sales production function, enhancing operational efficiency and driving cost savings. This optimization reduced overstaffing by more than 50%.</li>
       </ul>
     </div>
 
@@ -113,8 +113,24 @@ ul.bullets li b{font-weight:600}
       <div class="row"><div class="job-title">Citizen Data Scientist &ndash; Digital Transformation</div><div class="job-date">August 2020&ndash;February 2021</div></div>
       <div class="job-sub">Tech Data Corporation &mdash; Global distributor of technology products, services and solutions</div>
       <ul class="bullets">
-        <li>Built a churn prediction model for Small Business Marketing (SMB), reducing churn 12% and retaining $500K+ in revenue.</li>
-        <li>Applied RFM segmentation in Tableau and Alteryx and blended multiple data sources into segmentation, propensity, and forecasting models to surface incremental revenue opportunities.</li>
+        <li><b>Churn Prevention:</b> Built an SMB churn model in Alteryx and R (logistic regression, decision tree, boosted model, random forest) that, paired with targeted marketing campaigns, prevented 12% of churn, about $670K in revenue.</li>
+        <li><b>Segmentation &amp; CX Insights:</b> Built RFM customer segmentation that Marketing adopted as the basis for its campaigns, and delivered customer-experience insights for partners and vendors in Tableau and Alteryx.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="row"><div class="job-title">Senior Business Analyst &ndash; US Analytics FP&amp;A</div><div class="job-date">November 2018&ndash;August 2020</div></div>
+      <div class="job-sub">Tech Data Corporation &mdash; Global distributor of technology products, services and solutions</div>
+      <ul class="bullets">
+        <li><b>Stakeholder Reporting &amp; Team Leadership:</b> Reported business metrics in Tableau for senior leadership, served as analytics point of contact for Sales and Vendor teams, managed a team of entry-level analysts, and integrated multiple data sources in Alteryx into a unified pipeline powering segmentation, propensity, and forecasting models.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="row"><div class="job-title">Senior Analyst &ndash; McDonald&rsquo;s Canada Consulting Team</div><div class="job-date">January 2017&ndash;November 2018</div></div>
+      <div class="job-sub">Revenue Management Solutions (RMS) &mdash; Data-driven pricing and revenue consulting firm for restaurant operators</div>
+      <ul class="bullets">
+        <li><b>Pricing &amp; Testing:</b> Built SQL price elasticity models behind pricing recommendations and revenue forecasts for McDonald&rsquo;s Canada franchisees across five provinces, and ran A/B tests on new products before market release.</li>
       </ul>
     </div>
   </div>
@@ -122,13 +138,14 @@ ul.bullets li b{font-weight:600}
   <div>
     <div class="sec-title">Education</div>
     <div class="edu">
-      <div><span><b>University of Tampa, Sykes College of Business</b> &mdash; M.S. in Finance (Beta Alpha Psi), GPA 3.9/4.0</span><span class="job-date">May 2015</span></div>
-      <div><span><b>Kenyon College</b> &mdash; B.A. in Economics (Davis Projects for Peace $10,000 Grant Winner), GPA 3.4/4.0</span><span class="job-date">May 2012</span></div>
-      <div><span><b>Udacity</b> &mdash; Nanodegree, Predictive Analytics for Business (Alteryx, Tableau)</span><span class="job-date">Spring 2020</span></div>
-      <div><span><b>American University</b> &mdash; Washington Semester: International Business and Trade, GPA 3.9/4.0</span><span class="job-date">Fall 2010</span></div>
+      <div><span><b>University of Tampa</b> &mdash; M.S. Finance, GPA 3.9/4.0</span><span class="job-date">May 2015</span></div>
+      <div><span><b>Kenyon College</b> &mdash; B.A. Economics</span><span class="job-date">May 2012</span></div>
+      <div><span><b>Udacity</b> &mdash; Nanodegree, Predictive Analytics for Business</span><span class="job-date">Spring 2020</span></div>
+      <div><span><b>American University</b> &mdash; Washington Semester, GPA 3.9/4.0</span><span class="job-date">Fall 2010</span></div>
     </div>
   </div>
 
 </section>
+
 
 </body></html>
