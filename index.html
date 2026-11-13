@@ -99,7 +99,7 @@
             <button onclick="navigateTo('skills')" id="nav-skills" class="px-3.5 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-colors hover:text-slate-900 text-slate-500 hover:bg-slate-100">Skills & Toolkits</button>
             <button onclick="navigateTo('writing')" id="nav-writing" class="px-3.5 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-colors hover:text-slate-900 text-slate-500 hover:bg-slate-100">Insights</button>
             <button onclick="navigateTo('resume')" id="nav-resume" class="px-3.5 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-colors hover:text-slate-900 text-slate-500 hover:bg-slate-100">Resume</button>
-            <button onclick="void(0)" id="nav-websites" class="px-3.5 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-colors hover:text-slate-900 text-slate-500 hover:bg-slate-100">Websites</button>
+            <button onclick="navigateTo('websites')" id="nav-websites" class="px-3.5 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-colors hover:text-slate-900 text-slate-500 hover:bg-slate-100">Websites</button>
            
         </nav>
 
@@ -136,6 +136,7 @@
         <button onclick="navigateTo('skills'); toggleMobileMenu()" class="block w-full text-left px-4 py-3 rounded-lg text-sm font-semibold uppercase tracking-wider hover:bg-slate-100 text-slate-500 hover:text-slate-900">Skills & Toolkits</button>
         <button onclick="navigateTo('writing'); toggleMobileMenu()" class="block w-full text-left px-4 py-3 rounded-lg text-sm font-semibold uppercase tracking-wider hover:bg-slate-100 text-slate-500 hover:text-slate-900">Insights</button>
         <button onclick="navigateTo('resume'); toggleMobileMenu()" class="block w-full text-left px-4 py-3 rounded-lg text-sm font-semibold uppercase tracking-wider hover:bg-slate-100 text-slate-500 hover:text-slate-900">Resume</button>
+        <button onclick="navigateTo('websites'); toggleMobileMenu()" class="block w-full text-left px-4 py-3 rounded-lg text-sm font-semibold uppercase tracking-wider hover:bg-slate-100 text-slate-500 hover:text-slate-900">Websites</button>
         <button onclick="navigateTo('contact'); toggleMobileMenu()" class="block w-full text-center py-3 rounded-lg text-sm font-bold uppercase tracking-widest bg-blue-600 hover:bg-blue-800 text-white mt-4 shadow-lg shadow-blue-600/15">Let's Connect</button>
     </div>
 </header>
@@ -750,6 +751,73 @@
             </div>
         </div>
 
+    </div>
+</div>
+
+<!-- VIEW: WEBSITES -->
+<div id="view-websites" class="hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 animate-fade-in no-print">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Side Projects & Websites</h1>
+        <p class="text-slate-500 text-base mt-2">Smaller builds outside client work — real, shipped products, not case studies.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <!-- Business Review Intelligence -->
+        <a href="https://www.businessreviewintelligence.com/" target="_blank" rel="noopener" class="bg-white border border-slate-200 rounded-2xl p-6 flex flex-col hover:border-blue-600/50 transition-all duration-300 group">
+            <div class="flex items-center justify-between mb-5">
+                <div class="h-14 w-14 rounded-2xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg, #4f46e5, #8b5cf6);">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19.07 4.93A10 10 0 0 0 6.99 3.34" />
+                        <path d="M4 6h.01" />
+                        <path d="M2.29 9.62A10 10 0 1 0 21.31 8.35" />
+                        <path d="M16.24 7.76A6 6 0 1 0 8.23 16.67" />
+                        <path d="M12 18h.01" />
+                        <path d="M17.99 11.66A6 6 0 0 1 15.77 16.67" />
+                        <circle cx="12" cy="12" r="2" />
+                        <path d="m13.41 10.59 5.66-5.66" />
+                    </svg>
+                </div>
+                <span class="text-[10px] font-bold uppercase tracking-widest text-blue-800 bg-blue-50/80 border border-blue-200 px-2.5 py-1 rounded-full">SaaS &bull; Review Analytics</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Business Review Intelligence</h3>
+            <p class="text-sm text-slate-500 mt-2 leading-relaxed">Analyzes a local business's Google Maps and Yelp reviews and turns them into a growth plan. One tier benchmarks the five closest competitors — a small version of Owner's thesis: doing the analysis for the owner instead of asking them to.</p>
+            <div class="mt-6 pt-5 border-t border-slate-200 flex items-center justify-between">
+                <span class="text-xs text-slate-500">businessreviewintelligence.com</span>
+                <span class="text-blue-600 group-hover:text-blue-800 font-bold text-xs flex items-center space-x-1">
+                    <span>Visit Site</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </span>
+            </div>
+        </a>
+
+        <!-- Family Meal Plan -->
+        <a href="https://ourfamilymealplan.vercel.app/FamilyPlan_Supabase.html" target="_blank" rel="noopener" class="bg-white border border-slate-200 rounded-2xl p-6 flex flex-col hover:border-blue-600/50 transition-all duration-300 group">
+            <div class="flex items-center justify-between mb-5">
+                <div class="h-14 w-14 rounded-2xl flex items-center justify-center flex-shrink-0" style="background: #faf6ef; border: 1px solid #e9e0d2;">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+                        <rect x="2" y="6" width="26" height="22" rx="3" stroke="#c4622d" stroke-width="2" fill="#fffdf9"/>
+                        <line x1="2" y1="12" x2="28" y2="12" stroke="#c4622d" stroke-width="2"/>
+                        <line x1="9" y1="2.5" x2="9" y2="8" stroke="#c4622d" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="21" y1="2.5" x2="21" y2="8" stroke="#c4622d" stroke-width="2" stroke-linecap="round"/>
+                        <rect x="6" y="16" width="5" height="5" rx="1" fill="#f3e3d6"/>
+                        <rect x="12.5" y="16" width="5" height="5" rx="1" fill="#5b6e4a"/>
+                        <rect x="19" y="16" width="5" height="5" rx="1" fill="#f3e3d6"/>
+                        <rect x="6" y="22" width="5" height="4" rx="1" fill="#e7ece0"/>
+                        <rect x="12.5" y="22" width="5" height="4" rx="1" fill="#f3e3d6"/>
+                    </svg>
+                </div>
+                <span class="text-[10px] font-bold uppercase tracking-widest text-blue-800 bg-blue-50/80 border border-blue-200 px-2.5 py-1 rounded-full">App &bull; Household</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Family Meal Plan</h3>
+            <p class="text-sm text-slate-500 mt-2 leading-relaxed">A shared meal planner and grocery list for households, with accounts and live sync across devices on Supabase — year-round calendar, family-tagged meals, and a running grocery list built from what's actually planned.</p>
+            <div class="mt-6 pt-5 border-t border-slate-200 flex items-center justify-between">
+                <span class="text-xs text-slate-500">ourfamilymealplan.vercel.app</span>
+                <span class="text-blue-600 group-hover:text-blue-800 font-bold text-xs flex items-center space-x-1">
+                    <span>Visit Site</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </span>
+            </div>
+        </a>
     </div>
 </div>
 
@@ -2164,14 +2232,14 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
         
         // Hide all views
-        const views = ['view-home', 'view-projects', 'view-project-detail', 'view-leadership', 'view-skills', 'view-writing', 'view-resume', 'view-contact'];
+        const views = ['view-home', 'view-projects', 'view-project-detail', 'view-leadership', 'view-skills', 'view-writing', 'view-resume', 'view-websites', 'view-contact'];
         views.forEach(v => {
             const el = document.getElementById(v);
             if (el) el.classList.add('hidden');
         });
 
         // Toggle active nav class styling
-        const navs = ['nav-home', 'nav-projects', 'nav-leadership', 'nav-skills', 'nav-writing', 'nav-resume'];
+        const navs = ['nav-home', 'nav-projects', 'nav-leadership', 'nav-skills', 'nav-writing', 'nav-resume', 'nav-websites'];
         navs.forEach(n => {
             const el = document.getElementById(n);
             if (el) {
